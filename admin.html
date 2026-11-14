@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Admin - Upload Music</title>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<style>
+body{font-family:Arial;background:#111;color:#fff;padding:20px;max-width:500px;margin:auto}
+input,button{width:100%;padding:12px;margin:8px 0;border-radius:8px;border:none}
+input{background:#222;color:#fff}
+button{background:#1ed760;color:#000;font-weight:bold}
+#msg{background:#222;padding:10px;border-radius:8px;margin-top:10px;white-space:pre-wrap}
+</style>
+</head>
+<body>
+<h2>Upload New Song</h2>
+<input id="title" placeholder="Song Title">
+<input id="artist" placeholder="Artist Name">
+<label>Audio File (mp3)</label>
+<input type="file" id="audio" accept="audio/*">
+<label>Cover Image</label>
+<input type="file" id="cover" accept="image/*">
+<button onclick="upload()">UPLOAD TO APP</button>
+<div id="msg">Ready...</div>
+<script>
+const SUPABASE_URL = "https://bnllpygszyosfbgmhljyo.supabase.co";
+const SUPABASE_KEY = "sb_publishable_nwKjsGD2BvonS8EKSJvIcQ_R8hESnTs";
+const sb = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
+async function upload(){
+  const title = document.getElementById('title').value;
+  const artist = document.getElementById('artist').value;
+  const audioFile = document.getElementById('audio').files[0];
+  const coverFile = document.getElementById('cover').files[0];
+  if(!title || !audioFile){ document.getElementById('msg').innerText="Put title + audio first"; return; }
+  document.getElementById('msg').innerText="Uploading... wait...";
+  const audioName = Date.now()+"-"+audioFile.name.replace(/[^a-zA-Z0-9.-]/g,'');
+  let {error: e1} = await sb.storage.from('audio').upload(audioName, audioFile);
+  if(e1){ document.getElementById('msg').innerText="Audio error: "+e1.message; return; }
+  const audioUrl = sb.storage.from('audio').getPublicUrl(audioName).data.publicUrl;
+  let coverUrl = "";
+  if(coverFile){
+    const coverName = Date.now()+"-"+coverFile.name.replace(/[^a-zA-Z0-9.-]/g,'');
+    let {error: e2} = await sb.storage.from('covers').upload(coverName, coverFile);
+    if(!e2) coverUrl = sb.storage.from('covers').getPublicUrl(coverName).data.publicUrl;
+  }
+  let {error: e3} = await sb.from('tracks').insert([{title:title, artist:artist, audio_url:audioUrl, cover_url:coverUrl}]);
+  if(e3){ document.getElementById('msg').innerText="DB error: "+e3.message; return; }
+  document.getElementById('msg').innerText="DONE! Song don enter app ✅\n"+title;
+}
+</script>
+</body>
+</html>
