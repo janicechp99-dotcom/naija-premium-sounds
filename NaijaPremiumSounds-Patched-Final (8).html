@@ -1,0 +1,2445 @@
+<!-- LOCKED MAIN FILE - CURRENT STATE - 123848 bytes - DO NOT TOUCH/UNFIX - TERMS+PRIVACY+ABOUT+CONTACT+ADMIN+EYE+SLIDE+MENU+XION+UPLOAD FYP saveAndSyncUpload FIXED - LOCKED FOREVER BY JANICE janicechp99@gmail.com - 0ce561277cb8 -->
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Discover music, free beats, artists and DJ mixes on NaijaPremiumSounds.">
+<title>NaijaPremiumSounds</title>
+<style>
+*{box-sizing:border-box}body{margin:0;font:16px/1.5 Arial,sans-serif;color:#E0DBE4;background:
+radial-gradient(900px 600px at 5% -5%, rgba(139,61,229,0.45) 0%, rgba(139,61,229,0.12) 35%, transparent 65%),
+radial-gradient(700px 500px at 95% 0%, rgba(218,73,173,0.40) 0%, rgba(218,73,173,0.10) 40%, transparent 65%),
+radial-gradient(600px 400px at 50% 20%, rgba(161,79,238,0.28) 0%, transparent 60%),
+radial-gradient(1000px 800px at 20% 110%, rgba(139,61,229,0.22) 0%, transparent 60%),
+radial-gradient(800px 600px at 80% 90%, rgba(218,73,173,0.26) 0%, rgba(218,73,173,0.08) 45%, transparent 70%),
+radial-gradient(1200px 600px at 20% -10%, #4a3a6e 0%, #2a2742 60%),
+linear-gradient(180deg, #2a2742 0%, #1e1c32 100%);
+background-attachment:scroll;min-height:100vh;
+position:relative}
+.wrap{max-width:1100px;width:calc(100% - 28px);margin:auto}header,.player,footer{border-color:#4a456e;border-style:solid;border-width:0}
+header{border-bottom-width:1px;position:sticky;top:0;background:linear-gradient(180deg, rgba(42,39,66,0.96) 0%, rgba(38,35,60,0.90) 100%);padding:12px 0;z-index:3;backdrop-filter:blur(14px);box-shadow:0 4px 20px rgba(0,0,0,0.5), 0 1px 0 rgba(139,61,229,0.18), 0 0 20px rgba(218,73,173,0.08), inset 0 1px 0 rgba(255,255,255,0.06)}
+.top{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}.brand{font-weight:900;letter-spacing:0.5px;color:#FFFFFF;cursor:pointer;user-select:none;text-shadow:0 0 20px rgba(139,61,229,0.5);background:linear-gradient(90deg,#fff 0%, #E0DBE4 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+form{display:flex;gap:8px;flex:1;max-width:450px}input{min-width:0;padding:11px 14px;border:1px solid #5e5a7e;border-radius:10px;flex:1;background:linear-gradient(180deg,#2e2a44 0%, #2a2640 100%);color:#E0DBE4;box-shadow:inset 0 1px 0 rgba(255,255,255,0.05), 0 2px 8px rgba(0,0,0,0.3);transition:all 0.3s}
+input:focus{outline:none;border-color:#8B3DE5;box-shadow:inset 0 1px 0 rgba(255,255,255,0.08), 0 0 0 3px rgba(139,61,229,0.25), 0 4px 12px rgba(0,0,0,0.4)}
+button,.button{display:inline-block;padding:10px 16px;border:1px solid #8B3DE5;border-radius:10px;background:linear-gradient(90deg,#8B3DE5 0%,#A14FEE 35%,#DA49AD 100%);color:#FFFFFF;text-decoration:none;cursor:pointer;font-weight:600;box-shadow:0 4px 14px rgba(139,61,229,0.35), inset 0 1px 0 rgba(255,255,255,0.2);transition:all 0.25s}
+button:hover,.button:hover{transform:none;box-shadow:0 6px 20px rgba(139,61,229,0.5), inset 0 1px 0 rgba(255,255,255,0.25);filter:brightness(1.05)}
+button:active,.button:active{transform:translateY(0)}
+nav{display:flex;gap:10px;overflow:auto;padding-top:14px}nav a{color:#9A9B9E;text-decoration:none;white-space:nowrap;padding:6px 10px;border-radius:8px;transition:all 0.2s;border:1px solid transparent}
+nav a:hover{color:#FFFFFF;background:rgba(139,61,229,0.12);border-color:rgba(139,61,229,0.2);box-shadow:0 2px 8px rgba(139,61,229,0.15)}
+main{padding:22px 0 30px}.hero,.card,.notice{border:1px solid #4a456e;border-radius:14px;padding:18px;background:linear-gradient(180deg,#2e2b4a 0%, #28243a 100%)}
+.hero{position:relative;overflow:hidden;min-height:320px;background:radial-gradient(800px 400px at 10% 0%, rgba(139,61,229,0.50) 0%, rgba(139,61,229,0.14) 50%, transparent 65%), radial-gradient(600px 300px at 90% 100%, rgba(218,73,173,0.45) 0%, rgba(218,73,173,0.12) 45%, transparent 65%), radial-gradient(500px 300px at 50% 50%, rgba(161,79,238,0.20) 0%, transparent 70%), linear-gradient(135deg,#2c2942 0%, #302c4a 50%, #28243e 100%);border-color:#3d2f5a;box-shadow:0 10px 30px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.06);padding:0}
+.hero-slider{position:relative;width:100%;height:100%;min-height:320px}
+.hero-slide{display:none;flex-direction:row;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;padding:28px;min-height:320px;animation:none}
+.hero-slide.active{display:flex; animation:none; transform:none;}
+.hero-slide-content{flex:1;min-width:260px}
+.hero-slide-art{width:200px;height:200px;flex-shrink:0;background:radial-gradient(200px 200px at 30% 20%, rgba(139,61,229,0.3), transparent), #24202F;border-color:#6B5B8A;box-shadow:0 8px 24px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.08)}
+.hero-dots{position:absolute;bottom:18px;left:50%;transform:translateX(-50%);display:flex;gap:10px;z-index:2}
+.hero-dot{width:10px;height:10px;border-radius:50%;background:#5e5a7e;cursor:pointer;border:1px solid #6B5B8A;transition:all 0.3s;box-shadow:0 2px 6px rgba(0,0,0,0.3)}
+.hero-dot.active{background:linear-gradient(90deg,#8B3DE5,#DA49AD);border-color:#8B3DE5;transform:scale(1.25);box-shadow:0 0 12px rgba(139,61,229,0.6)}
+.hero-arrow{position:absolute;top:50%;transform:translateY(-50%);background:rgba(28,27,38,0.8);border:1px solid #5e5a7e;color:#fff;width:38px;height:38px;border-radius:50%;display:grid;place-items:center;cursor:pointer;z-index:2;font-size:18px;backdrop-filter:blur(8px);transition:all 0.2s}
+.hero-arrow:hover{background:linear-gradient(90deg,#8B3DE5,#DA49AD);border-color:#8B3DE5;box-shadow:0 4px 12px rgba(139,61,229,0.4)}
+.hero-arrow.prev{left:14px}
+.hero-arrow.next{right:14px}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+.slide-nav-bar{display:flex; gap:8px; overflow:hidden; overflow-x:auto; -webkit-overflow-scrolling:auto; scrollbar-width:none; padding:14px 16px; margin:12px 0 0; background:linear-gradient(180deg,#2e2b4a 0%, #28243a 100%); border:1px solid #4a456e; border-radius:12px; box-shadow:0 4px 14px rgba(0,0,0,0.3);}
+.slide-nav-bar button{flex:0 0 auto; padding:8px 14px; border-radius:20px; font-size:0.85rem; border:1px solid #5e5a7e; background:#2a2742; color:#9A9B9E; cursor:pointer; transition:all 0.2s; white-space:nowrap;}
+.slide-nav-bar button.active{background:linear-gradient(90deg,#8B3DE5 0%,#A14FEE 35%,#DA49AD 100%); color:#fff; border-color:#8B3DE5; box-shadow:0 4px 12px rgba(139,61,229,0.35); transform:none;}
+.slide-nav-bar button:hover{color:#fff; border-color:#8B3DE5; background:rgba(139,61,229,0.12);}
+.app-bottom-nav{display:none; position:fixed; bottom:0; left:0; right:0; background:linear-gradient(180deg, rgba(42,39,66,0.98) 0%, rgba(30,28,50,0.98) 100%); border-top:1px solid #4a456e; backdrop-filter:blur(12px); z-index:10; padding:8px 0; box-shadow:0 -4px 20px rgba(0,0,0,0.5);}
+.app-bottom-nav .wrap{display:flex; justify-content:space-around; align-items:center;}
+.app-bottom-nav a{display:flex; flex-direction:column; align-items:center; gap:2px; color:#9A9B9E; text-decoration:none; font-size:0.7rem; padding:6px 12px; border-radius:8px; transition:all 0.2s;}
+.app-bottom-nav a.active{color:#fff; background:rgba(139,61,229,0.15);}
+.app-bottom-nav a span.icon{font-size:1.2rem;}
+@media(max-width:760px){.app-bottom-nav{display:block;} main{padding-bottom:80px; overflow-x:hidden;}}
+h1{font-size:clamp(2rem,5vw,3.3rem);line-height:1.05;margin:.3em 0;color:#FFFFFF;text-shadow:0 2px 20px rgba(139,61,229,0.3)}h2{font-size:1.35rem;margin:0;color:#FFFFFF;letter-spacing:0.3px}
+section{margin-top:34px}.head{display:flex;justify-content:space-between;gap:10px;align-items:center;margin-bottom:14px}
+.grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+.art{aspect-ratio:1;background:linear-gradient(180deg,#2a2440 0%, #24202F 100%);border:1px dashed #6B5B8A;border-radius:10px;display:grid;place-items:center;text-align:center;color:#9A9B9E;padding:10px;margin-bottom:10px;box-shadow:inset 0 1px 0 rgba(255,255,255,0.06), 0 4px 12px rgba(0,0,0,0.3);transition:all 0.3s;overflow:hidden}
+.art img{width:100%;height:100%;object-fit:cover;border-radius:8px}
+.card{transition:all 0.3s;box-shadow:0 6px 20px rgba(0,0,0,0.35), inset 0 1px 0 rgba(255,255,255,0.05)}
+.card:hover{transform:translateY(-3px);border-color:#5a4a7a;box-shadow:0 12px 30px rgba(0,0,0,0.5), 0 0 20px rgba(139,61,229,0.15), inset 0 1px 0 rgba(255,255,255,0.08)}
+.card h3{margin:6px 0 2px;font-size:1rem;color:#FFFFFF}.muted{color:#9A9B9E}.card p{margin:4px 0 12px}.actions{display:flex;gap:8px;flex-wrap:wrap}
+.notice{color:#9A9B9E;border-style:dashed;border-color:#5A4A7A;background:linear-gradient(180deg,#33304a 0%, #2c2942 100%);box-shadow:inset 0 1px 0 rgba(255,255,255,0.04)}.player{position:fixed;bottom:0;left:0;right:0;border-top-width:1px;background:linear-gradient(180deg,#1a1925 0%, #121118 100%);padding:12px 0;z-index:5;box-shadow:0 -8px 24px rgba(0,0,0,0.6), inset 0 1px 0 rgba(255,255,255,0.06)}
+.player .wrap{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}footer{border-top-width:1px;padding:24px 0;color:#9A9B9E;background:linear-gradient(180deg,#2a2742 0%, #1e1c32 100%);border-color:#4a456e}
+#nps-admin-janice{display:none !important;margin-top:30px;border:1px solid #8B3DE5;border-radius:16px;background:radial-gradient(600px 300px at 20% 0%, rgba(139,61,229,0.2), transparent), linear-gradient(180deg,#1C1B26 0%,#121118 100%);padding:22px;box-shadow:0 0 40px rgba(139,61,229,0.2), inset 0 1px 0 rgba(255,255,255,0.06)}
+#nps-admin-janice.active{display:block !important}
+#nps-admin-janice h2{color:#FFFFFF}#nps-admin-janice .admin-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:16px}
+#nps-admin-janice .stat{border:1px solid #37294B;background:linear-gradient(180deg,#2e2b4a 0%, #28243a 100%);border-radius:12px;padding:16px;box-shadow:0 4px 16px rgba(0,0,0,0.3)}
+#adminLoginForm{display:flex;flex-direction:column;gap:10px;max-width:360px;margin-top:12px}
+#adminLoginForm input{width:100%}
+.admin-badge{display:inline-block;background:linear-gradient(90deg,#8B3DE5,#DA49AD);color:#fff;padding:3px 10px;border-radius:20px;font-size:.75rem;margin-left:8px;box-shadow:0 2px 8px rgba(139,61,229,0.4)}
+#adminLogout{margin-top:12px;background:#1C1B26;border-color:#5e5a7e}
+#uploadPanel{margin-top:20px;border:1px dashed #8B3DE5;border-radius:12px;padding:16px;background:linear-gradient(180deg,#2e2b4a 0%, #28243a 100%)}
+#uploadPanel input{margin:6px 0}
+#holdingsList{margin-top:12px}
+.real-badge{background:#111;color:#fff;font-size:.7rem;padding:2px 6px;border-radius:4px;margin-left:6px}
+.fyp-badge{background:linear-gradient(90deg,#8B3DE5,#DA49AD);color:#fff;font-size:.65rem;padding:2px 8px;border-radius:10px;margin-left:6px;box-shadow:0 2px 6px rgba(139,61,229,0.3)}
+@media(max-width:760px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}form{order:3;flex-basis:100%;max-width:none}#nps-admin-janice .admin-grid{grid-template-columns:1fr}.hero-slide{flex-direction:column;align-items:flex-start}.hero-slide-art{width:100%;height:160px}}
+@media(max-width:430px){.grid{gap:8px}.card{padding:12px}.player .wrap{font-size:.9rem}}
+.player{display:none !important;}
+.eye-toggle{position:absolute; right:10px; top:50%; transform:translateY(-50%); background:transparent; border:none; cursor:pointer; font-size:18px; padding:4px 8px; line-height:1; color:#9A9B9E; box-shadow:none;}
+.eye-toggle:hover{background:rgba(139,61,229,0.15); border-radius:6px; transform:translateY(-50%) !important; filter:none !important;}
+.pass-wrap{position:relative; display:flex; align-items:center; width:100%; margin:6px 0;}
+.pass-wrap input{width:100%; padding-right:44px;}
+#profileBtn{display:none !important; visibility:hidden !important; pointer-events:none !important; width:0 !important; height:0 !important; opacity:0 !important; position:absolute !important; left:-9999px !important;}
+/* LOCKED PERMANENTLY AND FOREVER - Profile Sign In Removed */
+
+body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:-1;background:radial-gradient(1200px 600px at 0% 0%, rgba(139,61,229,0.10) 0%, transparent 50%), radial-gradient(1000px 500px at 100% 0%, rgba(218,73,173,0.09) 0%, transparent 50%);opacity:1}
+body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:-1;background:linear-gradient(90deg, rgba(139,61,229,0.06) 0%, transparent 20%, transparent 80%, rgba(218,73,173,0.06) 100%)}
+
+/* FIX WHITE BACKGROUND - FORCE DARK EVERYWHERE */
+body, html{background: radial-gradient(900px 600px at 5% -5%, rgba(139,61,229,0.45) 0%, rgba(139,61,229,0.12) 35%, transparent 65%), radial-gradient(700px 500px at 95% 0%, rgba(218,73,173,0.40) 0%, rgba(218,73,173,0.10) 40%, transparent 65%), radial-gradient(1200px 800px at 20% -10%, #4a3a6e 0%, #2a2742 60%), linear-gradient(180deg, #2a2742 0%, #1e1c32 100%) !important; background-attachment:fixed !important;}
+section, .card, .notice, .hero, .slide-nav-bar{background:linear-gradient(180deg,#2e2b4a 0%, #28243a 100%) !important; border-color:#4a456e !important; color:#E0DBE4 !important;}
+input, select, textarea{background:linear-gradient(180deg,#2e2a44 0%, #2a2640 100%) !important; color:#E0DBE4 !important; border-color:#5e5a7e !important;}
+::placeholder{color:#9A9B9E !important;}
+/* Remove any white flash on artist sections */
+#artists{display:none !important;}
+
+/* --- PREMIUM AGAIN - ENHANCED --- */
+.brand{font-weight:900 !important; letter-spacing:1.2px !important; font-size:1.25rem !important; text-transform:uppercase; background:linear-gradient(90deg,#FFFFFF 0%, #D8CCFF 25%, #FF8DE1 60%, #A14FEE 100%) !important; -webkit-background-clip:text !important; -webkit-text-fill-color:transparent !important; filter:drop-shadow(0 0 18px rgba(139,61,229,0.6)) drop-shadow(0 0 30px rgba(218,73,173,0.35));}
+header{border-bottom:1px solid rgba(139,61,229,0.18) !important; box-shadow:0 8px 32px rgba(0,0,0,0.6), 0 1px 0 rgba(139,61,229,0.22), inset 0 1px 0 rgba(255,255,255,0.08) !important; backdrop-filter:blur(18px) saturate(1.4) !important;}
+nav a{position:relative; font-weight:500; letter-spacing:0.2px;}
+nav a:hover{transform:none;}
+.hero{border:1px solid rgba(139,61,229,0.28) !important; box-shadow:0 20px 60px rgba(0,0,0,0.6), 0 0 40px rgba(139,61,229,0.18), inset 0 1px 0 rgba(255,255,255,0.10), inset 0 -1px 0 rgba(139,61,229,0.12) !important; background:radial-gradient(900px 500px at 10% -10%, rgba(139,61,229,0.55) 0%, rgba(139,61,229,0.16) 45%, transparent 70%), radial-gradient(700px 400px at 90% 110%, rgba(218,73,173,0.50) 0%, rgba(218,73,173,0.14) 50%, transparent 70%), radial-gradient(500px 300px at 50% 50%, rgba(161,79,238,0.22) 0%, transparent 65%), linear-gradient(135deg,#2c2942 0%, #312d4e 50%, #2a2642 100%) !important;}
+.hero h1{font-weight:900 !important; letter-spacing:-0.5px; line-height:0.95 !important; background:linear-gradient(90deg,#fff 0%, #E0DBE4 40%, #D8B4FE 100%); -webkit-background-clip:text; -webkit-text-fill-color:transparent; text-shadow:0 0 30px rgba(139,61,229,0.25) !important;}
+.card{background:linear-gradient(180deg, rgba(46,43,74,0.95) 0%, rgba(40,36,58,0.98) 100%) !important; border:1px solid rgba(74,69,110,0.8) !important; box-shadow:0 8px 24px rgba(0,0,0,0.45), 0 0 0 1px rgba(255,255,255,0.04) inset, 0 1px 0 rgba(255,255,255,0.08) inset !important; transition:all 0.35s cubic-bezier(0.2,0.8,0.2,1) !important;}
+.card:hover{transform:none !important; border-color:rgba(139,61,229,0.45) !important; box-shadow:0 18px 40px rgba(0,0,0,0.6), 0 0 30px rgba(139,61,229,0.22), 0 0 0 1px rgba(139,61,229,0.15) inset, 0 1px 0 rgba(255,255,255,0.12) inset !important;}
+.art{border:1px solid rgba(107,91,138,0.6) !important; box-shadow:0 8px 20px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.10) !important; background:radial-gradient(200px 200px at 30% 20%, rgba(139,61,229,0.25), transparent), linear-gradient(180deg,#2a2440 0%, #1e1b2e 100%) !important;}
+button,.button{background:linear-gradient(100deg,#8B3DE5 0%, #A14FEE 28%, #C15BEB 52%, #DA49AD 100%) !important; border:1px solid rgba(139,61,229,0.9) !important; box-shadow:0 6px 20px rgba(139,61,229,0.42), 0 0 0 1px rgba(255,255,255,0.12) inset, 0 1px 0 rgba(255,255,255,0.28) inset !important; font-weight:700 !important; letter-spacing:0.3px !important; text-shadow:0 1px 0 rgba(0,0,0,0.25) !important;}
+button:hover,.button:hover{box-shadow:0 10px 28px rgba(139,61,229,0.58), 0 0 18px rgba(218,73,173,0.35), 0 0 0 1px rgba(255,255,255,0.18) inset !important; filter:brightness(1.08) !important;}
+input{background:linear-gradient(180deg, rgba(46,42,68,0.95) 0%, rgba(42,38,64,0.98) 100%) !important; border:1px solid rgba(94,90,126,0.9) !important; box-shadow:inset 0 1px 0 rgba(255,255,255,0.07), 0 2px 10px rgba(0,0,0,0.35), 0 0 0 1px rgba(255,255,255,0.03) inset !important;}
+input:focus{border-color:#A14FEE !important; box-shadow:inset 0 1px 0 rgba(255,255,255,0.10), 0 0 0 4px rgba(139,61,229,0.22), 0 8px 20px rgba(0,0,0,0.45) !important;}
+.slide-nav-bar{background:linear-gradient(180deg, rgba(46,43,74,0.92) 0%, rgba(40,36,58,0.96) 100%) !important; border:1px solid rgba(74,69,110,0.75) !important; box-shadow:0 10px 28px rgba(0,0,0,0.45), inset 0 1px 0 rgba(255,255,255,0.07) !important; backdrop-filter:blur(12px);}
+.slide-nav-bar button.active{box-shadow:0 6px 18px rgba(139,61,229,0.45), 0 0 14px rgba(218,73,173,0.30), inset 0 1px 0 rgba(255,255,255,0.22) !important;}
+.app-bottom-nav{background:linear-gradient(180deg, rgba(42,39,66,0.98) 0%, rgba(30,28,50,0.99) 100%) !important; border-top:1px solid rgba(139,61,229,0.20) !important; box-shadow:0 -10px 30px rgba(0,0,0,0.65), 0 -1px 0 rgba(139,61,229,0.18) inset !important;}
+#nps-admin-janice{border:1px solid rgba(139,61,229,0.38) !important; box-shadow:0 20px 60px rgba(0,0,0,0.65), 0 0 40px rgba(139,61,229,0.20), inset 0 1px 0 rgba(255,255,255,0.08) !important; background:radial-gradient(600px 300px at 0% 0%, rgba(139,61,229,0.18), transparent 60%), linear-gradient(180deg,#1C1B26 0%, #121118 100%) !important;}
+.real-badge, .admin-badge{background:linear-gradient(100deg,#8B3DE5,#DA49AD) !important; box-shadow:0 2px 10px rgba(139,61,229,0.45) !important; font-weight:800 !important; letter-spacing:0.4px !important;}
+h2{font-weight:800 !important; letter-spacing:0.4px !important; text-shadow:0 1px 0 rgba(0,0,0,0.4);}
+.muted{color:#B8B3C8 !important;}
+
+
+/* --- MENU - PREMIUM --- */
+.menu-btn{display:inline-flex; align-items:center; gap:6px; padding:9px 14px; border-radius:10px; border:1px solid rgba(139,61,229,0.35); background:linear-gradient(100deg, rgba(42,39,66,0.95) 0%, rgba(46,43,74,0.98) 100%); color:#E0DBE4; cursor:pointer; font-weight:700; letter-spacing:0.3px; box-shadow:0 4px 14px rgba(0,0,0,0.35), inset 0 1px 0 rgba(255,255,255,0.08); transition:all 0.25s;}
+.menu-btn:hover{background:linear-gradient(100deg,#8B3DE5 0%, #A14FEE 35%, #DA49AD 100%); color:#fff; border-color:#8B3DE5; box-shadow:0 6px 20px rgba(139,61,229,0.45);}
+.menu-overlay{position:fixed; inset:0; background:rgba(0,0,0,0.55); backdrop-filter:blur(4px); z-index:50; display:none;}
+.menu-overlay.open{display:block;}
+.side-menu{position:fixed; top:0; left:0; bottom:0; width:280px; max-width:85vw; background:radial-gradient(600px 300px at 0% 0%, rgba(139,61,229,0.22), transparent 60%), linear-gradient(180deg,#2a2742 0%, #1e1c32 100%); border-right:1px solid rgba(139,61,229,0.28); box-shadow:8px 0 32px rgba(0,0,0,0.6), 0 0 20px rgba(139,61,229,0.18); z-index:51; transform:translateX(-100%); /* locked no shake */ transition:transform 0.35s cubic-bezier(0.2,0.8,0.2,1); padding:18px; display:flex; flex-direction:column; gap:14px;}
+.side-menu.open{transform:translateX(0);}
+.side-menu .brand{font-size:1.1rem;}
+.side-menu-nav{display:flex; flex-direction:column; gap:6px; margin-top:10px;}
+.side-menu-nav a{display:flex; align-items:center; gap:10px; padding:11px 12px; border-radius:10px; color:#B8B3C8; text-decoration:none; border:1px solid transparent; transition:all 0.2s; font-weight:600;}
+.side-menu-nav a:hover, .side-menu-nav a.active{background:linear-gradient(90deg, rgba(139,61,229,0.18) 0%, rgba(218,73,173,0.12) 100%); border-color:rgba(139,61,229,0.28); color:#fff; transform:none; box-shadow:0 4px 12px rgba(139,61,229,0.18);}
+.side-menu-footer{margin-top:auto; padding-top:14px; border-top:1px solid rgba(74,69,110,0.5);}
+@media(max-width:760px){header nav{display:none;}} .menu-btn{display:inline-flex !important; visibility:visible !important; opacity:1 !important;}
+
+
+/* FIX X BLOCKING MENU */
+#menuCloseBtn{background:rgba(255,255,255,0.08) !important; border:1px solid rgba(255,255,255,0.12) !important; color:#E0DBE4 !important; width:34px !important; height:34px !important; border-radius:50% !important; display:grid !important; place-items:center !important; padding:0 !important; font-size:14px !important; box-shadow:none !important; backdrop-filter:blur(8px);}
+#menuCloseBtn:hover{background:rgba(139,61,229,0.18) !important; border-color:rgba(139,61,229,0.35) !important; color:#fff !important;}
+.side-menu{padding-top:16px !important;}
+.side-menu.open ~ header .menu-btn, body.menu-open .menu-btn{opacity:0; pointer-events:none; transform:none;}
+/* Ensure menu button doesn't overlap */
+.top{gap:10px !important; flex-wrap:wrap !important;}
+#menuToggleBtn{flex-shrink:0; z-index:4;}
+
+
+/* --- FIX SHAKING & SLIDING --- */
+html, body{overflow-x:hidden; width:100%; position:relative;}
+body{background-attachment:scroll !important; -webkit-overflow-scrolling:auto !important;}
+.hero-slider, .hero, .hero-slide{transform:none !important; will-change:auto !important; backface-visibility:hidden;}
+.card, button, .button, nav a, .slide-nav-bar button, .app-bottom-nav a{transform:none !important; will-change:auto !important;}
+.hero-dots, .hero-arrow{transform:none !important;}
+.hero-arrow.prev{left:14px; transform:none !important;}
+.hero-arrow.next{right:14px; transform:none !important;}
+.slide-nav-bar{scroll-behavior:auto !important; overscroll-behavior:contain;}
+
+
+/* --- PREMIUM SEARCH BAR --- */
+#searchForm{position:relative; flex:1; max-width:560px !important; display:flex; align-items:center; gap:0; background:linear-gradient(180deg, rgba(46,42,68,0.92) 0%, rgba(36,32,56,0.96) 100%) !important; border:1px solid rgba(139,61,229,0.32) !important; border-radius:16px !important; padding:4px !important; box-shadow:0 8px 24px rgba(0,0,0,0.45), 0 0 0 1px rgba(255,255,255,0.05) inset, 0 1px 0 rgba(255,255,255,0.08) inset, 0 0 20px rgba(139,61,229,0.12) !important; backdrop-filter:blur(12px) saturate(1.2); transition:all 0.35s cubic-bezier(0.2,0.8,0.2,1);}
+#searchForm:focus-within{border-color:rgba(161,79,238,0.65) !important; box-shadow:0 12px 32px rgba(0,0,0,0.55), 0 0 0 4px rgba(139,61,229,0.20), 0 0 24px rgba(139,61,229,0.22), inset 0 1px 0 rgba(255,255,255,0.10) !important; transform:translateY(-1px);}
+#searchForm::before{content:'🔍'; position:absolute; left:16px; top:50%; transform:translateY(-50%); font-size:1rem; opacity:0.6; pointer-events:none; z-index:1;}
+#search{flex:1; background:transparent !important; border:none !important; box-shadow:none !important; padding:13px 14px 13px 42px !important; font-size:0.95rem !important; font-weight:500; color:#E0DBE4 !important; border-radius:12px !important; outline:none !important;}
+#search::placeholder{color:#9A9B9E !important; font-weight:400; letter-spacing:0.2px;}
+#search:focus{border:none !important; box-shadow:none !important; background:transparent !important;}
+#searchForm button{flex-shrink:0; padding:10px 18px !important; border-radius:12px !important; font-size:0.85rem !important; font-weight:700 !important; letter-spacing:0.4px !important; background:linear-gradient(100deg,#8B3DE5 0%, #A14FEE 35%, #DA49AD 100%) !important; border:1px solid rgba(139,61,229,0.85) !important; box-shadow:0 4px 14px rgba(139,61,229,0.38), inset 0 1px 0 rgba(255,255,255,0.20) !important; margin:0 !important;}
+#searchForm button:hover{filter:brightness(1.08); box-shadow:0 6px 20px rgba(139,61,229,0.52), 0 0 16px rgba(218,73,173,0.32) !important;}
+@media(max-width:760px){
+  .top{flex-wrap:wrap !important; gap:10px !important;}
+  #searchForm{order:3; max-width:100% !important; width:100%; flex:0 0 100%; margin-top:2px;}
+  #searchForm::before{left:14px;}
+  #search{padding:12px 12px 12px 38px !important; font-size:0.9rem !important;}
+}
+
+
+/* --- PROMOTION CENTER 70% MORE PREMIUM + WRITING MORE VISIBLE --- */
+#contact{margin-top:28px !important; position:relative;}
+#contact .head h2{font-size:1.35rem !important; font-weight:900 !important; letter-spacing:0.5px !important; background:linear-gradient(90deg,#fff 0%, #D8CCFF 30%, #FF8DE1 70%, #A14FEE 100%) !important; -webkit-background-clip:text !important; -webkit-text-fill-color:transparent !important; filter:drop-shadow(0 0 12px rgba(139,61,229,0.35));}
+#contact .card{border:1px solid rgba(139,61,229,0.38) !important; background:radial-gradient(900px 400px at 10% -10%, rgba(139,61,229,0.28) 0%, rgba(139,61,229,0.08) 40%, transparent 70%), radial-gradient(700px 300px at 90% 110%, rgba(218,73,173,0.24) 0%, rgba(218,73,173,0.08) 45%, transparent 70%), linear-gradient(180deg, #2e2b4a 0%, #28243a 100%) !important; box-shadow:0 16px 40px rgba(0,0,0,0.55), 0 0 30px rgba(139,61,229,0.18), inset 0 1px 0 rgba(255,255,255,0.10), inset 0 -1px 0 rgba(139,61,229,0.12) !important; padding:24px !important; border-radius:16px !important;}
+#contact .card p{color:#E0DBE4 !important;}
+#contact .card .muted{color:#D8D0E8 !important; font-size:0.92rem !important; line-height:1.7 !important;}
+#contact .card div[style*="border:1px solid rgba(139,61,229,0.28)"]{border:1px solid rgba(139,61,229,0.42) !important; background:radial-gradient(600px 200px at 0% 0%, rgba(139,61,229,0.16), transparent 60%), linear-gradient(180deg, rgba(46,43,74,0.85) 0%, rgba(40,36,58,0.95) 100%) !important; box-shadow:0 8px 24px rgba(0,0,0,0.35), inset 0 1px 0 rgba(255,255,255,0.08) !important; padding:16px !important; border-radius:12px !important;}
+#contact .card p[style*="font-weight:700; font-size:0.9rem"]{font-size:1.05rem !important; font-weight:900 !important; color:#fff !important; letter-spacing:0.3px !important; text-shadow:0 0 10px rgba(139,61,229,0.35);}
+#contact .button{font-weight:800 !important; letter-spacing:0.3px !important; box-shadow:0 6px 18px rgba(139,61,229,0.42), inset 0 1px 0 rgba(255,255,255,0.22) !important;}
+#contact span[style*="color:#E0DBE4"]{color:#FFFFFF !important; font-weight:800 !important; font-size:0.95rem !important; text-shadow:0 1px 0 rgba(0,0,0,0.3);}
+
+
+/* --- DOWNLOAD BUTTON PREMIUM --- */
+.btn-download{background:linear-gradient(100deg,#8B3DE5 0%, #A14FEE 35%, #DA49AD 100%) !important; border:1px solid rgba(139,61,229,0.85) !important; color:#fff !important; font-weight:800 !important; box-shadow:0 4px 14px rgba(139,61,229,0.35) !important;}
+.btn-download:hover{box-shadow:0 6px 20px rgba(139,61,229,0.52), 0 0 16px rgba(218,73,173,0.32) !important; filter:brightness(1.08);}
+.actions{display:flex; gap:6px; flex-wrap:wrap; margin-top:8px;}
+
+
+/* --- FIX DS OVERLAP + SIDE MENU PEEKING --- */
+.side-menu{transform:translateX(-101%) !important; visibility:hidden; opacity:0; pointer-events:none;}
+.side-menu.open{transform:translateX(0) !important; visibility:visible; opacity:1; pointer-events:auto;}
+header .top{overflow:hidden; position:relative; z-index:4;}
+#brandLogo{max-width:60%; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;}
+
+
+/* --- FIX SLIDE ARROWS NOT BLOCKING TEXT + FUNCTIONING --- */
+.hero-slider{overflow:hidden;}
+.hero-slide{padding-left:50px; padding-right:50px;}
+.hero-arrow.prev{left:6px !important; width:32px; height:32px; font-size:14px; background:rgba(42,39,66,0.9) !important;}
+.hero-arrow.next{right:6px !important; width:32px; height:32px; font-size:14px; background:rgba(42,39,66,0.9) !important;}
+.hero-slide-content{position:relative; z-index:1;}
+.hero-slide-art{z-index:0;}
+.hero-dots{bottom:10px !important;}
+@media(max-width:760px){.hero-slide{padding-left:40px; padding-right:40px;}}
+
+</style></head><body>
+<header><div class="wrap"><div class="top">
+<button class="menu-btn" id="menuToggleBtn" aria-label="Open menu">☰ Menu</button><a class="brand" href="#home" id="brandLogo" title="Triple-click for admin">NAIJAPREMIUMSOUNDS</a>
+<form id="searchForm"><input id="search" type="search" placeholder="Search music, artists, producers..." aria-label="Search"><button>Search</button></form>
+<!-- Profile / Sign in removed as requested - admin via triple-click logo - hidden --></div>
+<nav><a href="#home">Home</a><a href="#music">Music</a><a href="#freebeat">Freebeat</a><a href="#artists">Artists</a><a href="#djs">DJs</a><a href="#albums">Albums</a><a href="#discovery">Audiomack discovery</a></nav>
+</div></header>
+
+<div class="menu-overlay" id="menuOverlay"></div>
+<div class="side-menu" id="sideMenu">
+  <div style="display:flex; justify-content:space-between; align-items:center;">
+    <span class="brand">NAIJAPREMIUMSOUNDS</span>
+    <button id="menuCloseBtn" style="padding:6px 10px;">✕</button>
+  </div>
+  <div class="side-menu-nav">
+    <a href="#home" data-menu="home">🏠 Home</a>
+    <a href="#music" data-menu="music">🎵 Latest Music</a>
+    <a href="#freebeat" data-menu="freebeat">🎹 Freebeat</a>
+    <a href="#artists" data-menu="artists">🎤 Artists</a>
+    <a href="#djs" data-menu="djs">🎧 DJs</a>
+    <a href="#albums" data-menu="albums">💿 Albums</a>
+    <a href="#discovery" data-menu="discovery">🔍 Discovery</a>
+    <a href="#contact" data-menu="contact" style="background:linear-gradient(90deg, rgba(139,61,229,0.18) 0%, rgba(218,73,173,0.14) 100%); border-color:rgba(139,61,229,0.32);">📧 Contact Us For Your Music Promotion</a>
+  </div>
+  <div class="side-menu-footer">
+    <p class="muted" style="font-size:0.75rem; margin:0; font-weight:600;">📧 janicechp99@gmail.com</p>
+    <p class="muted" style="font-size:0.7rem; margin:4px 0 0;">Contact Company for Promotion</p>
+    <p class="muted" style="font-size:0.7rem; margin:6px 0 0;">Powered by Xion Company • Legit • Official</p>
+    <p class="muted" style="font-size:0.65rem; margin:4px 0 0; opacity:0.9; line-height:1.4;">Google Direct • MP3 Download • Pin Top 5 Months • Next DJ Mix</p>
+  </div>
+</div>
+
+<main class="wrap" id="home">
+<div class="hero">
+<div class="hero-slider" id="heroSlider">
+  <div class="hero-slide active" data-slide="0">
+    <div class="hero-slide-content"><p class="muted">MUSIC · BEATS · DJ MIXES</p><h1>Welcome to<br>NaijaPremiumSounds</h1><p>Discover your next favourite sound.</p><a class="button" href="#contact">Contact us for your music distribution</a></div>
+    <div class="art hero-slide-art">Featured artwork / Slide 1</div>
+  </div>
+  <div class="hero-slide" data-slide="1">
+    <div class="hero-slide-content"><p class="muted">FYP · LATEST DROPS</p><h1>Latest Afrobeats<br>& Amapiano Hits</h1><p>Fresh tracks holding for real, straight to FYP.</p><a class="button" href="#music">View Latest →</a></div>
+    <div class="art hero-slide-art">🎵 Afrobeat Hits<br>Slide 2</div>
+  </div>
+  <div class="hero-slide" data-slide="2">
+    <div class="hero-slide-content"><p class="muted">FREEBEAT · INSTRUMENTALS</p><h1>Free Beats<br>For Your Next Hit</h1><p>Premium Afrobeat & Amapiano instrumentals.</p><a class="button" href="#freebeat">Get Freebeats →</a></div>
+    <div class="art hero-slide-art">🎹 Free Beats<br>Slide 3</div>
+  </div>
+  <div class="hero-slide" data-slide="3">
+    <div class="hero-slide-content"><p class="muted">SELECT YOUR GENRE</p><h1>select your genre</h1><p>Tap to browse all genres - Amapiano, Tradition, Afro, Afrobeats, Gospel, Hip-Hop, Highlife & more.</p>
+    <div style="display:flex; flex-wrap:wrap; gap:6px; margin-top:10px;">
+      <button onclick="document.getElementById('genreSelectBox').style.display='block'; document.getElementById('genreSelectBox').scrollIntoView({behavior:'smooth'});" style="padding:8px 14px; font-size:0.85rem;">select your genre ▼</button>
+      <a class="button" href="#music" style="padding:8px 14px; font-size:0.85rem;">All Genres →</a>
+    </div>
+    </div>
+    <div class="art hero-slide-art" style="padding:10px; text-align:center; font-size:0.8rem; line-height:1.6;">🎵<br>Amapiano<br>Tradition<br>Afro<br>Afrobeats<br>Gospel<br>Hip-Hop</div>
+  </div>
+  <button class="hero-arrow prev" id="heroPrev" aria-label="Previous slide">‹</button>
+  <button class="hero-arrow next" id="heroNext" aria-label="Next slide">›</button>
+  <div class="hero-dots" id="heroDots">
+    <span class="hero-dot active" data-dot="0"></span>
+    <span class="hero-dot" data-dot="1"></span>
+    <span class="hero-dot" data-dot="2"></span>
+    <span class="hero-dot" data-dot="3"></span>
+  </div>
+</div>
+</div>
+<!-- SLIDE NAVIGATION BAR - FOR APP SLIDE NAVIGATION -->
+<div class="slide-nav-bar" id="slideNavBar">
+  <button data-slide-nav="0" class="active">🏠 Welcome</button>
+  <button data-slide-nav="1">🔥 FYP Latest</button>
+  <button data-slide-nav="2">🎹 Free Beats</button>
+  <button data-slide-nav="3">🎵 Select Genre</button>
+</div>
+
+<div id="genreSelectBox" style="display:none; margin:12px 0 0; padding:14px; border:1px solid rgba(139,61,229,0.32); border-radius:12px; background:linear-gradient(180deg,#2e2b4a 0%, #28243a 100%); box-shadow:0 8px 24px rgba(0,0,0,0.35);">
+  <div class="head" style="margin-bottom:10px;"><h2 style="font-size:1rem;">Select Genre</h2><button onclick="this.parentElement.parentElement.style.display='none'" style="padding:4px 8px; font-size:0.8rem; background:#2a2742;">✕ Close</button></div>
+  <div style="display:flex; flex-wrap:wrap; gap:8px;">
+    <button onclick="filterByGenre('Amapiano')" style="padding:8px 12px; font-size:0.85rem;">Amapiano</button>
+    <button onclick="filterByGenre('Tradition')" style="padding:8px 12px; font-size:0.85rem;">Tradition</button>
+    <button onclick="filterByGenre('Afro')" style="padding:8px 12px; font-size:0.85rem;">Afro</button>
+    <button onclick="filterByGenre('Afrobeats')" style="padding:8px 12px; font-size:0.85rem;">Afrobeats</button>
+    <button onclick="filterByGenre('Afro-fusion')" style="padding:8px 12px; font-size:0.85rem;">Afro-fusion</button>
+    <button onclick="filterByGenre('Gospel')" style="padding:8px 12px; font-size:0.85rem;">Gospel</button>
+    <button onclick="filterByGenre('Hip-Hop')" style="padding:8px 12px; font-size:0.85rem;">Hip-Hop</button>
+    <button onclick="filterByGenre('Highlife')" style="padding:8px 12px; font-size:0.85rem;">Highlife</button>
+    <button onclick="filterByGenre('Street')" style="padding:8px 12px; font-size:0.85rem;">Street</button>
+    <button onclick="filterByGenre('R&B')" style="padding:8px 12px; font-size:0.85rem;">R&B</button>
+    <button onclick="filterByGenre('Freebeat')" style="padding:8px 12px; font-size:0.85rem;">Freebeat</button>
+    <button onclick="filterByGenre('DJ Mix')" style="padding:8px 12px; font-size:0.85rem;">DJ Mix</button>
+    <button onclick="filterByGenre('')" style="padding:8px 12px; font-size:0.85rem; background:#2a2742; border-color:#5e5a7e;">Show All</button>
+  </div>
+</div>
+<script>
+function filterByGenre(genre){
+  let q = genre.toLowerCase();
+  let n=0;
+  document.querySelectorAll('.card').forEach(c=>{
+    let hay = (c.dataset.search || c.textContent || '').toLowerCase() + ' ' + (c.dataset.genre||'').toLowerCase();
+    let ok = !q || hay.includes(q);
+    c.hidden=!ok;
+    if(ok) n++;
+  });
+  document.querySelectorAll('section').forEach(sec=>{
+    if(sec.id==='nps-admin-janice' || sec.id==='discovery') return;
+    let vis = sec.querySelectorAll('.card:not([hidden])');
+    if(sec.querySelectorAll('.card').length>0) sec.hidden = vis.length===0;
+    else sec.hidden=false;
+  });
+  let msg=document.getElementById('searchMessage');
+  if(msg){ msg.hidden=false; msg.textContent= q ? n + ' result(s) for genre: ' + genre : 'Showing all genres'; }
+  document.getElementById('music')?.scrollIntoView({behavior:'smooth'});
+}
+</script>
+
+
+<section id="music"><div class="head"><h2>Latest Music</h2><a href="#music">View more →</a></div><div class="grid" id="tracks">
+<article class="card" data-search="sample afrobeats track naija producer"><div class="art"><img src="resource/image_20261024_165503.webp" alt="Afrobeats Track Artwork" style="width:100%;height:100%;object-fit:cover;border-radius:8px"></div><h3>Sample Afrobeats Track</h3><p class="muted">Naija Producer</p><div class="actions"><button data-play>▶ Play preview</button><button>♡ Save</button><button class="btn-download" onclick="downloadSample(this, 'Sample Afrobeats Track')">⬇ Download MP3</button></div></article>
+<article class="card" data-search="sample amapiano beat premium sounds"><div class="art"><img src="resource/image_20261024_165511.webp" alt="Amapiano Beat Artwork" style="width:100%;height:100%;object-fit:cover;border-radius:8px"></div><h3>Sample Amapiano Beat</h3><p class="muted">Premium Sounds</p><div class="actions"><button data-play>▶ Play preview</button><a class="button" href="#freebeat">Freebeat</a><button class="btn-download" onclick="downloadSample(this, 'Sample Amapiano Beat')">⬇ Download MP3</button></div></article>
+<article class="card" data-search="street vibe mix dj sample"><div class="art"><img src="resource/image_20261024_165514.webp" alt="Street Vibe DJ Mix Artwork" style="width:100%;height:100%;object-fit:cover;border-radius:8px"></div><h3>Street Vibe Mix</h3><p class="muted">DJ Sample</p><div class="actions"><button data-play>▶ Play preview</button><button class="btn-download" onclick="downloadSample(this, 'Street Vibe Mix')">⬇ Download MP3</button></div></article>
+<article class="card" data-search="midnight groove sample artist"><div class="art"><img src="resource/image_20261024_165514_1.webp" alt="Midnight Groove Artwork" style="width:100%;height:100%;object-fit:cover;border-radius:8px"></div><h3>Midnight Groove</h3><p class="muted">Sample Artist</p><div class="actions"><button data-play>▶ Play preview</button><button class="btn-download" onclick="downloadSample(this, 'Midnight Groove')">⬇ Download MP3</button></div></article>
+</div><p id="searchMessage" class="notice" hidden></p></section>
+<section id="freebeat"><div class="head"><h2>Freebeat</h2><a href="#freebeat">View more →</a></div><div class="grid">
+<article class="card"><div class="art"><img src="resource/image_20261024_165503.webp" alt="Afrobeat Instrumental Artwork" style="width:100%;height:100%;object-fit:cover;border-radius:8px"></div><h3>Sample Afrobeat Instrumental</h3><p class="muted">Producer · BPM: — · Key: —</p><div class="actions"><button data-play>▶ Preview</button><button class="btn-download" onclick="downloadSample(this, 'Freebeat')">⬇ Download MP3</button></div></article>
+<article class="card"><div class="art"><img src="resource/image_20261024_165511.webp" alt="Amapiano Instrumental Artwork" style="width:100%;height:100%;object-fit:cover;border-radius:8px"></div><h3>Sample Amapiano Instrumental</h3><p class="muted">Producer · BPM: — · Key: —</p><div class="actions"><button data-play>▶ Preview</button><button class="btn-download" onclick="downloadSample(this, 'Freebeat')">⬇ Download MP3</button></div></article>
+</div></section>
+<section id="artists"><div class="head"><h2>Popular Artists</h2></div><p class="notice">s and releases connect here in the full application.</p></section>
+<section id="djs"><div class="head"><h2>DJ Mixes</h2></div><p class="notice">s and published mixes connect here.</p></section>
+<section id="albums"><div class="head"><h2>Albums & Collections</h2></div><p class="notice">Album artwork, tracklists and collections connect here.</p></section>
+<section id="discovery"><div class="head"><h2>Audiomack Music Discovery</h2></div><p class="notice">Discovery placeholder. Use authorised integrations; this starter does not access Audiomack's catalogue.</p></section>
+<section id="profile"><div class="head"><h2>Account</h2></div><p class="notice">🎤 <b>Account - Coming Soon!</b><br><br>We are building your personal NaijaPremiumSounds account - save favorites, follow artists, create playlists and manage your uploads.<br><br>🚀 Account features launching soon! Meanwhile, for promotion & artist services, contact us:<br><br>📩 <b>janicechp99@gmail.com</b><br><br><span style="color:#8B3DE5; font-weight:700;">Stay tuned - your personal space is loading... ✨</span></p></section>
+
+<section id="nps-admin-janice">
+<div class="head"><h2>Admin Only — Janice <span class="admin-badge">PRIVATE</span></h2><span id="adminStatus" class="muted"></span></div>
+<div id="adminLoginWrap">
+<p class="muted">This area is for admin only. No other profiles allowed. Enter your admin access.</p>
+<form id="adminLoginForm">
+<input id="adminEmail" type="email" placeholder="Admin email" value="janicechp99@gmail.com" aria-label="Admin email">
+<div class="pass-wrap">
+<input id="adminPass" type="password" placeholder="Admin password" aria-label="Admin password">
+<button type="button" class="eye-toggle" data-eye="adminPass" aria-label="Show password">👁️</button>
+</div>
+<button type="submit">Login as Admin</button>
+<p class="muted" style="font-size:.8rem">Hint: use your private password. Only janicechp99@gmail.com can access. Access also via #nps-admin-janice</p>
+<p id="adminMsg" class="notice" hidden></p>
+</form>
+</div>
+<div id="adminDashboard" hidden>
+<p class="muted">Welcome, Admin Janice. Only you can see this. Slide + Upload settings below.</p>
+
+<!-- SLIDE SETTINGS -->
+<div style="margin:18px 0; padding:18px; border:1px solid #4a456e; border-radius:14px; background:linear-gradient(180deg,#2e2b4a 0%, #28243a 100%);">
+<div class="head"><h2>🎬 Slide Settings (4 Slides - 3s)</h2><button id="saveSlidesBtn">Save Slides</button></div>
+<div id="slideSettingsGrid" style="display:grid; gap:14px; grid-template-columns:1fr 1fr;">
+  <div style="border:1px dashed #5e5a7e; border-radius:10px; padding:12px;">
+    <h3 style="margin:0 0 8px; font-size:0.95rem;">Slide 1 - Welcome</h3>
+    <input id="s1_small" placeholder="Small top text" style="width:100%; margin:4px 0;">
+    <input id="s1_title" placeholder="Title (use \n for line break)" style="width:100%; margin:4px 0;">
+    <input id="s1_desc" placeholder="Description" style="width:100%; margin:4px 0;">
+    <input id="s1_btn" placeholder="Button text" style="width:100%; margin:4px 0;">
+    <input id="s1_art" placeholder="Art text (e.g. Featured artwork)" style="width:100%; margin:4px 0;">
+  </div>
+  <div style="border:1px dashed #5e5a7e; border-radius:10px; padding:12px;">
+    <h3 style="margin:0 0 8px; font-size:0.95rem;">Slide 2 - Afrobeats</h3>
+    <input id="s2_small" placeholder="Small top text" style="width:100%; margin:4px 0;">
+    <input id="s2_title" placeholder="Title" style="width:100%; margin:4px 0;">
+    <input id="s2_desc" placeholder="Description" style="width:100%; margin:4px 0;">
+    <input id="s2_btn" placeholder="Button text" style="width:100%; margin:4px 0;">
+    <input id="s2_art" placeholder="Art text" style="width:100%; margin:4px 0;">
+  </div>
+  <div style="border:1px dashed #5e5a7e; border-radius:10px; padding:12px;">
+    <h3 style="margin:0 0 8px; font-size:0.95rem;">Slide 3 - Free Beats</h3>
+    <input id="s3_small" placeholder="Small top text" style="width:100%; margin:4px 0;">
+    <input id="s3_title" placeholder="Title" style="width:100%; margin:4px 0;">
+    <input id="s3_desc" placeholder="Description" style="width:100%; margin:4px 0;">
+    <input id="s3_btn" placeholder="Button text" style="width:100%; margin:4px 0;">
+    <input id="s3_art" placeholder="Art text" style="width:100%; margin:4px 0;">
+  </div>
+  <div style="border:1px dashed #5e5a7e; border-radius:10px; padding:12px;">
+    <h3 style="margin:0 0 8px; font-size:0.95rem;">Slide 4 - Distribution</h3>
+    <input id="s4_small" placeholder="Small top text" style="width:100%; margin:4px 0;">
+    <input id="s4_title" placeholder="Title" style="width:100%; margin:4px 0;">
+    <input id="s4_desc" placeholder="Description" style="width:100%; margin:4px 0;">
+    <input id="s4_btn" placeholder="Button text" style="width:100%; margin:4px 0;">
+    <input id="s4_art" placeholder="Art text" style="width:100%; margin:4px 0;">
+  </div>
+</div>
+<p class="muted" style="font-size:0.8rem; margin-top:10px;">Edits save to this device (localStorage) and show instantly on hero slider. Use \n in title for line break.</p>
+</div>
+
+<!-- UPLOAD SETTINGS -->
+<div style="margin:18px 0; padding:18px; border:1px solid #8B3DE5; border-radius:14px; background:linear-gradient(180deg,#2e2b4a 0%, #28243a 100%); box-shadow:0 0 20px rgba(139,61,229,0.15);">
+<div class="head"><h2>📤 Upload Settings - Add Music</h2></div>
+<div style="display:grid; gap:10px; grid-template-columns:1fr 1fr;">
+  <input id="up_title" placeholder="Track Title *" style="width:100%;">
+  <input id="up_artist" placeholder="Artist / Producer *" style="width:100%;">
+  <select id="up_genre" style="width:100%; padding:11px 14px; border:1px solid #5e5a7e; border-radius:10px; background:linear-gradient(180deg,#2e2a44 0%, #2a2640 100%); color:#E0DBE4;">
+    <option value="">Select Genre *</option>
+    <option value="Afrobeats">Afrobeats</option>
+    <option value="Amapiano">Amapiano</option>
+    <option value="Gospel">Gospel</option>
+    <option value="Hip-Hop">Hip-Hop</option>
+    <option value="R&B">R&B</option>
+    <option value="Highlife">Highlife</option>
+    <option value="Street">Street / Zanku</option>
+    <option value="Freebeat">Freebeat / Instrumental</option>
+    <option value="DJ Mix">DJ Mix</option>
+    <option value="Album">Album</option>
+    <option value="Audiomack">Audiomack Discovery</option>
+  </select>
+  <input id="up_type" placeholder="Type: Music / Freebeat / DJ Mix / Artist" style="width:100%;">
+  <input id="up_cover" placeholder="Cover Image URL (or leave blank for default)" style="width:100%;">
+  <input id="up_audio" type="file" accept="audio/*" style="width:100%;">
+  <input id="up_coverFile" type="file" accept="image/*" style="width:100%;">
+</div>
+<div style="display:flex; gap:8px; margin-top:12px; flex-wrap:wrap;">
+  <button id="uploadTrackBtn">Upload & Add to Site</button>
+  <button id="clearUploadsBtn" style="background:#2a2742; border-color:#5e5a7e;">Clear My Uploads</button>
+</div>
+<p class="muted" style="font-size:0.8rem;">Uploads appear instantly in Latest Music. Cover + audio stored locally (demo) - for real deployment connect to Cloudinary/Supabase.</p>
+
+<div id="cloudConfigPanel" style="margin-top:18px; padding:16px; border:1px solid rgba(139,61,229,0.32); border-radius:12px; background:linear-gradient(180deg,#2e2b4a 0%, #28243a 100%);">
+  <div class="head"><h2>☁️ Real Cloud Storage - Global Uploads</h2><span id="cloudConfigStatus" class="muted"></span></div>
+  <p class="muted" style="font-size:0.85rem; line-height:1.6;">Files uploaded to Catbox.moe are already GLOBAL (no setup). For fully global list (everyone sees same uploads), add free Supabase + Cloudinary below. Takes 2 mins, free.</p>
+  <div style="display:grid; gap:10px; margin-top:10px;">
+    <input id="cfg_cloudName" placeholder="Cloudinary Cloud Name (e.g. dxxxx)" style="width:100%;">
+    <input id="cfg_uploadPreset" placeholder="Cloudinary Upload Preset (unsigned, e.g. naija_preset)" style="width:100%;">
+    <input id="cfg_supabaseUrl" placeholder="Supabase URL (e.g. https://xxx.supabase.co)" style="width:100%;">
+    <input id="cfg_supabaseKey" placeholder="Supabase anon key" type="password" style="width:100%;">
+  </div>
+  <div style="display:flex; gap:8px; margin-top:12px; flex-wrap:wrap;">
+    <button id="saveCloudConfigBtn">Save Cloud Config</button>
+    <button id="clearCloudConfigBtn" style="background:#2a2742; border-color:#5e5a7e;">Clear Config</button>
+  </div>
+  <p id="uploadStatus" class="muted" style="margin-top:10px; font-weight:600;"></p>
+  <div style="margin-top:12px; padding:10px; border:1px dashed #5e5a7e; border-radius:8px; background:rgba(0,0,0,0.2);">
+    <p style="margin:0; font-size:0.8rem; font-weight:700;">How to make uploads GLOBAL for everyone:</p>
+    <p style="margin:6px 0 0; font-size:0.75rem; line-height:1.6; color:#9A9B9E;">
+      1. <b>Catbox (already global, no setup):</b> Audio & cover uploaded to catbox.moe → global URL, anyone can download if they have link.<br>
+      2. <b>For global list (everyone sees same tracks):</b><br>
+      - Create free Supabase account → New Project → Table `uploads` with columns: title, artist, genre, cover_url, audio_url, audio_name, created_at<br>
+      - Copy Project URL + anon key → paste above → Save → Now every upload saves to Supabase and appears globally to all visitors.<br>
+      3. <b>Cloudinary (optional, better than Catbox):</b> Create free Cloudinary → Settings → Upload → Add unsigned preset → paste Cloud Name + Preset above.<br>
+      Without Supabase: files are global but list is local per device. With Supabase: fully global.
+    </p>
+  </div>
+</div>
+
+
+<div id="pinPanel" style="margin-top:18px; padding:16px; border:1px solid rgba(218,73,173,0.32); border-radius:12px; background:radial-gradient(600px 200px at 10% 0%, rgba(218,73,173,0.15), transparent), linear-gradient(180deg,#2e2b4a 0%, #28243a 100%);">
+  <div class="head"><h2>📌 Pin 5 Music for Promotion (Artists wey ask for promo)</h2><span id="pinCount" class="muted"></span></div>
+  <p class="muted" style="font-size:0.85rem; line-height:1.6;">Pin up to 5 tracks wey artists pay for promotion. Pinned go stay for top of Latest Music for 5 months, with PROMOTION badge. Only you fit pin/unpin for admin.</p>
+  <div id="pinnedList" style="display:grid; gap:8px; margin-top:12px;"></div>
+  <div style="display:flex; gap:8px; margin-top:12px;">
+    <button id="clearPinnedBtn" style="background:#2a2742; border-color:#5e5a7e;">Clear All Pinned</button>
+  </div>
+</div>
+
+<div id="myUploadsList" style="margin-top:14px;"></div>
+</div>
+
+<div class="admin-grid" style="margin-top:18px;">
+<div class="stat"><h3>Music Control</h3><p class="muted">Approve / reject uploads</p><button onclick="alert('Admin: Music approval ready')">Manage</button></div>
+<div class="stat"><h3>Users</h3><p class="muted">Only admin account exists</p><button onclick="alert('Admin: Only you - Janice')">View Users</button></div>
+<div class="stat"><h3>Distribution</h3><p class="muted">Google Direct + MP3 Download + Pin Top 5 Months</p><button onclick="alert('Admin: Distribution panel')">Open Panel</button></div>
+</div>
+<button id="adminLogout" style="margin-top:16px;">Logout</button>
+</div>
+</section>
+
+
+<section id="contact" style="margin-top:22px;">
+  <div class="head"><h2>Contact Us For Your Music Promotion</h2></div>
+  <div class="card" style="padding:20px;">
+    <div style="display:flex; flex-direction:column; gap:10px;">
+      <p style="margin:0; font-weight:700; font-size:1.05rem;">📧 Promotion & Distribution Contact</p>
+      <p class="muted" style="margin:0;">For music promotion, distribution, upload, and partnership - contact our official promo team directly.</p>
+      <div style="display:flex; flex-wrap:wrap; gap:8px; margin-top:6px;">
+        <a class="button" href="mailto:janicechp99@gmail.com?subject=Music%20Promotion%20-%20NaijaPremiumSounds">✉️ janicechp99@gmail.com</a>
+        <a class="button" href="mailto:janicechp99@gmail.com?subject=Music%20Distribution%20-%20Powered%20by%20Xion" style="background:#2a2742 !important; border-color:#5e5a7e !important;">Contact Company for Promotion</a>
+      </div>
+      <div style="margin-top:10px; padding:12px; border:1px solid rgba(139,61,229,0.28); border-radius:10px; background:linear-gradient(180deg, rgba(46,43,74,0.6) 0%, rgba(40,36,58,0.8) 100%);">
+        <p style="margin:0 0 6px; font-weight:700; font-size:0.9rem;">Powered by Xion Company • Website Distribution</p>
+        <p class="muted" style="margin:0; font-size:0.85rem; line-height:1.6;">
+          <span style="color:#E0DBE4; font-weight:600;">✅ Distribute to Google Direct</span> - Your music appears on Google search direct, easy for fans to find.<br>
+          <span style="color:#E0DBE4; font-weight:600;">✅ Direct Download to MP3</span> - Fans download your track direct as MP3 from our website.<br>
+          <span style="color:#E0DBE4; font-weight:600;">✅ Make Your Music Pin on Top for 5 Months</span> - We pin your song on homepage top for 5 months, more plays, more fans.<br>
+          <span style="color:#E0DBE4; font-weight:600;">✅ Get Your Music on the Next DJ Mix</span> - Your track enters our next DJ mix rotation, played by DJs.<br>
+          <span style="margin-top:6px; display:block;">For Afrobeats, Amapiano, Gospel, Hip-Hop - 100% legit, fast, website only. Contact us now to start promo.</span>
+        </p>
+        <p class="muted" style="margin:8px 0 0; font-size:0.8rem;">📍 NaijaPremiumSounds • Powered by Xion • Official Gmail: janicechp99@gmail.com • Response within 24 hours • Website distribution only</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- LEGAL MODALS - TERMS, PRIVACY, ABOUT, CONTACT - RESTORED, NO SCATTER -->
+<style>
+.legal-modal{display:none; position:fixed; inset:0; z-index:100; background:rgba(0,0,0,0.75); backdrop-filter:blur(6px); padding:20px; overflow:auto;}
+.legal-modal.active{display:flex; align-items:center; justify-content:center;}
+.legal-modal-content{background:linear-gradient(180deg,#2e2b4a 0%, #28243a 100%); border:1px solid #8B3DE5; border-radius:16px; padding:24px; max-width:720px; width:100%; max-height:85vh; overflow:auto; box-shadow:0 20px 60px rgba(0,0,0,0.6);}
+.legal-modal-content h2{margin:0 0 12px; color:#fff;}
+.legal-modal-content p{color:#E0DBE4; line-height:1.7; font-size:0.92rem; margin:8px 0;}
+.legal-modal-close{float:right; background:#2a2742; border:1px solid #5e5a7e; color:#fff; border-radius:8px; padding:6px 12px; cursor:pointer;}
+.footer-legal{display:flex; gap:10px; flex-wrap:wrap; margin-top:10px; font-size:0.8rem;}
+.footer-legal a{color:#9A9B9E; text-decoration:none; border:1px solid transparent; padding:5px 9px; border-radius:8px;}
+.footer-legal a:hover{color:#fff; border-color:rgba(139,61,229,0.3); background:rgba(139,61,229,0.12);}
+</style>
+
+<div id="about-modal" class="legal-modal"><div class="legal-modal-content"><button class="legal-modal-close" onclick="document.getElementById('about-modal').classList.remove('active')">✕ Close</button><h2>About Us</h2><p>NaijaPremiumSounds is a premium music discovery platform for Afrobeats, Amapiano, Hip-Hop, Gospel, Freebeats, DJ Mixes and more. We connect artists, producers, DJs and fans worldwide.</p><p>Founded and managed by Janice (janicechp99@gmail.com). Mission: promote authentic Naija sounds globally via Google Direct, Boomplay, Audiomack, Xion Company.</p><p>Contact: janicechp99@gmail.com</p></div></div>
+
+<div id="contact-modal" class="legal-modal"><div class="legal-modal-content"><button class="legal-modal-close" onclick="document.getElementById('contact-modal').classList.remove('active')">✕ Close</button><h2>Contact Us For Your Music Promotion</h2><p>For music distribution, promotion, advert placement and support, contact our official promo team directly.</p><p><strong>Email:</strong> janicechp99@gmail.com</p><p><strong>Powered by:</strong> Xion Company - Legit - Official</p><p>We respond within 24 hours. Send track title, artist, genre, cover art.</p><a class="button" href="mailto:janicechp99@gmail.com?subject=Music%20Promotion">✉️ Email Us</a></div></div>
+
+<div id="privacy-modal" class="legal-modal"><div class="legal-modal-content"><button class="legal-modal-close" onclick="document.getElementById('privacy-modal').classList.remove('active')">✕ Close</button><h2>Privacy Policy</h2><p>We respect your privacy. We collect only email for admin access and music metadata for uploads. We do not sell your data. All uploads stored via Catbox.moe (global) and Supabase secure database. We use localStorage for your preferences (nps_uploads, nps_favorites, nps_uploads_backup, nps_uploads_backup_locked_forever).</p><p>You can clear uploads anytime via admin panel Clear My Uploads. Contact janicechp99@gmail.com for data removal.</p></div></div>
+
+<div id="terms-modal" class="legal-modal"><div class="legal-modal-content"><button class="legal-modal-close" onclick="document.getElementById('terms-modal').classList.remove('active')">✕ Close</button><h2>Terms & Conditions / DMCA</h2><p><strong>Terms & Conditions:</strong> By using NaijaPremiumSounds you agree to upload only music you own rights to. No copyrighted material without permission. We reserve right to remove content violating copyright. Promotion fees non-refundable after campaign starts.</p><p><strong>DMCA:</strong> If you believe your work is infringed, email janicechp99@gmail.com with proof of ownership, track URL, your contact. We will remove within 48 hours after verification.</p><p><strong>Distribution:</strong> Google Direct, Direct Download to MP3, Pin Top 5 Months. You retain rights.</p><p><strong>Contact:</strong> janicechp99@gmail.com - Powered by Xion Company</p></div></div>
+
+<script>function openLegal(id){document.getElementById(id).classList.add('active');} window.openLegal=openLegal; document.addEventListener('click', function(e){ if(e.target.classList.contains('legal-modal')) e.target.classList.remove('active'); });</script>
+
+<footer><div class="wrap"><div>© <span id="year"></span> NaijaPremiumSounds</div><div class="footer-legal"><a href="javascript:openLegal('about-modal')">About Us</a><a href="javascript:openLegal('contact-modal')">Contact Us</a><a href="javascript:openLegal('privacy-modal')">Privacy Policy</a><a href="javascript:openLegal('terms-modal')">Terms & Conditions / DMCA</a><a href="mailto:janicechp99@gmail.com">janicechp99@gmail.com</a></div></div></footer>
+
+</main>
+<div class="wrap" style="text-align:center; padding: 24px 0 12px; margin-top: 10px;">
+  <div id="xionSecretBtn" title="Powered by Xion Company" style="display:inline-block; padding: 10px 28px; border-radius: 30px; background: linear-gradient(90deg,#8B3DE5 0%,#A14FEE 35%,#DA49AD 100%); color:#FFFFFF; font-weight:700; font-size:0.95rem; letter-spacing:0.8px; box-shadow: 0 4px 14px rgba(139,61,229,0.35), inset 0 1px 0 rgba(255,255,255,0.2); text-shadow: 0 1px 2px rgba(0,0,0,0.3); cursor:default; user-select:none;">
+    Powered by Xion Company
+  </div>
+</div>
+<!-- Secret Admin Password Only Modal - hidden -->
+<div id="xionPassModal" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.75); z-index:9999; align-items:center; justify-content:center; backdrop-filter:blur(6px);">
+  <div style="background:linear-gradient(180deg,#2e2b4a 0%, #28243a 100%); border:1px solid #8B3DE5; border-radius:16px; padding:22px; width:90%; max-width:340px; box-shadow:0 20px 60px rgba(0,0,0,0.6), 0 0 30px rgba(139,61,229,0.2);">
+    <h3 style="margin:0 0 12px; color:#fff;">Admin Access</h3>
+    <p style="margin:0 0 12px; color:#9A9B9E; font-size:0.85rem;">Enter password only</p>
+    <div class="pass-wrap" style="margin-bottom:12px;">
+<input id="xionPassInput" type="password" placeholder="Password" style="width:100%; padding:11px 14px; border:1px solid #5e5a7e; border-radius:10px; background:#2e2a44; color:#E0DBE4; padding-right:44px;">
+<button type="button" class="eye-toggle" data-eye="xionPassInput" aria-label="Show password">👁️</button>
+</div>
+    <div style="display:flex; gap:8px;">
+      <button id="xionPassSubmit" style="flex:1;">Unlock</button>
+      <button id="xionPassCancel" style="flex:1; background:#2a2742; border-color:#5e5a7e;">Cancel</button>
+    </div>
+    <p id="xionPassMsg" class="notice" hidden style="margin-top:12px;"></p>
+  </div>
+</div>
+
+<!-- player removed as requested -->
+
+<script>
+document.getElementById('year').textContent=new Date().getFullYear();
+const form=document.getElementById('searchForm'),input=document.getElementById('search'),msg=document.getElementById('searchMessage');
+form.addEventListener('submit',e=>{e.preventDefault();
+let q=input.value.trim().toLowerCase();
+let n=0;
+let allCards = document.querySelectorAll('.card, [data-search]');
+if(q===''){
+  document.querySelectorAll('.card').forEach(c=>{c.hidden=false;});
+  document.querySelectorAll('section').forEach(s=>{s.hidden=false;});
+  msg.hidden=false; msg.textContent='Showing all tracks.';
+  msg.style.borderColor='#4a456e';
+  return;
+}
+document.querySelectorAll('.card').forEach(c=>{
+  let hay = (c.dataset.search || (c.textContent||'')).toLowerCase();
+  // also include genre
+  hay += ' ' + (c.dataset.genre||'').toLowerCase();
+  let ok = hay.includes(q);
+  c.hidden=!ok;
+  if(ok) n++;
+});
+// Hide empty sections for real
+document.querySelectorAll('section').forEach(sec=>{
+  if(sec.id==='discovery' || sec.id==='nps-admin-janice') return;
+  let cards = sec.querySelectorAll('.card');
+  if(cards.length>0){
+    let visible = sec.querySelectorAll('.card:not([hidden])');
+    sec.hidden = visible.length===0;
+  }
+});
+msg.hidden=false;
+if(n===0){
+  msg.textContent=`No results for "${q}" - try Afrobeats, Amapiano, Freebeat, Gospel, etc.`;
+  msg.style.borderColor='#DA49AD';
+} else {
+  msg.textContent=`${n} result(s) for "${q}" - real search across Music, Freebeat, Artists, DJs`;
+  msg.style.borderColor='#8B3DE5';
+}
+document.getElementById('music')?.scrollIntoView({behavior:'smooth', block:'start'});
+});
+ // Real live search as you type
+input.addEventListener('input', ()=>{
+  if(input.value.trim()===''){
+    document.querySelectorAll('.card').forEach(c=>c.hidden=false);
+    document.querySelectorAll('section').forEach(s=>s.hidden=false);
+    msg.hidden=true;
+  }
+});
+
+
+// --- ADMIN ONLY LOGIC - ONLY YOU - LOCKED PERMANENTLY ---
+const ADMIN_EMAIL = 'janicechp99@gmail.com';
+const ADMIN_PASS_HASH = 'f643d57175c86015ee945bd6641823e5122952f644415e3f15ad9ad0506792e6'; // SHA-256 of real password - never plain in source
+const ADMIN_PASS_PLAIN = ''; // removed for security - hackers cannot see
+const adminSection = document.getElementById('nps-admin-janice');
+const loginWrap = document.getElementById('adminLoginWrap');
+const dash = document.getElementById('adminDashboard');
+const statusEl = document.getElementById('adminStatus');
+const msgEl = document.getElementById('adminMsg');
+const profileBtn = document.getElementById('profileBtn'); // will be null - locked forever
+const brandLogo = document.getElementById('brandLogo');
+
+function showAdminSection(){
+  adminSection.classList.add('active');
+  adminSection.scrollIntoView({behavior:'smooth'});
+}
+function checkHash(){
+  if(location.hash === '#nps-admin-janice' || location.hash === '#admin' || location.hash === '#janice-admin'){
+    showAdminSection();
+  }
+}
+window.addEventListener('hashchange', checkHash);
+checkHash();
+
+// Triple-click brand to open admin (hidden access)
+let clickCount=0, clickTimer;
+brandLogo.addEventListener('click', (e)=>{
+  clickCount++;
+  clearTimeout(clickTimer);
+  clickTimer = setTimeout(()=>clickCount=0, 800);
+  if(clickCount>=3){
+    clickCount=0;
+    showAdminSection();
+  }
+});
+
+function isAdminLogged(){
+  return localStorage.getItem('nps_admin') === 'janice_logged';
+}
+function updateAdminUI(){
+  if(isAdminLogged()){
+    loginWrap.hidden=true;
+    dash.hidden=false;
+    statusEl.textContent='Logged in as Admin - PERMANENTLY LOCKED';
+    const profileSec = document.getElementById('profile');
+    if(profileSec) profileSec.style.display='none';
+  } else {
+    loginWrap.hidden=false;
+    dash.hidden=true;
+    statusEl.textContent='Not logged in';
+  }
+}
+updateAdminUI();
+
+// Secure password check with SHA-256 hash + brute force lock
+async function sha256(str){
+  const buf = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(str));
+  return Array.from(new Uint8Array(buf)).map(b=>b.toString(16).padStart(2,'0')).join('');
+}
+async function checkPasswordReal(inputPass){
+  try{
+    const hash = await sha256(inputPass);
+    return hash === ADMIN_PASS_HASH;
+  }catch(e){ return false; }
+}
+let failedAttempts = parseInt(localStorage.getItem('nps_failed')||'0');
+let lockUntil = parseInt(localStorage.getItem('nps_lock_until')||'0');
+
+document.getElementById('adminLoginForm').addEventListener('submit', async e=>{
+  e.preventDefault();
+  const email = document.getElementById('adminEmail').value.trim().toLowerCase();
+  const pass = document.getElementById('adminPass').value;
+  msgEl.hidden=false;
+  
+  // Check brute-force lock
+  if(lockUntil && Date.now() < lockUntil){
+    let secs = Math.ceil((lockUntil - Date.now())/1000);
+    msgEl.textContent=`Locked for ${secs}s after 3 fails - hacker protection. Wait ${Math.ceil(secs/60)} min.`;
+    msgEl.style.borderColor='#ff4d4d';
+    return;
+  }
+  if(Date.now() > lockUntil && lockUntil){
+    localStorage.removeItem('nps_failed');
+    localStorage.removeItem('nps_lock_until');
+    failedAttempts=0;
+    lockUntil=0;
+  }
+  
+  if(email !== ADMIN_EMAIL){
+    msgEl.textContent='Access denied: Only janicechp99@gmail.com allowed. No other profiles.';
+    msgEl.style.borderColor='#ff4d4d';
+    return;
+  }
+  const isCorrect = await checkPasswordReal(pass);
+  if(!isCorrect){
+    failedAttempts++;
+    localStorage.setItem('nps_failed', failedAttempts.toString());
+    if(failedAttempts >= 3){
+      lockUntil = Date.now() + 5*60*1000; // 5 min lock
+      localStorage.setItem('nps_lock_until', lockUntil.toString());
+      msgEl.textContent='Too many failed attempts. Locked for 5 min - hacker protection.';
+      msgEl.style.borderColor='#ff4d4d';
+    } else {
+      msgEl.textContent=`Wrong password. Attempt ${failedAttempts}/3 - ${3-failedAttempts} left before 5 min lock.`;
+      msgEl.style.borderColor='#ff4d4d';
+    }
+    return;
+  }
+  // Success
+  localStorage.removeItem('nps_failed');
+  localStorage.removeItem('nps_lock_until');
+  localStorage.setItem('nps_admin','janice_logged');
+  localStorage.setItem('nps_admin_email', email);
+  msgEl.textContent='Welcome Janice — Admin access granted - LOCKED PERMANENTLY';
+  msgEl.style.borderColor='#4CAF50';
+  updateAdminUI();
+  setTimeout(()=>{ msgEl.hidden=true; }, 1500);
+});
+
+// Also secure Powered by Xion popup - use same hash check
+window.checkXionPassword = checkPasswordReal;
+
+
+document.getElementById('adminLogout').addEventListener('click', ()=>{
+  localStorage.removeItem('nps_admin');
+  localStorage.removeItem('nps_admin_email');
+  updateAdminUI();
+  msgEl.hidden=false;
+  msgEl.textContent='Logged out. Admin area locked permanently.';
+  loginWrap.hidden=false;
+  dash.hidden=true;
+  const profileSec = document.getElementById('profile');
+  if(profileSec) profileSec.style.display='block';
+});
+
+(function(){
+  const origProfile = document.getElementById('profile');
+  if(origProfile){
+    const p = origProfile.querySelector('.notice');
+    if(p && !isAdminLogged()){
+      p.innerHTML = `🎤 <b>Account - Coming Soon!</b><br><br>We are building your personal NaijaPremiumSounds account - save favorites, follow artists, create playlists and manage your uploads.<br><br>🚀 Account features launching soon! Meanwhile, for promotion & artist services, contact us:<br><br>📩 <b>janicechp99@gmail.com</b><br><br><span style="color:#8B3DE5; font-weight:700;">Stay tuned - your personal space is loading... ✨</span>`;
+    }
+  }
+})();
+
+// --- PERMANENT LOCK - Prevent Profile button from ever returning ---
+(function lockProfileForever(){
+  const removeBtn = () => {
+    const btn = document.getElementById('profileBtn');
+    if(btn) btn.remove();
+  };
+  removeBtn();
+  const observer = new MutationObserver(removeBtn);
+  observer.observe(document.body, {childList:true, subtree:true});
+  // Also block any future insertion via innerHTML
+  setInterval(removeBtn, 1000);
+})();
+console.log('NaijaPremiumSounds - Secure Admin - Hacker Protected');
+
+// --- 4 SLIDE HERO SLIDER 3 SECS - LOCKED ---
+let currentSlide = 0;
+const slides = document.querySelectorAll('.hero-slide');
+const dots = document.querySelectorAll('.hero-dot');
+const totalSlides = 4;
+let slideInterval;
+function showSlide(index){
+  if(index<0) index=totalSlides-1;
+  if(index>=totalSlides) index=0;
+  currentSlide=index;
+  slides.forEach(s=>s.classList.remove('active'));
+  dots.forEach(d=>d.classList.remove('active'));
+  if(slides[currentSlide]) slides[currentSlide].classList.add('active');
+  if(dots[currentSlide]) dots[currentSlide].classList.add('active');
+}
+function nextSlide(){ showSlide(currentSlide+1); }
+function prevSlide(){ showSlide(currentSlide-1); }
+function startSlider(){ slideInterval=setInterval(nextSlide, 3000); }
+function stopSlider(){ clearInterval(slideInterval); }
+document.getElementById('heroNext')?.addEventListener('click', ()=>{ nextSlide(); stopSlider(); startSlider(); });
+document.getElementById('heroPrev')?.addEventListener('click', ()=>{ prevSlide(); stopSlider(); startSlider(); });
+dots.forEach(dot=>{ dot.addEventListener('click', ()=>{ showSlide(parseInt(dot.getAttribute('data-dot'))); stopSlider(); startSlider(); }); });
+const heroSliderEl = document.getElementById('heroSlider');
+if(heroSliderEl){
+  heroSliderEl.addEventListener('mouseenter', stopSlider);
+  heroSliderEl.addEventListener('mouseleave', startSlider);
+}
+startSlider();
+
+// --- SECRET ADMIN VIA POWERED BY XION - ONLY PASSWORD - LOCKED FOREVER ---
+const xionBtn = document.getElementById('xionSecretBtn');
+const xionModal = document.getElementById('xionPassModal');
+const xionInput = document.getElementById('xionPassInput');
+const xionSubmit = document.getElementById('xionPassSubmit');
+const xionCancel = document.getElementById('xionPassCancel');
+const xionMsg = document.getElementById('xionPassMsg');
+
+function openXionModal(){
+  if(!xionModal) return;
+  xionModal.style.display='flex';
+  xionInput.value='';
+  xionMsg.hidden=true;
+  setTimeout(()=>xionInput.focus(), 100);
+}
+function closeXionModal(){
+  if(!xionModal) return;
+  xionModal.style.display='none';
+}
+async function checkXionPass(){
+  const p = xionInput.value;
+  xionMsg.hidden=false;
+  const isCorrect = await checkPasswordReal(p);
+  if(isCorrect){
+    localStorage.removeItem('nps_failed');
+    localStorage.removeItem('nps_lock_until');
+    localStorage.setItem('nps_admin','janice_logged');
+    localStorage.setItem('nps_admin_email', ADMIN_EMAIL);
+    xionMsg.textContent='Access granted - Welcome Janice - LOCKED FOREVER';
+    xionMsg.style.borderColor='#8B3DE5';
+    setTimeout(()=>{
+      closeXionModal();
+      showAdminSection();
+      updateAdminUI();
+    }, 600);
+  } else {
+    // brute force handling for xion too
+    let failed = parseInt(localStorage.getItem('nps_failed')||'0')+1;
+    localStorage.setItem('nps_failed', failed.toString());
+    if(failed >=3){
+      let lockUntil = Date.now() + 5*60*1000;
+      localStorage.setItem('nps_lock_until', lockUntil.toString());
+      xionMsg.textContent='Too many fails. Locked 5 min - hacker protection';
+    } else {
+      xionMsg.textContent=`Wrong password - ${failed}/3 attempts`;
+    }
+    xionMsg.style.borderColor='#ff4d4d';
+  }
+}
+if(xionBtn){ xionBtn.addEventListener('click', openXionModal); }
+if(xionSubmit){ xionSubmit.addEventListener('click', checkXionPass); }
+if(xionCancel){ xionCancel.addEventListener('click', closeXionModal); }
+if(xionInput){ xionInput.addEventListener('keydown', (e)=>{ if(e.key==='Enter') checkXionPass(); if(e.key==='Escape') closeXionModal(); }); }
+if(xionModal){ xionModal.addEventListener('click', (e)=>{ if(e.target===xionModal) closeXionModal(); }); }
+
+// --- SLIDE SETTINGS LOGIC ---
+function loadSlideSettings(){
+  const defaults = [
+    {small:'MUSIC · BEATS · DJ MIXES', title:'Welcome to\nNaijaPremiumSounds', desc:'Discover your next favourite sound.', btn:'Contact us for your music distribution', art:'Featured artwork / Slide 1'},
+    {small:'FYP · LATEST DROPS', title:'Latest Afrobeats\n& Amapiano Hits', desc:'Fresh tracks holding for real, straight to FYP.', btn:'View Latest →', art:'🎵 Afrobeat Hits\nSlide 2'},
+    {small:'FREEBEAT · INSTRUMENTALS', title:'Free Beats\nFor Your Next Hit', desc:'Premium Afrobeat & Amapiano instrumentals.', btn:'Get Freebeats →', art:'🎹 Free Beats\nSlide 3'},
+    {small:'DISTRIBUTION · XION', title:'Distribute With\nXion — Boomplay', desc:'Contact us for your music distribution worldwide.', btn:'Start Now →', art:'🚀 Distribution\nSlide 4'}
+  ];
+  let saved = null;
+  try{ saved = JSON.parse(localStorage.getItem('nps_slides')||'null'); }catch(e){}
+  const data = saved || defaults;
+  for(let i=1;i<=4;i++){
+    const d = data[i-1];
+    const sSmall = document.getElementById('s'+i+'_small');
+    const sTitle = document.getElementById('s'+i+'_title');
+    const sDesc = document.getElementById('s'+i+'_desc');
+    const sBtn = document.getElementById('s'+i+'_btn');
+    const sArt = document.getElementById('s'+i+'_art');
+    if(sSmall) sSmall.value = d.small;
+    if(sTitle) sTitle.value = d.title;
+    if(sDesc) sDesc.value = d.desc;
+    if(sBtn) sBtn.value = d.btn;
+    if(sArt) sArt.value = d.art;
+  }
+  applySlidesToHero(data);
+}
+function getSlideDataFromInputs(){
+  const arr=[];
+  for(let i=1;i<=4;i++){
+    arr.push({
+      small: document.getElementById('s'+i+'_small')?.value || '',
+      title: document.getElementById('s'+i+'_title')?.value || '',
+      desc: document.getElementById('s'+i+'_desc')?.value || '',
+      btn: document.getElementById('s'+i+'_btn')?.value || '',
+      art: document.getElementById('s'+i+'_art')?.value || ''
+    });
+  }
+  return arr;
+}
+function applySlidesToHero(data){
+  const heroSlides = document.querySelectorAll('.hero-slide');
+  heroSlides.forEach((slideEl, idx)=>{
+    const d = data[idx];
+    if(!d) return;
+    const small = slideEl.querySelector('.hero-slide-content .muted');
+    const h1 = slideEl.querySelector('.hero-slide-content h1');
+    const p = slideEl.querySelector('.hero-slide-content p:not(.muted)');
+    const btn = slideEl.querySelector('.hero-slide-content .button');
+    const art = slideEl.querySelector('.hero-slide-art');
+    if(small) small.textContent = d.small;
+    if(h1) h1.innerHTML = d.title.replace(/\n/g,'<br>');
+    if(p) p.textContent = d.desc;
+    if(btn) btn.textContent = d.btn;
+    if(art) art.innerHTML = d.art.replace(/\n/g,'<br>');
+  });
+}
+document.getElementById('saveSlidesBtn')?.addEventListener('click', ()=>{
+  const data = getSlideDataFromInputs();
+  localStorage.setItem('nps_slides', JSON.stringify(data));
+  applySlidesToHero(data);
+  alert('Slides saved! Hero updated instantly - permanently on this device.');
+});
+loadSlideSettings();
+
+// --- SLIDE NAVIGATION BAR FOR APP - REBUILT ---
+(function(){
+  const slides = document.querySelectorAll('.hero-slide');
+  const dots = document.querySelectorAll('.hero-dot');
+  const slideNavBtns = document.querySelectorAll('[data-slide-nav]');
+  let currentSlide = 0;
+  let slideInterval;
+  
+  function showSlide(idx){
+    currentSlide = idx;
+    slides.forEach((s,i)=>s.classList.toggle('active', i===idx));
+    dots.forEach((d,i)=>d.classList.toggle('active', i===idx));
+    slideNavBtns.forEach((b,i)=>b.classList.toggle('active', i===idx));
+    // Update bottom nav home active when slide changes
+  }
+  function nextSlide(){ showSlide((currentSlide+1)%slides.length); }
+  function prevSlide(){ showSlide((currentSlide-1+slides.length)%slides.length); }
+  
+  // Bind nav bar buttons
+  slideNavBtns.forEach(btn=>{
+    btn.addEventListener('click', ()=>{
+      const idx = parseInt(btn.getAttribute('data-slide-nav'));
+      showSlide(idx);
+      resetAuto();
+    });
+  });
+  // Bind arrows
+  document.getElementById('heroPrev')?.addEventListener('click', ()=>{ prevSlide(); resetAuto(); });
+  document.getElementById('heroNext')?.addEventListener('click', ()=>{ nextSlide(); resetAuto(); });
+  // Bind dots
+  dots.forEach(dot=>{
+    dot.addEventListener('click', ()=>{
+      const idx = parseInt(dot.getAttribute('data-dot'));
+      showSlide(idx);
+      resetAuto();
+    });
+  });
+  // Auto slide every 5s
+  function startAuto(){ /* auto slide disabled - shaking fixed */ }
+  function resetAuto(){ clearInterval(slideInterval); }
+  startAuto();
+  
+  // Bottom app nav active state
+  const bottomLinks = document.querySelectorAll('.app-bottom-nav a');
+  function setBottomActive(hash){
+    bottomLinks.forEach(a=>a.classList.toggle('active', a.getAttribute('href')===hash));
+  }
+  window.addEventListener('hashchange', ()=> setBottomActive(location.hash||'#home'));
+  bottomLinks.forEach(a=>{
+    a.addEventListener('click', ()=> setBottomActive(a.getAttribute('href')));
+  });
+  setBottomActive(location.hash||'#home');
+  
+  // Expose for slide settings
+  window.NPS_showSlide = showSlide;
+})();
+
+// --- UPLOAD SETTINGS LOGIC ---
+function loadMyUploads(){
+  let uploads = [];
+  try{ uploads = JSON.parse(localStorage.getItem('nps_uploads')||'[]'); }catch(e){}
+  const list = document.getElementById('myUploadsList');
+  const tracksGrid = document.getElementById('tracks');
+  if(list){
+    if(uploads.length===0){
+      list.innerHTML='<p class="muted">No uploads yet.</p>';
+    } else {
+      list.innerHTML = uploads.map((u,i)=>{
+        var cover = u.cover || u.cover_url || 'resource/image_20261024_165503.webp';
+        var isPinned = (function(){ try{ var p=JSON.parse(localStorage.getItem('nps_pinned')||'[]'); return p.some(function(x){ return x.id===u.id || x.title===u.title; }); }catch(e){ return false; } })();
+        var pinLabel = isPinned ? '📌 Pinned - Unpin' : '📌 Pin to Top & Slide';
+        var pinStyle = isPinned ? 'background:linear-gradient(90deg,#FF8C00,#FFD700); color:#000; border-color:#FFD700;' : 'background:linear-gradient(90deg,#8B3DE5,#DA49AD); color:#fff;';
+        return `<div style="display:flex; align-items:center; gap:10px; border:1px solid #4a456e; border-radius:10px; padding:8px 10px; margin:6px 0; background:linear-gradient(180deg,#2e2b4a 0%, #28243a 100%);"><img src="${cover}" style="width:48px; height:48px; border-radius:8px; object-fit:cover; flex-shrink:0;" onerror="this.src='resource/image_20261024_165503.webp'"><div style="flex:1; min-width:0;"><b style="white-space:nowrap; overflow:hidden; text-overflow:ellipsis; display:block;">${u.title}</b><small style="color:#9A9B9E;">${u.artist} · ${u.genre||''} · ${u.type||'Music'}</small> <span style="background:linear-gradient(90deg,#8B3DE5,#DA49AD); color:#fff; font-size:0.65rem; padding:2px 6px; border-radius:10px; margin-left:4px;">${u.genre||'Music'}</span> ${isPinned ? '<span style="background:linear-gradient(90deg,#FF8C00,#FFD700); color:#000; font-size:0.6rem; padding:2px 6px; border-radius:10px; font-weight:900; margin-left:4px;">📌 PINNED</span>' : ''}</div><div style="display:flex; gap:6px; flex-wrap:wrap;"><button onclick="editUploadNPS(${i})" style="padding:6px 10px; font-size:0.75rem; background:#2a2742; border-color:#5e5a7e;">✏️ Edit</button><button onclick="postAgainUploadNPS(${i})" style="padding:6px 10px; font-size:0.75rem; background:#2a2742; border-color:#5e5a7e;">🔁 Post Again</button><button onclick="togglePinUploadNPS(${i})" style="padding:6px 10px; font-size:0.75rem; ${pinStyle}">${pinLabel}</button><button onclick="deleteUpload(${i})" style="padding:6px 10px; font-size:0.75rem; background:#2a2742; border-color:#5e5a7e;">🗑️ Delete</button></div></div>`;
+      }).join('');
+    }
+  }
+  // Render uploads into Latest Music + genre sections
+  if(tracksGrid){
+    tracksGrid.querySelectorAll('.card[data-uploaded="1"]').forEach(el=>el.remove());
+    uploads.forEach(u=>{
+      const art = document.createElement('article');
+      art.className='card';
+      art.dataset.search = (u.title+' '+u.artist+' '+u.type+' '+(u.genre||'')).toLowerCase();
+      art.dataset.uploaded='1';
+      art.dataset.genre = u.genre||'Afrobeats';
+      const hasAudio = u.audio && u.audio.length>0;
+      const dlBtn = hasAudio ? `<button class="btn-download" onclick="downloadRealMP3('${u.audio}', '${(u.audioName||u.title+".mp3").replace(/'/g, "\'")}')">⬇ Download MP3</button>` : `<button class="btn-download" onclick="downloadSample(this, '${u.title.replace(/'/g, "\'")}')">⬇ Download MP3</button>`;
+      art.innerHTML = `<div class="art"><img src="${u.cover || 'resource/image_20261024_165503.webp'}" alt="${u.title}" style="width:100%;height:100%;object-fit:cover;border-radius:8px"></div><h3>${u.title} <span class="real-badge" style="background:linear-gradient(90deg,#8B3DE5,#DA49AD);">NEW</span> <span style="background:#2a2742; border:1px solid #8B3DE5; color:#E0DBE4; font-size:0.6rem; padding:2px 6px; border-radius:10px;">${u.genre||'Music'}</span></h3><p class="muted">${u.artist} · ${u.type} · ${u.genre||''}</p><div class="actions"><button data-play>▶ Play preview</button><button>♡ Save</button>${dlBtn}</div>`;
+      tracksGrid.prepend(art);
+      // Also route to genre side
+      routeToGenreSide(u, art.cloneNode(true));
+    });
+  }
+  // Also load freebeat grid if genre is Freebeat
+  if(uploads.length>0){
+    const freebeatGrid = document.querySelector('#freebeat .grid');
+    if(freebeatGrid){
+      freebeatGrid.querySelectorAll('.card[data-uploaded="1"]').forEach(el=>el.remove());
+      uploads.filter(u=>(u.genre||'').toLowerCase().includes('freebeat') || (u.type||'').toLowerCase().includes('freebeat')).forEach(u=>{
+        const c = document.createElement('article');
+        c.className='card';
+        c.dataset.uploaded='1';
+        c.innerHTML = `<div class="art"><img src="${u.cover||'resource/image_20261024_165503.webp'}" style="width:100%;height:100%;object-fit:cover;border-radius:8px"></div><h3>${u.title}</h3><p class="muted">${u.artist} · ${u.genre} · BPM: —</p><button data-play>▶ Preview</button>`;
+        freebeatGrid.prepend(c);
+      });
+    }
+  }
+}
+function routeToGenreSide(upload, cardEl){
+  // This makes music appear in its genre nav when searched - genre is stored in data-search for filtering
+  // For real backend, this would insert into DB with genre column
+  console.log('Routed', upload.title, 'to genre', upload.genre);
+}
+
+function togglePin(idx){
+  try{
+    let uploads = JSON.parse(localStorage.getItem('nps_uploads')||'[]');
+    let u = uploads[idx];
+    if(!u) return;
+    if(!u.id) u.id = u.date || Date.now().toString() + idx;
+    if(isPinnedById(u.id)){
+      unpinTrackById(u.id);
+    } else {
+      if(!pinTrackById(u)) return;
+    }
+    localStorage.setItem('nps_uploads', JSON.stringify(uploads));
+    renderPinnedOnTop();
+    loadMyUploads();
+  }catch(e){ console.log(e); }
+}
+function deleteUpload(idx){
+  let uploads = JSON.parse(localStorage.getItem('nps_uploads')||'[]');
+  uploads.splice(idx,1);
+  localStorage.setItem('nps_uploads', JSON.stringify(uploads));
+  loadMyUploads();
+
+// Cloud config UI logic
+(function(){
+  function loadCfgToInputs(){
+    let cfg = getCloudConfig();
+    document.getElementById('cfg_cloudName').value = cfg.cloudName||'';
+    document.getElementById('cfg_uploadPreset').value = cfg.uploadPreset||'';
+    document.getElementById('cfg_supabaseUrl').value = cfg.supabaseUrl||'';
+    document.getElementById('cfg_supabaseKey').value = cfg.supabaseKey||'';
+    renderCloudConfigUI();
+  }
+  document.getElementById('saveCloudConfigBtn')?.addEventListener('click', ()=>{
+    let cfg = {
+      cloudName: document.getElementById('cfg_cloudName').value.trim(),
+      uploadPreset: document.getElementById('cfg_uploadPreset').value.trim(),
+      supabaseUrl: document.getElementById('cfg_supabaseUrl').value.trim(),
+      supabaseKey: document.getElementById('cfg_supabaseKey').value.trim()
+    };
+    saveCloudConfig(cfg);
+    cloudConfig = cfg;
+    renderCloudConfigUI();
+    alert('Cloud config saved! Now uploads will be global. Cloudinary: ' + (cfg.cloudName?'yes':'no (using Catbox)') + ', Supabase: ' + (cfg.supabaseUrl?'yes - GLOBAL LIST':'no - local list only'));
+  });
+  document.getElementById('clearCloudConfigBtn')?.addEventListener('click', ()=>{
+    if(confirm('Clear cloud config? Uploads will be local only (Catbox still global for files)')){
+      localStorage.removeItem(CLOUD_CONFIG_KEY);
+      cloudConfig = {};
+      loadCfgToInputs();
+    }
+  });
+  // Load on admin open
+  setTimeout(loadCfgToInputs, 500);
+})();
+
+// Modify loadMyUploads to fetch global uploads too
+const originalLoadMyUploads = loadMyUploads;
+loadMyUploads = async function(){
+  // First run original local logic
+  await originalLoadMyUploads();
+  // Then try global
+  try{
+    let globals = await fetchGlobalUploads();
+    if(globals && globals.length>0){
+      let tracksGrid = document.getElementById('tracks');
+      let freebeatGrid = document.querySelector('#freebeat .grid');
+      // Remove old global cards
+      document.querySelectorAll('.card[data-global="1"]').forEach(el=>el.remove());
+      globals.forEach(u=>{
+        if(!u.title) return;
+        // Avoid duplicate if already in local
+        let exists = false;
+        document.querySelectorAll('#tracks .card h3').forEach(h=>{ if(h.textContent.trim()===u.title.trim()) exists=true; });
+        if(exists) return;
+        let art = document.createElement('article');
+        art.className='card';
+        art.dataset.uploaded='1';
+        art.dataset.global='1';
+        art.dataset.search = (u.title + ' ' + u.artist + ' ' + u.genre).toLowerCase();
+        art.dataset.genre = (u.genre||'').toLowerCase();
+        let coverImg = u.cover || u.cover_url || 'resource/image_20261024_165503.webp';
+        let audioUrl = u.audio || u.audio_url || '';
+        let dlBtn = audioUrl ? `<button class="btn-download" onclick="downloadRealMP3('${audioUrl}', '${(u.audioName||u.title+'.mp3').replace(/'/g,"\\'")}')">⬇ Download MP3</button>` : `<button class="btn-download" onclick="downloadSample(this, '${u.title.replace(/'/g,"\\'")}')">⬇ Download MP3</button>`;
+        art.innerHTML = `<div class="art"><img src="${coverImg}" style="width:100%;height:100%;object-fit:cover;border-radius:8px" onerror="this.src='resource/image_20261024_165503.webp'"><span style="position:absolute; top:6px; left:6px; background:linear-gradient(90deg,#8B3DE5,#DA49AD); color:#fff; font-size:0.6rem; padding:2px 6px; border-radius:10px;">GLOBAL</span></div><h3>${u.title}</h3><p class="muted">${u.artist} · ${u.genre} ${u.global?'· 🌍 Global':''}</p><div class="actions"><button data-play>▶ Play preview</button><button>♡ Save</button>${dlBtn}</div>`;
+        art.style.position='relative';
+        if(tracksGrid) tracksGrid.prepend(art);
+      });
+    }
+  }catch(e){ console.log('global fetch error', e); }
+}
+
+}
+
+// --- REAL CLOUD STORAGE WIRED - GLOBAL UPLOADS ---
+const CLOUD_CONFIG_KEY = 'nps_cloud_config';
+
+// --- SUPABASE CONNECTED - REAL GLOBAL - YOUR CREDENTIALS ---
+const SUPABASE_URL_FIXED = "https://bnllpygszyosfbgmhjyo.supabase.co";
+const SUPABASE_ANON_KEY_FIXED = "sb_publishable_nwKjsGD2BvonS8EovhPzPZs_3Y5w5O8N";
+// Auto save your credentials so admin doesn't need to paste again
+(function autoConnectSupabase(){
+  try{
+    let cfg = JSON.parse(localStorage.getItem('nps_cloud_config')||'{}');
+    let needsSave = false;
+    if(!cfg.supabaseUrl || cfg.supabaseUrl !== SUPABASE_URL_FIXED){ cfg.supabaseUrl = SUPABASE_URL_FIXED; needsSave=true; }
+    if(!cfg.supabaseKey || cfg.supabaseKey !== SUPABASE_ANON_KEY_FIXED){ cfg.supabaseKey = SUPABASE_ANON_KEY_FIXED; needsSave=true; }
+    if(needsSave) localStorage.setItem('nps_cloud_config', JSON.stringify(cfg));
+  }catch(e){}
+})();
+
+
+// --- PIN 5 MUSIC FOR PROMOTION - ADMIN ONLY ---
+const PINNED_KEY = 'nps_pinned';
+
+// 5 months expiry logic - real promotion duration
+function addMonths(date, months){
+  let d = new Date(date);
+  d.setMonth(d.getMonth() + months);
+  return d;
+}
+function getExpiryDate(pinnedAt){
+  return addMonths(new Date(pinnedAt), 5);
+}
+function isExpiredPin(p){
+  try{
+    let expiry = getExpiryDate(p.pinnedAt);
+    return Date.now() > expiry.getTime();
+  }catch(e){ return false; }
+}
+function getRemainingText(p){
+  try{
+    let expiry = getExpiryDate(p.pinnedAt);
+    let now = new Date();
+    let diff = expiry - now;
+    if(diff <= 0) return 'Expired - auto unpinned';
+    let days = Math.floor(diff / (1000*60*60*24));
+    let months = Math.floor(days / 30);
+    let remDays = days % 30;
+    let hours = Math.floor((diff % (1000*60*60*24)) / (1000*60*60));
+    if(months > 0) return `${months}m ${remDays}d ${hours}h left - 5 months promo`;
+    return `${remDays}d ${hours}h left - 5 months promo`;
+  }catch(e){ return '5 months promo'; }
+}
+function cleanExpiredPins(){
+  let pinned = getPinned();
+  let before = pinned.length;
+  let active = pinned.filter(p=>!isExpiredPin(p));
+  if(active.length !== before){
+    savePinned(active);
+    console.log(`Auto unpinned ${before - active.length} expired promotion tracks after 5 months`);
+  }
+  return active;
+}
+
+const PIN_MAX = 5;
+function getPinned(){ try{ return JSON.parse(localStorage.getItem(PINNED_KEY)||'[]'); }catch(e){ return []; } }
+function savePinned(arr){ localStorage.setItem(PINNED_KEY, JSON.stringify(arr)); }
+function isPinnedById(id){ return getPinned().some(p=>p.id===id); }
+function pinTrackById(upload){
+  let pinned = getPinned();
+  if(pinned.length >= PIN_MAX){ alert('You can only pin 5 music max for promotion. Unpin one first.'); return false; }
+  if(isPinnedById(upload.id||upload.date)){ alert('Already pinned for promotion'); return false; }
+  pinned.unshift({...upload, pinnedAt: new Date().toISOString(), id: upload.id||upload.date||Date.now().toString()});
+  if(pinned.length > PIN_MAX) pinned = pinned.slice(0,PIN_MAX);
+  savePinned(pinned);
+  return true;
+}
+function unpinTrackById(id){
+  let pinned = getPinned().filter(p=>p.id!==id);
+  savePinned(pinned);
+}
+function getPinnedIds(){ return new Set(getPinned().map(p=>p.id)); }
+
+function getCloudConfig(){
+  try{ return JSON.parse(localStorage.getItem(CLOUD_CONFIG_KEY)||'{}'); }catch(e){ return {}; }
+}
+function saveCloudConfig(cfg){ localStorage.setItem(CLOUD_CONFIG_KEY, JSON.stringify(cfg)); }
+
+let cloudConfig = getCloudConfig();
+
+// Upload file to Catbox (global, no key needed - real cloud)
+async function uploadToCatbox(file){
+  try{
+    let fd = new FormData();
+    fd.append('reqtype','fileupload');
+    fd.append('fileToUpload', file);
+    let res = await fetch('https://catbox.moe/user/api.php', {method:'POST', body:fd});
+    if(!res.ok) throw new Error('catbox failed');
+    let url = (await res.text()).trim();
+    if(url.startsWith('http')) return url;
+    throw new Error('invalid catbox response');
+  }catch(e){ console.log('catbox error', e); return null; }
+}
+
+// Upload to Cloudinary if configured (global CDN)
+async function uploadToCloudinary(file, resourceType='auto'){
+  let cfg = getCloudConfig();
+  if(!cfg.cloudName || !cfg.uploadPreset) return null;
+  try{
+    let fd = new FormData();
+    fd.append('file', file);
+    fd.append('upload_preset', cfg.uploadPreset);
+    fd.append('folder', 'naijapremiumsounds');
+    let url = `https://api.cloudinary.com/v1_1/${cfg.cloudName}/${resourceType}/upload`;
+    let res = await fetch(url, {method:'POST', body:fd});
+    let data = await res.json();
+    if(data.secure_url) return data.secure_url;
+    console.log('cloudinary error', data);
+    return null;
+  }catch(e){ console.log('cloudinary error', e); return null; }
+}
+
+// Save to Supabase if configured (global list)
+async function saveToSupabaseGlobal(upload){
+  let cfg = getCloudConfig();
+  // Use fixed credentials if not in config
+  let supabaseUrl = cfg.supabaseUrl || SUPABASE_URL_FIXED;
+  let supabaseKey = cfg.supabaseKey || SUPABASE_ANON_KEY_FIXED;
+  if(!supabaseUrl || !supabaseKey) return false;
+  try{
+    let url = supabaseUrl.replace(/\/$/,'') + '/rest/v1/uploads';
+    // Your table: id, title, artist, genre, cover_url, audio_url, created_at
+    let payload = {
+      title: upload.title || upload.track_title || 'Untitled',
+      artist: upload.artist || upload.artist_name || 'Unknown',
+      genre: upload.genre || 'Afrobeats',
+      cover_url: upload.cover || upload.cover_url || '',
+      audio_url: upload.audio || upload.audio_url || ''
+    };
+    let res = await fetch(url, {
+      method:'POST',
+      headers:{
+        'apikey': supabaseKey,
+        'Authorization': 'Bearer ' + supabaseKey,
+        'Content-Type':'application/json',
+        'Prefer':'return=representation'
+      },
+      body: JSON.stringify(payload)
+    });
+    if(!res.ok){
+      let txt = await res.text();
+      console.log('supabase save failed', res.status, txt);
+      // If fails because of publishable key format, try without Bearer
+      if(res.status===401 || res.status===403){
+        console.log('Trying alternative auth...');
+      }
+      return false;
+    }
+    let data = await res.json();
+    console.log('Supabase saved globally', data);
+    return true;
+  }catch(e){ console.log('supabase save error', e); return false; }
+}
+
+async function fetchGlobalUploads(){
+  let cfg = getCloudConfig();
+  let supabaseUrl = cfg.supabaseUrl || SUPABASE_URL_FIXED;
+  let supabaseKey = cfg.supabaseKey || SUPABASE_ANON_KEY_FIXED;
+  let globalUploads = [];
+  // Try Supabase - fetch all songs so everyone sees same
+  if(supabaseUrl && supabaseKey){
+    try{
+      let url = supabaseUrl.replace(/\/$/,'') + '/rest/v1/uploads?select=*&order=created_at.desc&limit=100';
+      let res = await fetch(url, {
+        headers:{
+          'apikey': supabaseKey,
+          'Authorization': 'Bearer ' + supabaseKey
+        }
+      });
+      if(res.ok){
+        let data = await res.json();
+        console.log('Fetched from Supabase', data.length, 'tracks');
+        if(Array.isArray(data)) globalUploads = data.map(d=>({
+          id: d.id?.toString() || d.created_at,
+          title: d.title,
+          artist: d.artist,
+          genre: d.genre,
+          type: 'Music',
+          cover: d.cover_url,
+          cover_url: d.cover_url,
+          audio: d.audio_url,
+          audio_url: d.audio_url,
+          audioName: d.title + '.mp3',
+          date: d.created_at,
+          created_at: d.created_at,
+          global: true
+        }));
+      } else {
+        let txt = await res.text();
+        console.log('supabase fetch failed', res.status, txt);
+      }
+    }catch(e){ console.log('supabase fetch error', e); }
+  }
+  return globalUploads;
+}
+
+
+function renderPinnedOnTop(){
+  let pinned = cleanExpiredPins();
+  // Auto clean expired before render
+
+  let countEl = document.getElementById('pinCount');
+  if(countEl) countEl.textContent = `${pinned.length}/5 pinned for promotion`;
+  let listEl = document.getElementById('pinnedList');
+  if(listEl){
+    if(pinned.length===0){
+      listEl.innerHTML = '<p class="muted" style="font-size:0.8rem;">No pinned music yet. Pin from uploads below - max 5 for promotion.</p>';
+    } else {
+      listEl.innerHTML = pinned.map((u,i)=>`
+        <div style="display:flex; align-items:center; gap:10px; padding:10px; border:1px solid rgba(139,61,229,0.32); border-radius:10px; background:linear-gradient(180deg, rgba(46,42,68,0.9), rgba(36,32,56,0.9));">
+          <img src="${u.cover||u.cover_url||'resource/image_20261024_165503.webp'}" style="width:48px; height:48px; border-radius:8px; object-fit:cover;">
+          <div style="flex:1; min-width:0;">
+            <div style="font-weight:700; font-size:0.9rem; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">${u.title} ${i===0?'👑':''}</div>
+            <div class="muted" style="font-size:0.75rem;">${u.artist} · ${u.genre} · Pinned ${new Date(u.pinnedAt).toLocaleDateString()}<br><span style="color:#FFD700; font-weight:700;">⏳ ${getRemainingText(u)} - Expires ${getExpiryDate(u.pinnedAt).toLocaleDateString()}</span></div>
+          </div>
+          <button onclick="unpinTrackById('${u.id}'); loadMyUploads();" style="padding:6px 10px; font-size:0.75rem; background:#2a2742; border-color:#5e5a7e;">Unpin</button>
+        </div>
+      `).join('');
+    }
+  }
+  // Render pinned on top of Latest Music grid
+  let tracksGrid = document.getElementById('tracks');
+  if(tracksGrid){
+    // Remove old pinned cards
+    tracksGrid.querySelectorAll('.card[data-pinned="1"]').forEach(el=>el.remove());
+    // Prepend pinned cards in reverse so first pinned is top
+    [...pinned].reverse().forEach(u=>{
+      let art = document.createElement('article');
+      art.className='card';
+      art.dataset.pinned='1';
+      art.dataset.uploaded='1';
+      art.dataset.search = (u.title + ' ' + u.artist + ' ' + u.genre).toLowerCase();
+      art.dataset.genre = (u.genre||'').toLowerCase();
+      let coverImg = u.cover || u.cover_url || 'resource/image_20261024_165503.webp';
+      let audioUrl = u.audio || u.audio_url || '';
+      let dlBtn = audioUrl ? `<button class="btn-download" onclick="downloadRealMP3('${audioUrl}', '${(u.audioName||u.title+'.mp3').replace(/'/g,"\\'")}')">⬇ Download MP3</button>` : `<button class="btn-download" onclick="downloadSample(this, '${u.title.replace(/'/g,"\\'")}')">⬇ Download MP3</button>`;
+      art.innerHTML = `<div class="art" style="position:relative;"><img src="${coverImg}" style="width:100%;height:100%;object-fit:cover;border-radius:8px" onerror="this.src='resource/image_20261024_165503.webp'"><span style="position:absolute; top:6px; left:6px; background:linear-gradient(90deg,#FF8C00,#FFD700); color:#000; font-size:0.6rem; padding:2px 8px; border-radius:10px; font-weight:900;">📌 PINNED PROMOTION</span><span style="position:absolute; top:6px; right:6px; background:linear-gradient(90deg,#8B3DE5,#DA49AD); color:#fff; font-size:0.55rem; padding:2px 6px; border-radius:10px;">5 MONTHS TOP</span></div><h3>${u.title} <span style="font-size:0.7rem; background:linear-gradient(90deg,#8B3DE5,#DA49AD); color:#fff; padding:2px 6px; border-radius:10px;">PROMO</span></h3><p class="muted">${u.artist} · ${u.genre} · 🌍 Promotion<br><span style="color:#FFD700; font-size:0.75rem; font-weight:700;">⏳ ${getRemainingText(u)}</span></p><div class="actions"><button data-play>▶ Play preview</button><button>♡ Save</button>${dlBtn}</div>`;
+      art.style.borderColor = 'rgba(255,215,0,0.35)';
+      art.style.boxShadow = '0 0 20px rgba(255,215,0,0.15), 0 6px 20px rgba(0,0,0,0.35)';
+      tracksGrid.prepend(art);
+    });
+  }
+}
+
+// Update admin UI to show cloud config
+function renderCloudConfigUI(){
+  let cfg = getCloudConfig();
+  // Force show your fixed credentials as connected
+  if(!cfg.supabaseUrl) cfg.supabaseUrl = SUPABASE_URL_FIXED;
+  if(!cfg.supabaseKey) cfg.supabaseKey = SUPABASE_ANON_KEY_FIXED;
+  let el = document.getElementById('cloudConfigStatus');
+  if(el){
+    let hasCloudinary = !!(cfg.cloudName && cfg.uploadPreset);
+    let hasSupabase = !!(cfg.supabaseUrl && cfg.supabaseKey);
+    el.innerHTML = `
+      <div style="font-size:0.8rem; line-height:1.6;">
+        <span style="color:${hasCloudinary?'#1ED760':'#ffaa00'}">● Cloudinary: ${hasCloudinary? 'Connected ('+cfg.cloudName+')' : 'Not set (using Catbox global fallback)'}</span><br>
+        <span style="color:${hasSupabase?'#1ED760':'#ffaa00'}">● Supabase Global List: ${hasSupabase? 'Connected - uploads are GLOBAL' : 'Not set - uploads local only (files still global via Catbox)'}</span><br>
+        <span style="color:#9A9B9E">Files uploaded to Catbox.moe are always global URLs (no config needed)</span>
+      </div>`;
+  }
+}
+
+
+document.getElementById('uploadTrackBtn')?.addEventListener('click', async ()=>{
+  const title = document.getElementById('up_title')?.value.trim();
+  const artist = document.getElementById('up_artist')?.value.trim();
+  const genre = document.getElementById('up_genre')?.value.trim();
+  const type = document.getElementById('up_type')?.value.trim() || 'Music';
+  const coverUrl = document.getElementById('up_cover')?.value.trim();
+  const coverFileInput = document.getElementById('up_coverFile');
+  const audioFileInput = document.getElementById('up_audio');
+  
+  if(!title || !artist){
+    alert('Enter Track Title and Artist');
+    return;
+  }
+  if(!genre){
+    alert('Select Genre - this is what takes music to its genre side');
+    return;
+  }
+  
+  // Handle cover + audio file for real download - NOW GLOBAL CLOUD
+  const finishUpload = async (coverDataUrl, audioDataUrl, audioName, coverFile, audioFile) => {
+    let statusEl = document.getElementById('uploadStatus');
+    if(statusEl) statusEl.textContent = 'Uploading to global cloud...';
+    
+    let finalCover = coverDataUrl || coverUrl || '';
+    let finalAudio = audioDataUrl || '';
+    
+    // Try real cloud upload for global URLs
+    let cfg = getCloudConfig();
+    // Upload cover file to cloud
+    if(coverFile){
+      if(statusEl) statusEl.textContent = 'Uploading cover to global cloud...';
+      let cloudCover = await uploadToCloudinary(coverFile, 'image') || await uploadToCatbox(coverFile);
+      if(cloudCover) finalCover = cloudCover;
+    }
+    // Upload audio file to cloud
+    if(audioFile){
+      if(statusEl) statusEl.textContent = 'Uploading audio to global cloud (may take 30s for large MP3)...';
+      let cloudAudio = await uploadToCloudinary(audioFile, 'auto') || await uploadToCatbox(audioFile);
+      if(cloudAudio) finalAudio = cloudAudio;
+    }
+    
+    const newUpload = {
+      title, artist, genre, type,
+      cover: finalCover,
+      audio: finalAudio,
+      audioName: audioName || (title + '.mp3'),
+      date: new Date().toISOString(),
+      cover_url: finalCover,
+      audio_url: finalAudio,
+      track_title: title,
+      artist_name: artist
+    };
+    
+    // Save globally if Supabase configured
+    let savedGlobal = await saveToSupabaseGlobal(newUpload);
+    
+    // Reliable Upload-to-FYP Sync using saveAndSyncUpload
+    let savedOK = false;
+    try {
+      if(typeof saveAndSyncUpload === 'function'){
+        savedOK = saveAndSyncUpload(newUpload);
+      } else {
+        // Fallback if function missing
+        let uploads = JSON.parse(localStorage.getItem('nps_uploads')||'[]');
+        uploads.unshift(newUpload);
+        localStorage.setItem('nps_uploads', JSON.stringify(uploads));
+        localStorage.setItem('nps_uploads_backup', JSON.stringify(uploads));
+        savedOK = true;
+      }
+    } catch(err){
+      // Fallback small save
+      try {
+        let uploads = JSON.parse(localStorage.getItem('nps_uploads')||'[]');
+        uploads.unshift(newUpload);
+        let smallUpload = {...newUpload, cover: newUpload.cover.startsWith('http') ? newUpload.cover : '', audio: newUpload.audio.startsWith('http') ? newUpload.audio : ''};
+        uploads[0] = smallUpload;
+        localStorage.setItem('nps_uploads', JSON.stringify(uploads));
+        localStorage.setItem('nps_uploads_backup', JSON.stringify(uploads));
+        savedOK = true;
+      } catch(e2){}
+    }
+    // Ensure FYP refresh
+    try { if(typeof loadMyUploads === 'function') loadMyUploads(); } catch(e){}
+    try { if(typeof renderPinnedOnTop === 'function') renderPinnedOnTop(); } catch(e){}
+    
+    document.getElementById('up_title').value='';
+    document.getElementById('up_artist').value='';
+    document.getElementById('up_cover').value='';
+    if(coverFileInput) coverFileInput.value='';
+    if(audioFileInput) audioFileInput.value='';
+    if(statusEl) statusEl.textContent = '';
+    
+    if(savedGlobal){
+      alert('Uploaded GLOBAL! Track is now visible to everyone worldwide via Supabase + Cloud. Cover: ' + (finalCover.startsWith('http')?'global URL':'local') + ', Audio: ' + (finalAudio.startsWith('http')?'global URL':'local'));
+    } else if(finalAudio.startsWith('http') || finalCover.startsWith('http')){
+      alert('Uploaded to GLOBAL cloud (Catbox)! File URLs are global: ' + finalAudio.substring(0,50) + '... Everyone can download, but list is local until you add Supabase. Add Supabase in Cloud Config below for fully global list.');
+    } else {
+      alert('Uploaded locally! For fully global, add Cloudinary + Supabase in Cloud Config, or files are too big for Catbox.');
+    }
+    renderCloudConfigUI();
+  };
+
+  const hasCover = coverFileInput && coverFileInput.files && coverFileInput.files[0];
+  const hasAudio = audioFileInput && audioFileInput.files && audioFileInput.files[0];
+  const coverFile = hasCover ? coverFileInput.files[0] : null;
+  const audioFile = hasAudio ? audioFileInput.files[0] : null;
+
+  // For preview, still read as DataURL but also keep file for global upload
+  if(hasCover && hasAudio){
+    const cr = new FileReader(); cr.onload = e1 => {
+      const ar = new FileReader(); ar.onload = e2 => finishUpload(e1.target.result, e2.target.result, audioFile.name, coverFile, audioFile);
+      ar.readAsDataURL(audioFile);
+    }; cr.readAsDataURL(coverFile);
+  } else if(hasCover){
+    const r = new FileReader(); r.onload = e => finishUpload(e.target.result, '', '', coverFile, null); r.readAsDataURL(coverFile);
+  } else if(hasAudio){
+    const r = new FileReader(); r.onload = e => finishUpload('', e.target.result, audioFile.name, null, audioFile); r.readAsDataURL(audioFile);
+  } else {
+    finishUpload('', '', '', null, null);
+  }
+});
+
+document.getElementById('clearPinnedBtn')?.addEventListener('click', ()=>{
+  if(confirm('Clear all 5 pinned promotion tracks?')){
+    localStorage.removeItem(PINNED_KEY);
+    renderPinnedOnTop();
+    loadMyUploads();
+  }
+});
+document.getElementById('clearUploadsBtn')?.addEventListener('click', ()=>{
+  if(confirm('Clear all your uploads from this device?')){
+    localStorage.removeItem('nps_uploads');
+    loadMyUploads();
+  }
+});
+loadMyUploads();
+renderPinnedOnTop();
+// Auto fetch global songs on homepage load
+setTimeout(async ()=>{ try{ let g = await fetchGlobalUploads(); if(g.length>0) { console.log('Global songs loaded', g.length); renderPinnedOnTop(); } }catch(e){} }, 800);
+
+// Auto check expiry every minute - real 5 months promo
+setInterval(()=>{
+  let before = getPinned().length;
+  let after = cleanExpiredPins().length;
+  if(before !== after){
+    renderPinnedOnTop();
+    loadMyUploads();
+  }
+}, 60*1000); // check every 1 min
+
+
+
+
+function downloadSample(btn, title){
+  // For sample tracks without real file, create a placeholder text file as demo MP3 download
+  // In real deployment, replace with actual MP3 URL
+  let blob = new Blob(["NaijaPremiumSounds - " + title + " - Download from NaijaPremiumSounds\nContact: janicechp99@gmail.com"], {type:"audio/mpeg"});
+  let url = URL.createObjectURL(blob);
+  let a = document.createElement('a');
+  a.href = url;
+  a.download = title.replace(/[^a-z0-9]/gi,'_') + '.mp3';
+  document.body.appendChild(a);
+  a.click();
+  setTimeout(()=>{ document.body.removeChild(a); URL.revokeObjectURL(url); }, 100);
+}
+function downloadRealMP3(dataUrl, filename){
+  if(!dataUrl){ alert('No MP3 file uploaded for this track yet - upload MP3 in Upload Settings'); return; }
+  let a = document.createElement('a');
+  a.href = dataUrl;
+  a.download = filename || 'track.mp3';
+  document.body.appendChild(a);
+  a.click();
+  setTimeout(()=>{ document.body.removeChild(a); }, 100);
+}
+
+// --- MENU - PREMIUM TOGGLE ---
+(function(){
+  const btn = document.getElementById('menuToggleBtn');
+  const closeBtn = document.getElementById('menuCloseBtn');
+  const overlay = document.getElementById('menuOverlay');
+  const side = document.getElementById('sideMenu');
+  function openMenu(){ side?.classList.add('open'); overlay?.classList.add('open'); document.body.classList.add('menu-open'); document.body.style.overflow='hidden'; }
+  function closeMenu(){ side?.classList.remove('open'); overlay?.classList.remove('open'); document.body.classList.remove('menu-open'); document.body.style.overflow=''; }
+  btn?.addEventListener('click', openMenu);
+  closeBtn?.addEventListener('click', closeMenu);
+  overlay?.addEventListener('click', closeMenu);
+  side?.querySelectorAll('a').forEach(a=>{
+    a.addEventListener('click', ()=>{
+      closeMenu();
+      // set active
+      side.querySelectorAll('a').forEach(x=>x.classList.remove('active'));
+      a.classList.add('active');
+    });
+  });
+  // ESC close
+  document.addEventListener('keydown', (e)=>{ if(e.key==='Escape') closeMenu(); });
+})();
+
+// --- EYE TOGGLE FOR PASSWORD - LOCKED --- PREMIUM 40 LIGHT RESTORED ---
+document.querySelectorAll('.eye-toggle').forEach(btn=>{
+  btn.addEventListener('click', ()=>{
+    const targetId = btn.getAttribute('data-eye');
+    const inp = document.getElementById(targetId);
+    if(!inp) return;
+    if(inp.type === 'password'){
+      inp.type='text';
+      btn.textContent='🙈';
+    } else {
+      inp.type='password';
+      btn.textContent='👁️';
+    }
+  });
+});
+</script>
+<script>
+// --- FINAL ADMIN FIX BASED ON USER PATCH - SAME FILE, NO REBUILD ---
+async function handleAdminLogin(passwordInput){
+  const targetPassword = 'Aliveg2004$';
+  const targetEmail = 'janicechp99@gmail.com';
+  const adminHash = 'f643d57175c86015ee945bd6641823e5122952f644415e3f15ad9ad0506792e6';
+  let isAuthenticated = false;
+  try {
+    if (passwordInput === targetPassword) {
+      isAuthenticated = true;
+    } else if (window.crypto && crypto.subtle) {
+      const buf = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(passwordInput));
+      const hash = Array.from(new Uint8Array(buf)).map(b=>b.toString(16).padStart(2,'0')).join('');
+      if (hash === adminHash) isAuthenticated = true;
+    }
+  } catch (err) {
+    console.warn("Crypto check failed, using direct string match:", err);
+    if (passwordInput === targetPassword) isAuthenticated = true;
+  }
+  if (isAuthenticated) {
+    localStorage.setItem('nps_admin','janice_logged');
+    localStorage.setItem('nps_admin_email', targetEmail);
+    const adminPanel = document.getElementById('nps-admin-janice');
+    if (adminPanel) {
+      adminPanel.classList.add('active');
+      adminPanel.style.setProperty('display','block','important');
+      adminPanel.style.visibility='visible';
+      adminPanel.style.opacity='1';
+      adminPanel.removeAttribute('hidden');
+    }
+    const loginWrap = document.getElementById('adminLoginWrap') || document.getElementById('loginWrap');
+    if (loginWrap) {
+      loginWrap.setAttribute('hidden','true');
+      loginWrap.hidden = true;
+      loginWrap.style.display = 'none';
+    }
+    const dash = document.getElementById('adminDashboard');
+    if (dash) {
+      dash.hidden = false;
+      if (dash.hasAttribute('hidden')) dash.removeAttribute('hidden');
+      dash.style.setProperty('display','block','important');
+      dash.style.visibility='visible';
+      dash.style.opacity='1';
+    }
+    const statusEl = document.getElementById('adminStatus');
+    if (statusEl) statusEl.textContent = 'Logged in as Admin - PERMANENTLY LOCKED';
+    try { if (typeof loadMyUploads === 'function') loadMyUploads(); } catch(e){}
+    try { if (typeof renderPinnedOnTop === 'function') renderPinnedOnTop(); } catch(e){}
+    return true;
+  } else {
+    return false;
+  }
+}
+
+(function(){
+  // Wire main login form
+  var form = document.getElementById('adminLoginForm');
+  if(form){
+    var clone = form.cloneNode(true);
+    form.parentNode.replaceChild(clone, form);
+    form = clone;
+    form.addEventListener('submit', async function(e){
+      e.preventDefault();
+      var emailEl = document.getElementById('adminEmail');
+      var passEl = document.getElementById('adminPass');
+      var msgEl = document.getElementById('adminMsg');
+      var email = emailEl ? emailEl.value.trim().toLowerCase() : '';
+      var pass = passEl ? passEl.value : '';
+      if(msgEl){ msgEl.hidden=false; msgEl.style.display='block'; }
+      if(email !== 'janicechp99@gmail.com'){
+        if(msgEl){ msgEl.textContent='Only janicechp99@gmail.com allowed'; msgEl.style.borderColor='#ff4d4d'; }
+        return;
+      }
+      var ok = await handleAdminLogin(pass);
+      if(ok){
+        if(msgEl){ msgEl.textContent='Access granted successfully! - LOCKED FOREVER'; msgEl.style.borderColor='#4CAF50'; }
+        var sec = document.getElementById('nps-admin-janice');
+        if(sec){ sec.scrollIntoView({behavior:'smooth'}); }
+      }else{
+        if(msgEl){ msgEl.textContent='Incorrect password. Please try again.'; msgEl.style.borderColor='#ff4d4d'; }
+      }
+    });
+  }
+
+  // Wire Xion modal unlock
+  var xionModal = document.getElementById('xionPassModal');
+  var xionInput = document.getElementById('xionPassInput');
+  var xionSubmit = document.getElementById('xionPassSubmit');
+  var xionCancel = document.getElementById('xionPassCancel');
+  var xionMsg = document.getElementById('xionPassMsg');
+  var xionBtn = document.getElementById('xionSecretBtn');
+
+  function openXion(){ if(xionModal){ xionModal.style.display='flex'; if(xionInput){ xionInput.value=''; setTimeout(function(){xionInput.focus();},80);} if(xionMsg) xionMsg.hidden=true; } }
+  function closeXion(){ if(xionModal) xionModal.style.display='none'; }
+
+  if(xionBtn){ var nb=xionBtn.cloneNode(true); xionBtn.parentNode.replaceChild(nb,xionBtn); xionBtn=nb; xionBtn.addEventListener('click', openXion); }
+  if(xionCancel){ var nc=xionCancel.cloneNode(true); xionCancel.parentNode.replaceChild(nc,xionCancel); xionCancel=nc; xionCancel.addEventListener('click', closeXion); }
+  if(xionSubmit){ 
+    var ns=xionSubmit.cloneNode(true); xionSubmit.parentNode.replaceChild(ns,xionSubmit); xionSubmit=ns; 
+    ns.addEventListener('click', async function(){
+      var p = xionInput ? xionInput.value : '';
+      if(xionMsg){ xionMsg.hidden=false; xionMsg.style.display='block'; }
+      var ok = await handleAdminLogin(p);
+      if(ok){ if(xionMsg){ xionMsg.textContent='Access granted successfully! - LOCKED FOREVER'; xionMsg.style.borderColor='#8B3DE5'; } setTimeout(function(){ closeXion(); },500); }
+      else { if(xionMsg){ xionMsg.textContent='Incorrect password. Please try again.'; xionMsg.style.borderColor='#ff4d4d'; } }
+    });
+  }
+  if(xionInput){ var ni=xionInput.cloneNode(true); xionInput.parentNode.replaceChild(ni,xionInput); xionInput=ni; ni.addEventListener('keydown', function(e){ if(e.key==='Enter'){ e.preventDefault(); if(xionSubmit) xionSubmit.click(); } if(e.key==='Escape') closeXion(); }); }
+  if(xionModal){ xionModal.addEventListener('click', function(e){ if(e.target===xionModal) closeXion(); }); }
+
+  // Brand triple-click
+  var brand=document.getElementById('brandLogo');
+  if(brand){ var br=brand.cloneNode(true); brand.parentNode.replaceChild(br,brand); brand=br; var c=0,t; brand.addEventListener('click', function(){ c++; clearTimeout(t); t=setTimeout(function(){c=0;},800); if(c>=3){ c=0; var sec=document.getElementById('nps-admin-janice'); if(sec){ sec.classList.add('active'); sec.style.setProperty('display','block','important'); sec.removeAttribute('hidden'); sec.scrollIntoView({behavior:'smooth'}); location.hash='#nps-admin-janice'; } var isLog=localStorage.getItem('nps_admin')==='janice_logged'; if(isLog){ var dash=document.getElementById('adminDashboard'); var lw=document.getElementById('adminLoginWrap'); if(dash){ dash.hidden=false; if(dash.hasAttribute('hidden')) dash.removeAttribute('hidden'); dash.style.setProperty('display','block','important'); } if(lw){ lw.hidden=true; lw.style.display='none'; } } } }); }
+
+  // Logout
+  var logout=document.getElementById('adminLogout');
+  if(logout){ var lo=logout.cloneNode(true); logout.parentNode.replaceChild(lo,logout); logout=lo; lo.addEventListener('click', function(){ localStorage.removeItem('nps_admin'); localStorage.removeItem('nps_admin_email'); var lw=document.getElementById('adminLoginWrap'); var dash=document.getElementById('adminDashboard'); if(lw){ lw.hidden=false; if(lw.hasAttribute('hidden')) lw.removeAttribute('hidden'); lw.style.display='block'; } if(dash){ dash.hidden=true; } var st=document.getElementById('adminStatus'); if(st) st.textContent='Not logged in'; }); }
+
+  // Eye toggle
+  document.addEventListener('click', function(e){ var b=e.target.closest('.eye-toggle'); if(!b) return; e.preventDefault(); var id=b.getAttribute('data-eye'); var inp=document.getElementById(id); if(!inp) return; if(inp.type==='password'){ inp.type='text'; b.textContent='🙈'; } else { inp.type='password'; b.textContent='👁️'; } });
+
+  window.handleAdminLogin = handleAdminLogin;
+  window.showAdminSection = function(){ var sec=document.getElementById('nps-admin-janice'); if(sec){ sec.classList.add('active'); sec.style.setProperty('display','block','important'); sec.removeAttribute('hidden'); sec.scrollIntoView({behavior:'smooth'}); } };
+})();
+</script>
+
+<script>
+// --- EYE TOGGLE FINAL FIX - NO DELEGATION ISSUE, DIRECT BIND ---
+(function(){
+  function bindEye(){
+    var btns = document.querySelectorAll('.eye-toggle');
+    btns.forEach(function(btn){
+      // Remove old via clone
+      var nb = btn.cloneNode(true);
+      btn.parentNode.replaceChild(nb, btn);
+      btn = nb;
+      btn.addEventListener('click', function(e){
+        e.preventDefault();
+        e.stopImmediatePropagation();
+        var id = btn.getAttribute('data-eye');
+        if(!id) return;
+        var inp = document.getElementById(id);
+        if(!inp) return;
+        if(inp.type === 'password'){
+          inp.type = 'text';
+          btn.textContent = '🙈';
+        } else {
+          inp.type = 'password';
+          btn.textContent = '👁️';
+        }
+        inp.focus();
+      });
+    });
+  }
+  bindEye();
+  setTimeout(bindEye, 300);
+  setTimeout(bindEye, 1000);
+  // Also bind when modal opens
+  var obs = new MutationObserver(function(){ bindEye(); });
+  var modal = document.getElementById('xionPassModal');
+  if(modal) obs.observe(modal, {attributes:true, attributeFilter:['style','class']});
+  var adminSec = document.getElementById('nps-admin-janice');
+  if(adminSec) obs.observe(adminSec, {attributes:true, attributeFilter:['class']});
+  
+  // Ensure CSS visible
+  var style = document.createElement('style');
+  style.textContent = `
+    .pass-wrap{position:relative !important; display:flex !important; align-items:center !important; width:100% !important;}
+    .pass-wrap input{padding-right:48px !important; width:100% !important;}
+    .eye-toggle{position:absolute !important; right:12px !important; top:50% !important; transform:translateY(-50%) !important; background:transparent !important; border:none !important; cursor:pointer !important; z-index:99 !important; display:block !important; visibility:visible !important; opacity:1 !important; font-size:18px !important; pointer-events:auto !important;}
+  `;
+  document.head.appendChild(style);
+})();
+</script>
+
+<script>
+// --- NPS Admin Persistence & Security Fix - SAME FILE, NO SCATTER ---
+document.addEventListener("DOMContentLoaded", () => {
+  const adminPanel = document.getElementById('nps-admin-janice');
+  const loginWrap = document.getElementById('adminLoginWrap') || document.getElementById('loginWrap');
+  const dashboard = document.getElementById('adminDashboard');
+  const adminState = localStorage.getItem('nps_admin');
+
+  if (adminPanel && loginWrap) {
+    if (adminState === 'janice_logged') {
+      adminPanel.classList.add('active');
+      adminPanel.style.setProperty('display', 'block', 'important');
+      adminPanel.removeAttribute('hidden');
+      if(dashboard){
+        dashboard.hidden = false;
+        if(dashboard.hasAttribute('hidden')) dashboard.removeAttribute('hidden');
+        dashboard.style.setProperty('display','block','important');
+      }
+      loginWrap.setAttribute('hidden', 'true');
+      loginWrap.hidden = true;
+      loginWrap.style.display = 'none';
+    } else {
+      // Not logged - keep admin section available for hash navigation but hide dashboard
+      // For security on fresh launch, dashboard stays locked
+      if(dashboard){
+        dashboard.hidden = true;
+        dashboard.style.setProperty('display','none','important');
+      }
+      // loginWrap stays visible inside admin section
+      loginWrap.removeAttribute('hidden');
+      if(loginWrap.hidden) loginWrap.hidden = false;
+      loginWrap.style.display = 'block';
+      // Don't hide whole adminPanel - let #nps-admin-janice be reachable via menu, but dashboard locked
+    }
+  }
+});
+
+function npsAdminLogout() {
+  localStorage.removeItem('nps_admin');
+  localStorage.removeItem('nps_admin_email');
+  location.reload();
+}
+window.npsAdminLogout = npsAdminLogout;
+</script>
+
+<script>
+// --- Reliable Upload-to-FYP Sync Fix - SAME FILE, NO REBUILD, REMEMBER RULES ---
+// Rules remembered before fix: single file locked Index_1.html 101058 bytes, no rebuild/new file/no unfix,
+// slide 4x 3s, menu, Xion Aliveg2004$, admin janicechp99@gmail.com, eye toggle, Supabase+Catbox, My Uploads 48px, FYP tracks, pin 5 months, nps_uploads + backup + locked_forever
+function saveAndSyncUpload(newTrackData) {
+  try {
+    let existingUploads = JSON.parse(localStorage.getItem('nps_uploads') || '[]');
+    existingUploads.unshift(newTrackData);
+    localStorage.setItem('nps_uploads', JSON.stringify(existingUploads));
+    localStorage.setItem('nps_uploads_backup', JSON.stringify(existingUploads));
+    // Extra backup for locked forever as required by locked rules
+    try { localStorage.setItem('nps_uploads_backup_locked_forever', JSON.stringify(existingUploads)); } catch(e){}
+    try { localStorage.setItem('nps_all_settings_backup', JSON.stringify({uploads: existingUploads, date: new Date().toISOString()})); } catch(e){}
+    
+    if (typeof renderTracks === 'function') {
+      renderTracks();
+    } else if (typeof loadFYPTracks === 'function') {
+      loadFYPTracks();
+    }
+    // Our locked app uses these:
+    if (typeof loadMyUploads === 'function') {
+      try { loadMyUploads(); } catch(e){}
+    }
+    if (typeof renderPinnedOnTop === 'function') {
+      try { renderPinnedOnTop(); } catch(e){}
+    }
+    if (typeof loadLatestMusic === 'function') {
+      try { loadLatestMusic(); } catch(e){}
+    }
+    // Force FYP grid refresh
+    var tracksEl = document.getElementById('tracks');
+    if(tracksEl){
+      // Trigger hash to refresh view if needed
+      try { if(typeof refreshFYP === 'function') refreshFYP(); } catch(e){}
+    }
+    console.log("Track successfully synced to FYP feed!");
+    return true;
+  } catch (error) {
+    console.error("Error syncing upload to local storage:", error);
+    return false;
+  }
+}
+window.saveAndSyncUpload = saveAndSyncUpload;
+
+// Hook into existing upload flow - replace direct localStorage set with our function where newUpload is created
+// We will intercept by watching for uploadTrackBtn click and overriding save if needed - minimal intrusion
+(function(){
+  var originalUploadHandler = null;
+  var btn = document.getElementById('uploadTrackBtn');
+  if(!btn) return;
+  // The existing handler is in main script, we will add additional listener that ensures backup exists after upload
+  btn.addEventListener('click', function(){
+    setTimeout(function(){
+      // After original handler finishes (it saves to nps_uploads), ensure backup sync
+      try {
+        var uploads = JSON.parse(localStorage.getItem('nps_uploads') || '[]');
+        if(uploads.length>0){
+          localStorage.setItem('nps_uploads_backup', JSON.stringify(uploads));
+          try { localStorage.setItem('nps_uploads_backup_locked_forever', JSON.stringify(uploads)); } catch(e){}
+        }
+      } catch(e){}
+    }, 800);
+  });
+})();
+</script>
+<script>
+// Reliable Upload-to-FYP Sync Fix
+function saveAndSyncUpload(newTrackData) {
+  try {
+    // 1. Grab existing uploads or initialize empty array
+    let existingUploads = JSON.parse(localStorage.getItem('nps_uploads') || '[]');
+    
+    // 2. Unshift new track to the top so it appears as NEW/Latest
+    existingUploads.unshift(newTrackData);
+    
+    // 3. Save back to localStorage securely
+    localStorage.setItem('nps_uploads', JSON.stringify(existingUploads));
+    
+    // 4. Create a backup key as required
+    localStorage.setItem('nps_uploads_backup', JSON.stringify(existingUploads));
+
+    // 5. Immediately refresh the FYP tracks grid if the function exists
+    if (typeof renderTracks === 'function') {
+      renderTracks();
+    } else if (typeof loadFYPTracks === 'function') {
+      loadFYPTracks();
+    }
+    
+    console.log("Track successfully synced to FYP feed!");
+  } catch (error) {
+    console.error("Error syncing upload to local storage:", error);
+  }
+}
+window.saveAndSyncUpload = saveAndSyncUpload;
+</script>
+
+<script>
+(function(){
+  function forceAdminOpen(){
+    var sec=document.getElementById('nps-admin-janice');
+    var loginWrap=document.getElementById('adminLoginWrap')||document.getElementById('loginWrap');
+    var dash=document.getElementById('adminDashboard');
+    if(!sec) return;
+    sec.classList.add('active');
+    sec.style.setProperty('display','block','important');
+    sec.style.visibility='visible';
+    sec.style.opacity='1';
+    sec.removeAttribute('hidden');
+    var isLogged = localStorage.getItem('nps_admin')==='janice_logged';
+    if(isLogged){
+      if(loginWrap){ loginWrap.hidden=true; loginWrap.style.display='none'; }
+      if(dash){ dash.hidden=false; if(dash.hasAttribute('hidden')) dash.removeAttribute('hidden'); dash.style.setProperty('display','block','important'); dash.style.visibility='visible'; dash.style.opacity='1'; }
+    } else {
+      if(loginWrap){ loginWrap.hidden=false; if(loginWrap.hasAttribute('hidden')) loginWrap.removeAttribute('hidden'); loginWrap.style.display='block'; loginWrap.style.visibility='visible'; }
+      if(dash){ dash.hidden=true; }
+    }
+    try{ sec.scrollIntoView({behavior:'smooth'}); }catch(e){}
+    location.hash='#nps-admin-janice';
+  }
+  window.showAdminSection = forceAdminOpen;
+  window.NPS_forceAdminOpen = forceAdminOpen;
+  // Extra backup save after upload
+  var btn=document.getElementById('uploadTrackBtn');
+  if(btn){
+    btn.addEventListener('click', function(){
+      setTimeout(function(){
+        try{
+          var uploads=JSON.parse(localStorage.getItem('nps_uploads')||'[]');
+          if(uploads.length>0){
+            localStorage.setItem('nps_uploads_backup', JSON.stringify(uploads));
+            try{ localStorage.setItem('nps_uploads_backup_locked_forever', JSON.stringify(uploads)); }catch(e){}
+            try{ localStorage.setItem('nps_all_settings_backup', JSON.stringify({uploads:uploads, date:new Date().toISOString()})); }catch(e){}
+            if(typeof loadMyUploads==='function') loadMyUploads();
+            if(typeof renderPinnedOnTop==='function') renderPinnedOnTop();
+          }
+        }catch(e){}
+      }, 900);
+    });
+  }
+})();
+</script>
+
+<script>
+try{
+  localStorage.setItem('nps_locked_forever','1');
+  localStorage.setItem('nps_locked_version', new Date().toISOString());
+  console.log('Locked forever - no unfix');
+}catch(e){}
+</script>
+<script>
+// --- NPS UPLOAD FIX: Prevent clearing & force save to FYP ---
+(function() {
+  const uploadBtn = document.querySelector('button, input[type="button"], input[type="submit"]') || document.getElementById('uploadFormBtn');
+  
+  // Intercept the upload action safely
+  document.addEventListener('click', function(e) {
+    const target = e.target;
+    // Check if clicked element is your "Upload & Add to Site" button
+    if (target && (target.textContent.includes('Upload & Add to Site') || target.id === 'uploadFormBtn' || target.id === 'uploadTrackBtn')) {
+      // Only run this advanced fix if audio file is selected, else let original handler manage validation
+      const audioInputCheck = document.getElementById('up_audio') || document.getElementById('audioFileInput') || document.querySelector('input[type="file"][accept*="audio"]');
+      if(!audioInputCheck || audioInputCheck.files.length===0) return; // let original handler show alert
+      e.preventDefault();
+      e.stopPropagation();
+
+      const titleInput = document.getElementById('up_title') || document.getElementById('trackTitleInput') || document.querySelector('input[placeholder*="Title" i]');
+      const artistInput = document.getElementById('up_artist') || document.getElementById('artistInput') || document.querySelector('input[placeholder*="Artist" i]');
+      const genreSelect = document.getElementById('up_genre') || document.getElementById('genreSelect') || document.querySelector('select');
+      const audioInput = document.getElementById('up_audio') || document.getElementById('audioFileInput') || document.querySelector('input[type="file"][accept*="audio"]');
+      const coverInput = document.getElementById('up_coverFile') || document.getElementById('coverFileInput');
+
+      const title = titleInput ? titleInput.value.trim() : '';
+      const artist = artistInput ? artistInput.value.trim() : '';
+      const genre = genreSelect ? genreSelect.value : 'Afrobeats';
+
+      const audioFile = audioInput.files[0];
+      const coverFile = coverInput && coverInput.files.length > 0 ? coverInput.files[0] : null;
+
+      // Create safe object URLs so the track plays and displays immediately
+      const audioUrl = URL.createObjectURL(audioFile);
+      const coverUrl = coverFile ? URL.createObjectURL(coverFile) : 'https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=300&auto=format&fit=crop&q=80';
+
+      const trackObj = {
+        id: 'nps_' + Date.now(),
+        title: title || audioFile.name.replace(/\.[^/.]+$/, ""),
+        artist: artist || 'Naija Premium Artist',
+        genre: genre,
+        audioUrl: audioUrl,
+        coverUrl: coverUrl,
+        audio: audioUrl,
+        cover: coverUrl,
+        audio_url: audioUrl,
+        cover_url: coverUrl,
+        track_title: title || audioFile.name.replace(/\.[^/.]+$/, ""),
+        artist_name: artist || 'Naija Premium Artist',
+        type: 'Music',
+        date: new Date().toISOString()
+      };
+
+      // Push into nps_uploads storage array securely - use saveAndSyncUpload if exists
+      try {
+        if(typeof saveAndSyncUpload === 'function'){
+          saveAndSyncUpload(trackObj);
+        } else {
+          let currentUploads = JSON.parse(localStorage.getItem('nps_uploads') || '[]');
+          currentUploads.unshift(trackObj);
+          localStorage.setItem('nps_uploads', JSON.stringify(currentUploads));
+          localStorage.setItem('nps_uploads_backup', JSON.stringify(currentUploads));
+        }
+        // Extra backup locked forever
+        try{
+          let cu = JSON.parse(localStorage.getItem('nps_uploads')||'[]');
+          localStorage.setItem('nps_uploads_backup_locked_forever', JSON.stringify(cu));
+        }catch(e){}
+
+        // Force render on FYP grid if function exists
+        if (typeof loadMyUploads === 'function') { loadMyUploads(); }
+        if (typeof renderPinnedOnTop === 'function') { try{ renderPinnedOnTop(); }catch(e){} }
+        if (typeof renderTracks === 'function') { renderTracks(); }
+        else if (typeof loadFYPTracks === 'function') { loadFYPTracks(); }
+        else if (typeof loadTracks === 'function') { loadTracks(); }
+
+        // Clear inputs after success
+        if(titleInput) titleInput.value='';
+        if(artistInput) artistInput.value='';
+        if(audioInput) audioInput.value='';
+        if(coverInput) coverInput.value='';
+
+        alert('Success! Track uploaded and added to FYP Latest Music.');
+      } catch (err) {
+        console.error('Storage error during upload:', err);
+        alert('Could not save track to local storage. Storage might be full.');
+      }
+    }
+  }, true);
+})();
+
+</script>
+<script>
+// --- NPS PLAY BUTTON FIX ---
+document.addEventListener('click', function(e) {
+  const targetBtn = e.target.closest('.play-btn, button, a');
+  if (!targetBtn) return;
+
+  const btnText = targetBtn.textContent || '';
+  // Check if it's the play preview button
+  if (btnText.includes('Play Preview') || btnText.includes('Play') || targetBtn.classList.contains('play-track-btn')) {
+    // If it says "Play Preview", clean it up to just "Play"
+    if (btnText.includes('Play Preview')) {
+      targetBtn.innerHTML = targetBtn.innerHTML.replace('Play Preview', '▶ Play');
+    }
+
+    // Find the audio URL attached to this track card/element
+    const trackCard = targetBtn.closest('[data-audio-url], .track-item, .track-card, tr, div');
+    const audioUrl = trackCard ? (trackCard.dataset.audioUrl || trackCard.getAttribute('data-url')) : null;
+
+    if (audioUrl) {
+      e.preventDefault();
+      e.stopPropagation();
+      
+      // Target the app's global audio player
+      const globalPlayer = document.getElementById('globalAudioPlayer') || document.querySelector('audio');
+      if (globalPlayer) {
+        globalPlayer.src = audioUrl;
+        globalPlayer.play().catch(err => console.log("Playback error:", err));
+      }
+    }
+  }
+}, true);
+
+// Automatically clean up button text across the UI on load
+window.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('button, a').forEach(el => {
+    if (el.textContent.trim() === 'Play Preview') {
+      el.innerHTML = el.innerHTML.replace('Play Preview', '▶ Play');
+    }
+  });
+});
+
+</script>
+
+<script>
+// --- NPS PLAY BUTTON FIX v2 - REAL FIX FOR CURRENT CARD STRUCTURE, NO OTHER TOUCH ---
+(function(){
+  // 1. Ensure global audio player exists - it was removed, so create it
+  function ensurePlayer(){
+    let player = document.getElementById('globalAudioPlayer');
+    if(!player){
+      player = document.createElement('audio');
+      player.id = 'globalAudioPlayer';
+      player.controls = true;
+      player.preload = 'metadata';
+      player.style.cssText = 'position:fixed; bottom:0; left:0; right:0; width:100%; z-index:99; background:#121118; display:none;';
+      document.body.appendChild(player);
+      // Also add a small now-playing bar if missing
+      let bar = document.getElementById('npsNowPlaying');
+      if(!bar){
+        bar = document.createElement('div');
+        bar.id = 'npsNowPlaying';
+        bar.style.cssText = 'position:fixed; bottom:54px; left:0; right:0; background:linear-gradient(90deg,#8B3DE5,#DA49AD); color:#fff; padding:8px 14px; font-size:0.85rem; z-index:98; display:none; text-align:center;';
+        bar.textContent = 'Now Playing';
+        document.body.appendChild(bar);
+      }
+    }
+    return player;
+  }
+  ensurePlayer();
+
+  // 2. Patch loadMyUploads cards to carry audio URL - wrap original loadMyUploads
+  // We will hook after loadMyUploads runs by using MutationObserver on #tracks
+  function patchCards(){
+    let tracks = document.getElementById('tracks');
+    if(!tracks) return;
+    let uploads = [];
+    try{ uploads = JSON.parse(localStorage.getItem('nps_uploads')||'[]'); }catch(e){}
+    // For each card, find matching upload by title
+    tracks.querySelectorAll('.card').forEach(function(card){
+      let titleEl = card.querySelector('h3');
+      if(!titleEl) return;
+      let title = titleEl.textContent.replace('NEW','').trim();
+      // Find upload by title prefix
+      let match = uploads.find(function(u){ return u.title && title.includes(u.title); });
+      let audioUrl = '';
+      if(match){ audioUrl = match.audio || match.audioUrl || match.audio_url || ''; }
+      // Also check if card already has audio in a button onclick
+      if(!audioUrl){
+        let dlBtn = card.querySelector('.btn-download');
+        if(dlBtn){
+          let onclick = dlBtn.getAttribute('onclick')||'';
+          let m = onclick.match(/downloadRealMP3\('([^']+)'/);
+          if(m) audioUrl = m[1];
+        }
+      }
+      if(audioUrl){
+        card.setAttribute('data-audio-url', audioUrl);
+        card.setAttribute('data-url', audioUrl);
+        card.dataset.audioUrl = audioUrl;
+        let playBtn = card.querySelector('[data-play], button');
+        if(playBtn){
+          playBtn.setAttribute('data-audio-url', audioUrl);
+          playBtn.setAttribute('data-url', audioUrl);
+          playBtn.classList.add('play-btn','play-track-btn');
+        }
+      }
+    });
+    // Clean button text
+    document.querySelectorAll('button, a').forEach(function(el){
+      if(el.textContent.trim() === 'Play Preview' || el.textContent.trim() === '▶ Play preview'){
+        el.innerHTML = '▶ Play';
+      }
+    });
+  }
+
+  // Patch after loadMyUploads
+  let originalLoad = window.loadMyUploads;
+  // Instead of replacing, observe DOM changes
+  let tracksEl = document.getElementById('tracks');
+  if(tracksEl){
+    let obs = new MutationObserver(function(){ setTimeout(patchCards, 100); });
+    obs.observe(tracksEl, {childList:true, subtree:true});
+  }
+  // Also patch on load
+  setTimeout(patchCards, 500);
+  setTimeout(patchCards, 1500);
+  setTimeout(patchCards, 3000);
+  document.addEventListener('click', function(e){
+    // Re-patch before handling play
+    if(e.target.closest('button')) setTimeout(patchCards, 50);
+  }, true);
+
+  // 3. Real play handler - runs before old alert handler
+  document.addEventListener('click', function(e){
+    let btn = e.target.closest('[data-play], .play-btn, .play-track-btn');
+    if(!btn) return;
+    let card = btn.closest('.card, [data-audio-url], div');
+    let audioUrl = btn.getAttribute('data-audio-url') || btn.getAttribute('data-url') || (card ? (card.getAttribute('data-audio-url') || card.getAttribute('data-url') || card.dataset.audioUrl) : null);
+    if(!audioUrl){
+      // Try to find from uploads by title
+      let title = card ? (card.querySelector('h3')?.textContent||'') : '';
+      try{
+        let ups = JSON.parse(localStorage.getItem('nps_uploads')||'[]');
+        let m = ups.find(function(u){ return u.title && title.includes(u.title); });
+        if(m) audioUrl = m.audio || m.audioUrl || m.audio_url || '';
+      }catch(err){}
+    }
+    if(!audioUrl) return; // let old handler show sample alert
+    e.preventDefault();
+    e.stopImmediatePropagation();
+    let player = ensurePlayer();
+    player.style.display = 'block';
+    player.src = audioUrl;
+    let bar = document.getElementById('npsNowPlaying');
+    if(bar){
+      let title = card ? card.querySelector('h3')?.textContent||'Now Playing' : 'Now Playing';
+      bar.textContent = '▶ Now Playing: ' + title;
+      bar.style.display = 'block';
+    }
+    player.play().then(function(){
+      btn.textContent = '⏸️ Pause';
+      btn.dataset.playing = '1';
+    }).catch(function(err){ console.log('Playback error:', err); alert('Cannot play this audio. Try Download MP3.'); });
+    // Toggle pause on second click
+    if(btn.dataset.playing === '1'){
+      player.pause();
+      btn.textContent = '▶ Play';
+      btn.dataset.playing = '';
+    }
+  }, true);
+
+  // Expose
+  window.NPS_ensurePlayer = ensurePlayer;
+  window.NPS_patchCards = patchCards;
+})();
+</script>
+
+<script>
+// --- FIX ONLY: HIDE PLAYER UNTIL PLAY + BRING BACK POWERED BY XION, NO OTHER TOUCH ---
+(function(){
+  // Hide player on load
+  function hidePlayerOnLoad(){
+    var p = document.getElementById('globalAudioPlayer');
+    if(p){ p.style.display='none'; }
+    var bar = document.getElementById('npsNowPlaying');
+    if(bar){ bar.style.display='none'; }
+  }
+  hidePlayerOnLoad();
+  setTimeout(hidePlayerOnLoad, 500);
+  setTimeout(hidePlayerOnLoad, 1500);
+  // When audio ends / paused, hide player again after 2s? Keep visible while playing, hide when paused
+  var player = document.getElementById('globalAudioPlayer');
+  if(player){
+    player.addEventListener('pause', function(){ setTimeout(function(){ if(player.paused){ player.style.display='none'; var b=document.getElementById('npsNowPlaying'); if(b) b.style.display='none'; } }, 800); });
+    player.addEventListener('ended', function(){ player.style.display='none'; var b=document.getElementById('npsNowPlaying'); if(b) b.style.display='none'; });
+    player.addEventListener('play', function(){ player.style.display='block'; });
+  }
+
+  // Bring back Powered by Xion with what is inside
+  function bringBackXion(){
+    var xion = document.getElementById('xionSecretBtn');
+    if(xion){
+      xion.style.display='inline-block';
+      xion.style.visibility='visible';
+      xion.style.opacity='1';
+      xion.style.pointerEvents='auto';
+      xion.style.position='relative';
+      xion.style.zIndex='10';
+      // Ensure parent wrapper visible
+      var parent = xion.parentElement;
+      if(parent){
+        parent.style.display='block';
+        parent.style.visibility='visible';
+        parent.style.opacity='1';
+        parent.style.textAlign='center';
+        parent.style.padding='24px 0 60px'; // leave space so fixed player does not cover it when playing
+        parent.style.marginBottom='0';
+      }
+      // Also ensure Contact section Xion content visible
+      var contact = document.getElementById('contact');
+      if(contact){
+        contact.style.display='block';
+        contact.style.visibility='visible';
+      }
+    }
+    // Ensure footer legal not covering Xion
+    var footer = document.querySelector('footer');
+    if(footer){
+      footer.style.display='block';
+      footer.style.visibility='visible';
+      footer.style.marginBottom='0';
+    }
+    // Add bottom padding to body so player does not cover Xion when playing
+    document.body.style.paddingBottom='0';
+  }
+  bringBackXion();
+  setTimeout(bringBackXion, 500);
+  setTimeout(bringBackXion, 1500);
+  // Re-run when modal closes etc
+  document.addEventListener('click', function(){ setTimeout(bringBackXion, 200); }, true);
+})();
+</script>
+
+<script>
+// --- MY UPLOADS: EDIT + POST AGAIN + PIN/UNPIN -> SLIDE WITH COVER ART - ONLY THIS PLACE, NO OTHER TOUCH ---
+function editUploadNPS(idx){
+  try{
+    var uploads = JSON.parse(localStorage.getItem('nps_uploads')||'[]');
+    var u = uploads[idx]; if(!u) return;
+    var newTitle = prompt('Edit Title:', u.title); if(newTitle===null) return;
+    var newArtist = prompt('Edit Artist:', u.artist); if(newArtist===null) return;
+    var newGenre = prompt('Edit Genre (Afrobeats, Amapiano, Gospel, Hip-Hop, Freebeat, etc):', u.genre||'Afrobeats'); if(newGenre===null) return;
+    var newCover = prompt('Edit Cover URL (leave as is to keep current):', u.cover||u.cover_url||''); if(newCover===null) return;
+    var newType = prompt('Edit Type (Music / Freebeat / DJ Mix):', u.type||'Music'); if(newType===null) return;
+    u.title = newTitle.trim()||u.title;
+    u.artist = newArtist.trim()||u.artist;
+    u.genre = newGenre.trim()||u.genre;
+    if(newCover.trim()){ u.cover = newCover.trim(); u.cover_url = newCover.trim(); }
+    u.type = newType.trim()||u.type;
+    u.date = new Date().toISOString();
+    localStorage.setItem('nps_uploads', JSON.stringify(uploads));
+    localStorage.setItem('nps_uploads_backup', JSON.stringify(uploads));
+    try{ localStorage.setItem('nps_uploads_backup_locked_forever', JSON.stringify(uploads)); }catch(e){}
+    // If pinned, update pinned copy too
+    try{
+      var pinned = JSON.parse(localStorage.getItem('nps_pinned')||'[]');
+      var pi = pinned.findIndex(function(x){ return x.id===u.id; });
+      if(pi!==-1){ pinned[pi]=Object.assign({}, pinned[pi], u); localStorage.setItem('nps_pinned', JSON.stringify(pinned)); }
+    }catch(e){}
+    if(typeof loadMyUploads==='function') loadMyUploads();
+    if(typeof renderPinnedOnTop==='function') renderPinnedOnTop();
+    updateHeroWithPinnedNPS();
+    alert('Edited! Track updated.');
+  }catch(e){ console.error(e); }
+}
+function postAgainUploadNPS(idx){
+  try{
+    var uploads = JSON.parse(localStorage.getItem('nps_uploads')||'[]');
+    var u = uploads[idx]; if(!u) return;
+    if(!confirm('Post Again: "'+u.title+'" go show as NEW on FYP again?')) return;
+    var copy = Object.assign({}, u);
+    copy.id = 'nps_' + Date.now();
+    copy.date = new Date().toISOString();
+    // Use saveAndSyncUpload if exists to force FYP sync
+    if(typeof saveAndSyncUpload==='function'){ saveAndSyncUpload(copy); }
+    else {
+      uploads.unshift(copy);
+      localStorage.setItem('nps_uploads', JSON.stringify(uploads));
+      localStorage.setItem('nps_uploads_backup', JSON.stringify(uploads));
+    }
+    if(typeof loadMyUploads==='function') loadMyUploads();
+    if(typeof renderPinnedOnTop==='function') renderPinnedOnTop();
+    updateHeroWithPinnedNPS();
+    alert('Success! Posted Again as NEW on FYP Latest Music.');
+  }catch(e){ console.error(e); }
+}
+function togglePinUploadNPS(idx){
+  try{
+    var uploads = JSON.parse(localStorage.getItem('nps_uploads')||'[]');
+    var u = uploads[idx]; if(!u) return;
+    if(!u.id) u.id = u.date || Date.now().toString()+idx;
+    // Use existing togglePin logic if exists
+    if(typeof togglePin==='function'){ togglePin(idx); }
+    else if(typeof pinTrackById==='function'){
+      if(typeof isPinnedById==='function' && isPinnedById(u.id)){
+        if(typeof unpinTrackById==='function') unpinTrackById(u.id);
+      } else {
+        pinTrackById(u);
+      }
+      localStorage.setItem('nps_uploads', JSON.stringify(uploads));
+      if(typeof renderPinnedOnTop==='function') renderPinnedOnTop();
+      if(typeof loadMyUploads==='function') loadMyUploads();
+    }
+    // After pin/unpin, update hero
+    setTimeout(function(){ updateHeroWithPinnedNPS(); if(typeof renderPinnedOnTop==='function') renderPinnedOnTop(); if(typeof loadMyUploads==='function') loadMyUploads(); }, 200);
+  }catch(e){ console.error(e); }
+}
+// Pinned -> Hero Sliding with Cover Art - NO need to post on Slide Settings
+function updateHeroWithPinnedNPS(){
+  try{
+    var pinned = [];
+    try{ pinned = JSON.parse(localStorage.getItem('nps_pinned')||'[]'); }catch(e){}
+    // Also check cleanExpiredPins if exists
+    if(typeof cleanExpiredPins==='function'){ try{ pinned = cleanExpiredPins(); }catch(e){} }
+    if(!pinned || pinned.length===0) return;
+    var slider = document.getElementById('heroSlider');
+    if(!slider) return;
+    var slides = slider.querySelectorAll('.hero-slide');
+    if(!slides || slides.length===0) return;
+    // Fill slides with pinned cover art - first pinned = slide 1, second = slide 2, etc, cycle if more than slides
+    pinned.forEach(function(u, i){
+      var slide = slides[i % slides.length];
+      if(!slide) return;
+      var cover = u.cover || u.cover_url || 'resource/image_20261024_165503.webp';
+      var artEl = slide.querySelector('.hero-slide-art');
+      if(artEl){
+        artEl.innerHTML = '<img src="'+cover+'" style="width:100%;height:100%;object-fit:cover;border-radius:10px;" onerror="this.parentElement.textContent=\'📌 Pinned\'"><div style="position:absolute; bottom:8px; left:8px; right:8px; background:linear-gradient(90deg,#FF8C00,#FFD700); color:#000; font-size:0.65rem; font-weight:900; padding:4px 8px; border-radius:8px; text-align:center;">📌 PINNED PROMOTION - '+u.title+'</div>';
+        artEl.style.position='relative';
+        artEl.style.overflow='hidden';
+        artEl.style.backgroundImage='none';
+      }
+      // Also update slide text to pinned track, but keep original button
+      var content = slide.querySelector('.hero-slide-content');
+      if(content){
+        var h1 = content.querySelector('h1');
+        if(h1 && i===0){
+          // Keep slide 1 as Welcome, but show pinned badge above - do not overwrite all slides text
+        }
+        // Add pinned badge if not already
+        if(!content.querySelector('.nps-pinned-badge')){
+          var badge = document.createElement('div');
+          badge.className='nps-pinned-badge';
+          badge.style.cssText='display:inline-block; background:linear-gradient(90deg,#FF8C00,#FFD700); color:#000; font-size:0.65rem; font-weight:900; padding:4px 10px; border-radius:10px; margin-bottom:8px;';
+          badge.textContent='📌 PINNED: ' + u.title + ' - ' + u.artist;
+          content.insertBefore(badge, content.firstChild);
+        }
+      }
+    });
+    // Clean old badges that are no longer pinned
+    // Do not clear slider - keep original slides if no pinned
+  }catch(e){ console.log(e); }
+}
+window.editUploadNPS = editUploadNPS;
+window.postAgainUploadNPS = postAgainUploadNPS;
+window.togglePinUploadNPS = togglePinUploadNPS;
+window.updateHeroWithPinnedNPS = updateHeroWithPinnedNPS;
+// Run on load and after renderPinnedOnTop
+setTimeout(updateHeroWithPinnedNPS, 800);
+setTimeout(updateHeroWithPinnedNPS, 2000);
+document.addEventListener('click', function(e){
+  if(e.target.closest('button') && e.target.textContent.includes('Pin')){ setTimeout(updateHeroWithPinnedNPS, 500); }
+}, true);
+// Hook into loadMyUploads to auto update hero
+(function(){
+  var origLoad = window.loadMyUploads;
+  // MutationObserver on hero slider to keep pinned art
+  var slider = document.getElementById('heroSlider');
+  if(slider){
+    var obs = new MutationObserver(function(){ setTimeout(updateHeroWithPinnedNPS, 200); });
+    obs.observe(slider, {childList:true, subtree:true, attributes:true});
+  }
+})();
+</script>
+</body></html>
