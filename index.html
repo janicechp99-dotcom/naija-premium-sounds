@@ -3,25 +3,6 @@
 <html lang="en"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="description" content="Discover music, free beats, artists and DJ mixes on NaijaPremiumSounds.">
-<!-- GOOGLE SEO FIX ONLY - SAME FILE - DO NOT TOUCH OTHER THINGS -->
-<meta name="robots" content="index, follow">
-<link rel="canonical" href="https://www.naijapremiumsounds.com/">
-<meta name="author" content="NaijaPremiumSounds - Powered by Xion Company">
-<meta name="keywords" content="NaijaPremiumSounds, Afrobeats, Amapiano, Naija music, free beats, DJ mixes, Nigerian music download">
-<link rel="icon" type="image/webp" href="resource/image_20261024_165503.webp">
-<link rel="apple-touch-icon" href="resource/image_20261024_165503.webp">
-<meta property="og:type" content="website">
-<meta property="og:site_name" content="NaijaPremiumSounds">
-<meta property="og:title" content="NaijaPremiumSounds - Afrobeats, Amapiano, Free Beats & DJ Mixes">
-<meta property="og:description" content="Discover music, free beats, artists and DJ mixes on NaijaPremiumSounds.">
-<meta property="og:url" content="https://www.naijapremiumsounds.com/">
-<meta property="og:image" content="https://www.naijapremiumsounds.com/resource/image_20261024_165503.webp">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="NaijaPremiumSounds - Afrobeats, Amapiano, Free Beats & DJ Mixes">
-<meta name="twitter:description" content="Discover music, free beats, artists and DJ mixes on NaijaPremiumSounds.">
-<meta name="twitter:image" content="https://www.naijapremiumsounds.com/resource/image_20261024_165503.webp">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"NaijaPremiumSounds","url":"https://www.naijapremiumsounds.com/","description":"Discover music, free beats, artists and DJ mixes on NaijaPremiumSounds.","publisher":{"@type":"Organization","name":"NaijaPremiumSounds","email":"janicechp99@gmail.com"}}</script>
-<!-- END GOOGLE SEO FIX ONLY -->
 <title>NaijaPremiumSounds</title>
 <style>
 *{box-sizing:border-box}body{margin:0;font:16px/1.5 Arial,sans-serif;color:#E0DBE4;background:
@@ -463,7 +444,7 @@ function filterByGenre(genre){
     <p style="margin:6px 0 0; font-size:0.75rem; line-height:1.6; color:#9A9B9E;">
       1. <b>Catbox (already global, no setup):</b> Audio & cover uploaded to catbox.moe → global URL, anyone can download if they have link.<br>
       2. <b>For global list (everyone sees same tracks):</b><br>
-      - Create free Supabase account → New Project → Table `songs` with columns: title, artist, genre, cover_url, audio_url, audio_name, created_at<br>
+      - Create free Supabase account → New Project → Table `uploads` with columns: title, artist, genre, cover_url, audio_url, audio_name, created_at<br>
       - Copy Project URL + anon key → paste above → Save → Now every upload saves to Supabase and appears globally to all visitors.<br>
       3. <b>Cloudinary (optional, better than Catbox):</b> Create free Cloudinary → Settings → Upload → Add unsigned preset → paste Cloud Name + Preset above.<br>
       Without Supabase: files are global but list is local per device. With Supabase: fully global.
@@ -658,13 +639,7 @@ brandLogo.addEventListener('click', (e)=>{
 });
 
 function isAdminLogged(){
-  try{
-    if(localStorage.getItem('nps_admin') !== 'janice_logged') return false;
-    if(localStorage.getItem('nps_admin_email') !== 'janicechp99@gmail.com') return false;
-    let ts = parseInt(localStorage.getItem('nps_admin_time')||'0');
-    if(ts && Date.now() - ts > 24*60*60*1000){ localStorage.removeItem('nps_admin'); localStorage.removeItem('nps_admin_email'); return false; }
-    return true;
-  }catch(e){ return false; }
+  return localStorage.getItem('nps_admin') === 'janice_logged';
 }
 function updateAdminUI(){
   if(isAdminLogged()){
@@ -738,7 +713,7 @@ document.getElementById('adminLoginForm').addEventListener('submit', async e=>{
   // Success
   localStorage.removeItem('nps_failed');
   localStorage.removeItem('nps_lock_until');
-  localStorage.setItem('nps_admin','janice_logged'); localStorage.setItem('nps_admin_time', Date.now().toString());
+  localStorage.setItem('nps_admin','janice_logged');
   localStorage.setItem('nps_admin_email', email);
   msgEl.textContent='Welcome Janice — Admin access granted - LOCKED PERMANENTLY';
   msgEl.style.borderColor='#4CAF50';
@@ -841,7 +816,7 @@ async function checkXionPass(){
   if(isCorrect){
     localStorage.removeItem('nps_failed');
     localStorage.removeItem('nps_lock_until');
-    localStorage.setItem('nps_admin','janice_logged'); localStorage.setItem('nps_admin_time', Date.now().toString());
+    localStorage.setItem('nps_admin','janice_logged');
     localStorage.setItem('nps_admin_email', ADMIN_EMAIL);
     xionMsg.textContent='Access granted - Welcome Janice - LOCKED FOREVER';
     xionMsg.style.borderColor='#8B3DE5';
@@ -1006,7 +981,7 @@ function loadMyUploads(){
         var isPinned = (function(){ try{ var p=JSON.parse(localStorage.getItem('nps_pinned')||'[]'); return p.some(function(x){ return x.id===u.id || x.title===u.title; }); }catch(e){ return false; } })();
         var pinLabel = isPinned ? '📌 Pinned - Unpin' : '📌 Pin to Top & Slide';
         var pinStyle = isPinned ? 'background:linear-gradient(90deg,#FF8C00,#FFD700); color:#000; border-color:#FFD700;' : 'background:linear-gradient(90deg,#8B3DE5,#DA49AD); color:#fff;';
-        return `<div style="display:flex; align-items:center; gap:10px; border:1px solid #4a456e; border-radius:10px; padding:8px 10px; margin:6px 0; background:linear-gradient(180deg,#2e2b4a 0%, #28243a 100%);"><img src="${cover}" alt="Song cover" style="width:48px; height:48px; border-radius:8px; object-fit:cover; flex-shrink:0;" onerror="this.src='resource/image_20261024_165503.webp'"><div style="flex:1; min-width:0;"><b style="white-space:nowrap; overflow:hidden; text-overflow:ellipsis; display:block;">${u.title}</b><small style="color:#9A9B9E;">${u.artist} · ${u.genre||''} · ${u.type||'Music'}</small> <span style="background:linear-gradient(90deg,#8B3DE5,#DA49AD); color:#fff; font-size:0.65rem; padding:2px 6px; border-radius:10px; margin-left:4px;">${u.genre||'Music'}</span> ${isPinned ? '<span style="background:linear-gradient(90deg,#FF8C00,#FFD700); color:#000; font-size:0.6rem; padding:2px 6px; border-radius:10px; font-weight:900; margin-left:4px;">📌 PINNED</span>' : ''}</div><div style="display:flex; gap:6px; flex-wrap:wrap;"><button onclick="editUploadNPS(${i})" style="padding:6px 10px; font-size:0.75rem; background:#2a2742; border-color:#5e5a7e;">✏️ Edit</button><button onclick="postAgainUploadNPS(${i})" style="padding:6px 10px; font-size:0.75rem; background:#2a2742; border-color:#5e5a7e;">🔁 Post Again</button><button onclick="togglePinUploadNPS(${i})" style="padding:6px 10px; font-size:0.75rem; ${pinStyle}">${pinLabel}</button><button onclick="deleteUpload(${i})" style="padding:6px 10px; font-size:0.75rem; background:#2a2742; border-color:#5e5a7e;">🗑️ Delete</button></div></div>`;
+        return `<div style="display:flex; align-items:center; gap:10px; border:1px solid #4a456e; border-radius:10px; padding:8px 10px; margin:6px 0; background:linear-gradient(180deg,#2e2b4a 0%, #28243a 100%);"><img src="${cover}" style="width:48px; height:48px; border-radius:8px; object-fit:cover; flex-shrink:0;" onerror="this.src='resource/image_20261024_165503.webp'"><div style="flex:1; min-width:0;"><b style="white-space:nowrap; overflow:hidden; text-overflow:ellipsis; display:block;">${u.title}</b><small style="color:#9A9B9E;">${u.artist} · ${u.genre||''} · ${u.type||'Music'}</small> <span style="background:linear-gradient(90deg,#8B3DE5,#DA49AD); color:#fff; font-size:0.65rem; padding:2px 6px; border-radius:10px; margin-left:4px;">${u.genre||'Music'}</span> ${isPinned ? '<span style="background:linear-gradient(90deg,#FF8C00,#FFD700); color:#000; font-size:0.6rem; padding:2px 6px; border-radius:10px; font-weight:900; margin-left:4px;">📌 PINNED</span>' : ''}</div><div style="display:flex; gap:6px; flex-wrap:wrap;"><button onclick="editUploadNPS(${i})" style="padding:6px 10px; font-size:0.75rem; background:#2a2742; border-color:#5e5a7e;">✏️ Edit</button><button onclick="postAgainUploadNPS(${i})" style="padding:6px 10px; font-size:0.75rem; background:#2a2742; border-color:#5e5a7e;">🔁 Post Again</button><button onclick="togglePinUploadNPS(${i})" style="padding:6px 10px; font-size:0.75rem; ${pinStyle}">${pinLabel}</button><button onclick="deleteUpload(${i})" style="padding:6px 10px; font-size:0.75rem; background:#2a2742; border-color:#5e5a7e;">🗑️ Delete</button></div></div>`;
       }).join('');
     }
   }
@@ -1036,7 +1011,7 @@ function loadMyUploads(){
         const c = document.createElement('article');
         c.className='card';
         c.dataset.uploaded='1';
-        c.innerHTML = `<div class="art"><img src="${u.cover||'resource/image_20261024_165503.webp'}" alt="Song cover" style="width:100%;height:100%;object-fit:cover;border-radius:8px"></div><h3>${u.title}</h3><p class="muted">${u.artist} · ${u.genre} · BPM: —</p><button data-play>▶ Preview</button>`;
+        c.innerHTML = `<div class="art"><img src="${u.cover||'resource/image_20261024_165503.webp'}" style="width:100%;height:100%;object-fit:cover;border-radius:8px"></div><h3>${u.title}</h3><p class="muted">${u.artist} · ${u.genre} · BPM: —</p><button data-play>▶ Preview</button>`;
         freebeatGrid.prepend(c);
       });
     }
@@ -1075,7 +1050,7 @@ function deleteUpload(idx){
   function loadCfgToInputs(){
     let cfg = getCloudConfig();
     document.getElementById('cfg_cloudName').value = cfg.cloudName||'';
-    document.getElementById('cfg_uploadPreset').value = cfg.uploadPreset || CLOUDINARY_UPLOAD_PRESET_FIXED||'';
+    document.getElementById('cfg_uploadPreset').value = cfg.uploadPreset||'';
     document.getElementById('cfg_supabaseUrl').value = cfg.supabaseUrl||'';
     document.getElementById('cfg_supabaseKey').value = cfg.supabaseKey||'';
     renderCloudConfigUI();
@@ -1131,7 +1106,7 @@ loadMyUploads = async function(){
         let coverImg = u.cover || u.cover_url || 'resource/image_20261024_165503.webp';
         let audioUrl = u.audio || u.audio_url || '';
         let dlBtn = audioUrl ? `<button class="btn-download" onclick="downloadRealMP3('${audioUrl}', '${(u.audioName||u.title+'.mp3').replace(/'/g,"\\'")}')">⬇ Download MP3</button>` : `<button class="btn-download" onclick="downloadSample(this, '${u.title.replace(/'/g,"\\'")}')">⬇ Download MP3</button>`;
-        art.innerHTML = `<div class="art"><img src="${coverImg}" alt="Song cover" style="width:100%;height:100%;object-fit:cover;border-radius:8px" onerror="this.src='resource/image_20261024_165503.webp'"><span style="position:absolute; top:6px; left:6px; background:linear-gradient(90deg,#8B3DE5,#DA49AD); color:#fff; font-size:0.6rem; padding:2px 6px; border-radius:10px;">GLOBAL</span></div><h3>${u.title}</h3><p class="muted">${u.artist} · ${u.genre} ${u.global?'· 🌍 Global':''}</p><div class="actions"><button data-play>▶ Play preview</button><button>♡ Save</button>${dlBtn}</div>`;
+        art.innerHTML = `<div class="art"><img src="${coverImg}" style="width:100%;height:100%;object-fit:cover;border-radius:8px" onerror="this.src='resource/image_20261024_165503.webp'"><span style="position:absolute; top:6px; left:6px; background:linear-gradient(90deg,#8B3DE5,#DA49AD); color:#fff; font-size:0.6rem; padding:2px 6px; border-radius:10px;">GLOBAL</span></div><h3>${u.title}</h3><p class="muted">${u.artist} · ${u.genre} ${u.global?'· 🌍 Global':''}</p><div class="actions"><button data-play>▶ Play preview</button><button>♡ Save</button>${dlBtn}</div>`;
         art.style.position='relative';
         if(tracksGrid) tracksGrid.prepend(art);
       });
@@ -1145,10 +1120,8 @@ loadMyUploads = async function(){
 const CLOUD_CONFIG_KEY = 'nps_cloud_config';
 
 // --- SUPABASE CONNECTED - REAL GLOBAL - YOUR CREDENTIALS ---
-const SUPABASE_URL_FIXED = "https://bnllpygszyosfbgmhljyo.supabase.co";
-const CLOUDINARY_CLOUD_NAME_FIXED = "mplhw46c";
-const CLOUDINARY_UPLOAD_PRESET_FIXED = "naija_upload";
-const SUPABASE_ANON_KEY_FIXED = "sb_publishable_nwKjsGD2BvonS8EKSJvIcQ_R8hESnTs";
+const SUPABASE_URL_FIXED = "https://bnllpygszyosfbgmhjyo.supabase.co";
+const SUPABASE_ANON_KEY_FIXED = "sb_publishable_nwKjsGD2BvonS8EovhPzPZs_3Y5w5O8N";
 // Auto save your credentials so admin doesn't need to paste again
 (function autoConnectSupabase(){
   try{
@@ -1224,18 +1197,7 @@ function unpinTrackById(id){
 function getPinnedIds(){ return new Set(getPinned().map(p=>p.id)); }
 
 function getCloudConfig(){
-  try{
-    var a = {}; try{ a = JSON.parse(localStorage.getItem(CLOUD_CONFIG_KEY)||'{}'); }catch(e){}
-    var b = {}; try{ b = JSON.parse(localStorage.getItem('nps_cloud_cfg')||'{}'); }catch(e){}
-    var cfg = Object.assign({}, b, a);
-    var FIXED_URL = 'https://bnllpygszyosfbgmhljyo.supabase.co';
-    var FIXED_KEY = 'sb_publishable_nwKjsGD2BvonS8EKSJvIcQ_R8hESnTs';
-    if(!cfg.supabaseUrl || cfg.supabaseUrl.indexOf('bnllpygszyosfbgmhljyo')===-1 || cfg.supabaseUrl.indexOf('localhost')!==-1){ cfg.supabaseUrl = FIXED_URL; }
-    if(!cfg.supabaseKey || cfg.supabaseKey.indexOf('EKSJvIcQ')===-1){ cfg.supabaseKey = FIXED_KEY; }
-    if(!cfg.cloudName) cfg.cloudName = 'mplhw46c';
-    if(!cfg.uploadPreset) cfg.uploadPreset = 'naija_upload';
-    return cfg;
-  }catch(e){ return {supabaseUrl:'https://bnllpygszyosfbgmhljyo.supabase.co', supabaseKey:'sb_publishable_nwKjsGD2BvonS8EKSJvIcQ_R8hESnTs', cloudName:'mplhw46c', uploadPreset:'naija_upload'}; }
+  try{ return JSON.parse(localStorage.getItem(CLOUD_CONFIG_KEY)||'{}'); }catch(e){ return {}; }
 }
 function saveCloudConfig(cfg){ localStorage.setItem(CLOUD_CONFIG_KEY, JSON.stringify(cfg)); }
 
@@ -1258,13 +1220,13 @@ async function uploadToCatbox(file){
 // Upload to Cloudinary if configured (global CDN)
 async function uploadToCloudinary(file, resourceType='auto'){
   let cfg = getCloudConfig();
-  var _cn = cfg.cloudName || (typeof CLOUDINARY_CLOUD_NAME_FIXED !== 'undefined' ? CLOUDINARY_CLOUD_NAME_FIXED : 'mplhw46c'); var _cp = cfg.uploadPreset || (typeof CLOUDINARY_UPLOAD_PRESET_FIXED !== 'undefined' ? CLOUDINARY_UPLOAD_PRESET_FIXED : 'naija_upload'); if(!_cn || !_cp) return null;
+  if(!cfg.cloudName || !cfg.uploadPreset) return null;
   try{
     let fd = new FormData();
     fd.append('file', file);
-    fd.append('upload_preset', cfg.uploadPreset || CLOUDINARY_UPLOAD_PRESET_FIXED);
+    fd.append('upload_preset', cfg.uploadPreset);
     fd.append('folder', 'naijapremiumsounds');
-    let url = `https://api.cloudinary.com/v1_1/${cfg.cloudName || CLOUDINARY_CLOUD_NAME_FIXED}/${resourceType}/upload`;
+    let url = `https://api.cloudinary.com/v1_1/${cfg.cloudName}/${resourceType}/upload`;
     let res = await fetch(url, {method:'POST', body:fd});
     let data = await res.json();
     if(data.secure_url) return data.secure_url;
@@ -1275,58 +1237,46 @@ async function uploadToCloudinary(file, resourceType='auto'){
 
 // Save to Supabase if configured (global list)
 async function saveToSupabaseGlobal(upload){
-  // --- SUPABASE FIX ONLY - NEW PROJECT bnllpygszyosfbgmhljyo / public.songs / INSERT FIRST ---
-  var FIXED_URL = 'https://bnllpygszyosfbgmhljyo.supabase.co';
-  var FIXED_KEY = 'sb_publishable_nwKjsGD2BvonS8EKSJvIcQ_R8hESnTs';
-  var cfg = {};
-  try{ cfg = getCloudConfig(); }catch(e){}
-  var supabaseUrl = FIXED_URL;
-  var supabaseKey = FIXED_KEY;
-  if(!supabaseUrl || !supabaseKey) return {ok:false, status:0, error:'Missing Supabase URL/Key'};
+  let cfg = getCloudConfig();
+  // Use fixed credentials if not in config
+  let supabaseUrl = cfg.supabaseUrl || SUPABASE_URL_FIXED;
+  let supabaseKey = cfg.supabaseKey || SUPABASE_ANON_KEY_FIXED;
+  if(!supabaseUrl || !supabaseKey) return false;
   try{
-    var url = supabaseUrl.replace(/\/$/,'') + '/rest/v1/songs';
-    var payload = {
+    let url = supabaseUrl.replace(/\/$/,'') + '/rest/v1/uploads';
+    // Your table: id, title, artist, genre, cover_url, audio_url, created_at
+    let payload = {
       title: upload.title || upload.track_title || 'Untitled',
       artist: upload.artist || upload.artist_name || 'Unknown',
       genre: upload.genre || 'Afrobeats',
       cover_url: upload.cover || upload.cover_url || '',
       audio_url: upload.audio || upload.audio_url || ''
     };
-    if(!payload.audio_url){ return {ok:false, status:0, error:'No audio_url - Cloudinary/Catbox upload failed, Supabase not tried'}; }
-    var doPost = async function(useBearer){
-      return await fetch(url, {
-        method:'POST',
-        headers: Object.assign({
-          'apikey': supabaseKey,
-          'Content-Type':'application/json',
-          'Prefer':'return=representation'
-        }, useBearer ? {'Authorization':'Bearer '+supabaseKey} : {}),
-        body: JSON.stringify(payload)
-      });
-    };
-    var res = await doPost(true);
-    if(!res.ok && (res.status===401 || res.status===403)){
-      // Retry without Bearer - some publishable keys only need apikey
-      res = await doPost(false);
-    }
+    let res = await fetch(url, {
+      method:'POST',
+      headers:{
+        'apikey': supabaseKey,
+        'Authorization': 'Bearer ' + supabaseKey,
+        'Content-Type':'application/json',
+        'Prefer':'return=representation'
+      },
+      body: JSON.stringify(payload)
+    });
     if(!res.ok){
-      var txt = '';
-      try{ txt = await res.text(); }catch(e){}
+      let txt = await res.text();
       console.log('supabase save failed', res.status, txt);
-      window.lastSupabaseError = 'Supabase INSERT failed: ' + res.status + ' ' + txt.substring(0,300);
-      return {ok:false, status:res.status, error: txt || ('HTTP '+res.status)};
+      // If fails because of publishable key format, try without Bearer
+      if(res.status===401 || res.status===403){
+        console.log('Trying alternative auth...');
+      }
+      return false;
     }
-    var data = null;
-    try{ data = await res.json(); }catch(e){}
+    let data = await res.json();
     console.log('Supabase saved globally', data);
-    window.lastSupabaseError = '';
-    return {ok:true, status:res.status, data:data};
-  }catch(e){
-    console.log('supabase save error', e);
-    window.lastSupabaseError = 'Supabase network error: ' + (e.message||e);
-    return {ok:false, status:0, error: String(e.message||e)};
-  }
+    return true;
+  }catch(e){ console.log('supabase save error', e); return false; }
 }
+
 async function fetchGlobalUploads(){
   let cfg = getCloudConfig();
   let supabaseUrl = cfg.supabaseUrl || SUPABASE_URL_FIXED;
@@ -1335,7 +1285,7 @@ async function fetchGlobalUploads(){
   // Try Supabase - fetch all songs so everyone sees same
   if(supabaseUrl && supabaseKey){
     try{
-      let url = supabaseUrl.replace(/\/$/,'') + '/rest/v1/songs?select=*&order=created_at.desc&limit=100';
+      let url = supabaseUrl.replace(/\/$/,'') + '/rest/v1/uploads?select=*&order=created_at.desc&limit=100';
       let res = await fetch(url, {
         headers:{
           'apikey': supabaseKey,
@@ -1383,7 +1333,7 @@ function renderPinnedOnTop(){
     } else {
       listEl.innerHTML = pinned.map((u,i)=>`
         <div style="display:flex; align-items:center; gap:10px; padding:10px; border:1px solid rgba(139,61,229,0.32); border-radius:10px; background:linear-gradient(180deg, rgba(46,42,68,0.9), rgba(36,32,56,0.9));">
-          <img src="${u.cover||u.cover_url||'resource/image_20261024_165503.webp'}" alt="Pinned Promotion - Must Download" style="width:48px; height:48px; border-radius:8px; object-fit:cover;">
+          <img src="${u.cover||u.cover_url||'resource/image_20261024_165503.webp'}" style="width:48px; height:48px; border-radius:8px; object-fit:cover;">
           <div style="flex:1; min-width:0;">
             <div style="font-weight:700; font-size:0.9rem; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">${u.title} ${i===0?'👑':''}</div>
             <div class="muted" style="font-size:0.75rem;">${u.artist} · ${u.genre} · Pinned ${new Date(u.pinnedAt).toLocaleDateString()}<br><span style="color:#FFD700; font-weight:700;">⏳ ${getRemainingText(u)} - Expires ${getExpiryDate(u.pinnedAt).toLocaleDateString()}</span></div>
@@ -1409,7 +1359,7 @@ function renderPinnedOnTop(){
       let coverImg = u.cover || u.cover_url || 'resource/image_20261024_165503.webp';
       let audioUrl = u.audio || u.audio_url || '';
       let dlBtn = audioUrl ? `<button class="btn-download" onclick="downloadRealMP3('${audioUrl}', '${(u.audioName||u.title+'.mp3').replace(/'/g,"\\'")}')">⬇ Download MP3</button>` : `<button class="btn-download" onclick="downloadSample(this, '${u.title.replace(/'/g,"\\'")}')">⬇ Download MP3</button>`;
-      art.innerHTML = `<div class="art" style="position:relative;"><img src="${coverImg}" alt="Pinned Promotion - Must Download" style="width:100%;height:100%;object-fit:cover;border-radius:8px" onerror="this.src='resource/image_20261024_165503.webp'"><span style="position:absolute; top:6px; left:6px; background:linear-gradient(90deg,#FF8C00,#FFD700); color:#000; font-size:0.6rem; padding:2px 8px; border-radius:10px; font-weight:900;">📌 PROMOTION NOW - MUST DOWNLOAD</span><span style="position:absolute; top:6px; right:6px; background:linear-gradient(90deg,#8B3DE5,#DA49AD); color:#fff; font-size:0.55rem; padding:2px 6px; border-radius:10px;">5 MONTHS TOP</span></div><h3>${u.title} <span style="font-size:0.7rem; background:linear-gradient(90deg,#8B3DE5,#DA49AD); color:#fff; padding:2px 6px; border-radius:10px;">PROMO</span></h3><p class="muted">${u.artist} · ${u.genre} · 🌍 Promotion<br><span style="color:#FFD700; font-size:0.75rem; font-weight:700;">⏳ ${getRemainingText(u)}</span></p><div class="actions"><button data-play>▶ Play preview</button><button>♡ Save</button>${dlBtn}</div>`;
+      art.innerHTML = `<div class="art" style="position:relative;"><img src="${coverImg}" style="width:100%;height:100%;object-fit:cover;border-radius:8px" onerror="this.src='resource/image_20261024_165503.webp'"><span style="position:absolute; top:6px; left:6px; background:linear-gradient(90deg,#FF8C00,#FFD700); color:#000; font-size:0.6rem; padding:2px 8px; border-radius:10px; font-weight:900;">📌 PINNED PROMOTION</span><span style="position:absolute; top:6px; right:6px; background:linear-gradient(90deg,#8B3DE5,#DA49AD); color:#fff; font-size:0.55rem; padding:2px 6px; border-radius:10px;">5 MONTHS TOP</span></div><h3>${u.title} <span style="font-size:0.7rem; background:linear-gradient(90deg,#8B3DE5,#DA49AD); color:#fff; padding:2px 6px; border-radius:10px;">PROMO</span></h3><p class="muted">${u.artist} · ${u.genre} · 🌍 Promotion<br><span style="color:#FFD700; font-size:0.75rem; font-weight:700;">⏳ ${getRemainingText(u)}</span></p><div class="actions"><button data-play>▶ Play preview</button><button>♡ Save</button>${dlBtn}</div>`;
       art.style.borderColor = 'rgba(255,215,0,0.35)';
       art.style.boxShadow = '0 0 20px rgba(255,215,0,0.15), 0 6px 20px rgba(0,0,0,0.35)';
       tracksGrid.prepend(art);
@@ -1425,7 +1375,7 @@ function renderCloudConfigUI(){
   if(!cfg.supabaseKey) cfg.supabaseKey = SUPABASE_ANON_KEY_FIXED;
   let el = document.getElementById('cloudConfigStatus');
   if(el){
-    let hasCloudinary = !!(cfg.cloudName && cfg.uploadPreset || CLOUDINARY_UPLOAD_PRESET_FIXED);
+    let hasCloudinary = !!(cfg.cloudName && cfg.uploadPreset);
     let hasSupabase = !!(cfg.supabaseUrl && cfg.supabaseKey);
     el.innerHTML = `
       <div style="font-size:0.8rem; line-height:1.6;">
@@ -1491,25 +1441,13 @@ document.getElementById('uploadTrackBtn')?.addEventListener('click', async ()=>{
     };
     
     // Save globally if Supabase configured
-    let _trackForSupabase = Object.assign({}, newUpload, {coverUrl: newUpload.cover || newUpload.cover_url || '', audioUrl: newUpload.audio || newUpload.audio_url || '', __npsStrictSaved: true});
-     // STRICT: Use saveTrackToSupabase - if it fails, DO NOT save to localStorage, DO NOT show Success, STOP
-     let savedGlobal = false;
-     try{
-       savedGlobal = await saveTrackToSupabase(_trackForSupabase);
-     }catch(e){ console.error('saveTrackToSupabase exception', e); savedGlobal = false; }
-     if(!savedGlobal){
-       if(statusEl) statusEl.textContent = 'SUPABASE FAILED - NOT SAVED: ' + (window.lastSupabaseError||'Unknown error') + ' | FYP NOT updated.';
-       return;
-     }
-     if(statusEl) statusEl.textContent = 'Saved to Supabase songs! Showing for FYP...';
-     // STRICT already saved to localStorage + FYP + showed Success alert - skip duplicate saveAndSyncUpload below
-     // Mark to skip the old localStorage block
-     newUpload.__npsStrictSaved = true;
+    let savedGlobal = await saveToSupabaseGlobal(newUpload);
     
     // Reliable Upload-to-FYP Sync using saveAndSyncUpload
     let savedOK = false;
     try {
-      if(newUpload.__npsStrictSaved){ savedOK = true; } else if(typeof saveAndSyncUpload === 'function'){ savedOK = saveAndSyncUpload(newUpload);
+      if(typeof saveAndSyncUpload === 'function'){
+        savedOK = saveAndSyncUpload(newUpload);
       } else {
         // Fallback if function missing
         let uploads = JSON.parse(localStorage.getItem('nps_uploads')||'[]');
@@ -1666,7 +1604,7 @@ document.querySelectorAll('.eye-toggle').forEach(btn=>{
 <script>
 // --- FINAL ADMIN FIX BASED ON USER PATCH - SAME FILE, NO REBUILD ---
 async function handleAdminLogin(passwordInput){
-  const targetPassword = ''; // REMOVED plain password - hash only for security
+  const targetPassword = 'Aliveg2004$';
   const targetEmail = 'janicechp99@gmail.com';
   const adminHash = 'f643d57175c86015ee945bd6641823e5122952f644415e3f15ad9ad0506792e6';
   let isAuthenticated = false;
@@ -1683,7 +1621,7 @@ async function handleAdminLogin(passwordInput){
     if (passwordInput === targetPassword) isAuthenticated = true;
   }
   if (isAuthenticated) {
-    localStorage.setItem('nps_admin','janice_logged'); localStorage.setItem('nps_admin_time', Date.now().toString());
+    localStorage.setItem('nps_admin','janice_logged');
     localStorage.setItem('nps_admin_email', targetEmail);
     const adminPanel = document.getElementById('nps-admin-janice');
     if (adminPanel) {
@@ -1886,7 +1824,7 @@ window.npsAdminLogout = npsAdminLogout;
 <script>
 // --- Reliable Upload-to-FYP Sync Fix - SAME FILE, NO REBUILD, REMEMBER RULES ---
 // Rules remembered before fix: single file locked Index_1.html 101058 bytes, no rebuild/new file/no unfix,
-// slide 4x 3s, menu, Xion REMOVED_PLAIN_PASSWORD, admin janicechp99@gmail.com, eye toggle, Supabase+Catbox, My Uploads 48px, FYP tracks, pin 5 months, nps_uploads + backup + locked_forever
+// slide 4x 3s, menu, Xion Aliveg2004$, admin janicechp99@gmail.com, eye toggle, Supabase+Catbox, My Uploads 48px, FYP tracks, pin 5 months, nps_uploads + backup + locked_forever
 function saveAndSyncUpload(newTrackData) {
   try {
     let existingUploads = JSON.parse(localStorage.getItem('nps_uploads') || '[]');
@@ -2457,7 +2395,7 @@ function updateHeroWithPinnedNPS(){
       var cover = u.cover || u.cover_url || 'resource/image_20261024_165503.webp';
       var artEl = slide.querySelector('.hero-slide-art');
       if(artEl){
-        artEl.innerHTML = '<img src="'+cover+'" alt="Pinned Promotion - Must Download" style="width:100%;height:100%;object-fit:cover;border-radius:10px;" onerror="this.parentElement.textContent=\'📌 Pinned\'"><div style="position:absolute; bottom:8px; left:8px; right:8px; background:linear-gradient(90deg,#FF8C00,#FFD700); color:#000; font-size:0.65rem; font-weight:900; padding:4px 8px; border-radius:8px; text-align:center;">📌 PROMOTION NOW - MUST DOWNLOAD - '+u.title+'</div>';
+        artEl.innerHTML = '<img src="'+cover+'" style="width:100%;height:100%;object-fit:cover;border-radius:10px;" onerror="this.parentElement.textContent=\'📌 Pinned\'"><div style="position:absolute; bottom:8px; left:8px; right:8px; background:linear-gradient(90deg,#FF8C00,#FFD700); color:#000; font-size:0.65rem; font-weight:900; padding:4px 8px; border-radius:8px; text-align:center;">📌 PINNED PROMOTION - '+u.title+'</div>';
         artEl.style.position='relative';
         artEl.style.overflow='hidden';
         artEl.style.backgroundImage='none';
@@ -2474,7 +2412,7 @@ function updateHeroWithPinnedNPS(){
           var badge = document.createElement('div');
           badge.className='nps-pinned-badge';
           badge.style.cssText='display:inline-block; background:linear-gradient(90deg,#FF8C00,#FFD700); color:#000; font-size:0.65rem; font-weight:900; padding:4px 10px; border-radius:10px; margin-bottom:8px;';
-          badge.textContent='📌 PROMOTION NOW - MUST DOWNLOAD: ' + u.title + ' - ' + u.artist;
+          badge.textContent='📌 PINNED: ' + u.title + ' - ' + u.artist;
           content.insertBefore(badge, content.firstChild);
         }
       }
@@ -2503,242 +2441,5 @@ document.addEventListener('click', function(e){
     obs.observe(slider, {childList:true, subtree:true, attributes:true});
   }
 })();
-</script>
-
-<script>
-// --- NPS LOGOUT FIX ONLY - RULE KEPT: SAME FILE, NO NEW FILE, NO OLD FILE, NO TOUCH OTHER THINGS ---
-(function(){
-  function doLogout(){
-    try{
-      localStorage.removeItem('nps_admin');
-      localStorage.removeItem('nps_admin_email');
-      localStorage.removeItem('nps_admin_session');
-      sessionStorage.removeItem('nps_admin');
-      sessionStorage.removeItem('nps_admin_email');
-    }catch(e){}
-    // Force hide dashboard even if it has display:block !important
-    var dash = document.getElementById('adminDashboard');
-    if(dash){ dash.hidden = true; dash.style.setProperty('display','none','important'); dash.style.visibility='hidden'; }
-    var panel = document.getElementById('nps-admin-janice');
-    if(panel){ panel.classList.remove('active'); panel.style.setProperty('display','none','important'); panel.hidden = true; panel.style.visibility='hidden'; }
-    var lw = document.getElementById('adminLoginWrap') || document.getElementById('loginWrap');
-    if(lw){ lw.hidden = false; if(lw.hasAttribute('hidden')) lw.removeAttribute('hidden'); lw.style.setProperty('display','block','important'); lw.style.visibility='visible'; }
-    var profile = document.getElementById('profile');
-    if(profile) profile.style.display = 'block';
-    var statusEl = document.getElementById('adminStatus') || document.querySelector('.admin-status');
-    if(statusEl) statusEl.textContent = 'Logged out. Admin area locked.';
-    var msg = document.getElementById('adminMsg');
-    if(msg){ msg.hidden = false; msg.textContent = 'Logged out. Admin area locked.'; }
-    // Reload to clear any stale admin UI state - after clearing localStorage, login form will show
-    setTimeout(function(){ location.reload(); }, 250);
-  }
-  window.npsAdminLogout = doLogout;
-  // Capture phase, highest priority, override all 3 old handlers
-  document.addEventListener('click', function(e){
-    var btn = e.target.closest('#adminLogout');
-    if(!btn) return;
-    e.preventDefault();
-    e.stopImmediatePropagation();
-    e.stopPropagation();
-    doLogout();
-  }, true);
-  // Also bind directly if button already exists
-  var b = document.getElementById('adminLogout');
-  if(b){
-    b.setAttribute('onclick', 'npsAdminLogout(); return false;');
-    b.onclick = function(ev){ ev.preventDefault(); doLogout(); return false; };
-  }
-})();
-</script>
-
-<script>
-// --- NPS ADMIN SECURITY FIX ONLY - RULE KEPT ---
-// 1. Plain password removed, hash only - SHA256 f643d57175c86015ee945bd6641823e5122952f644415e3f15ad9ad0506792e6
-// 2. isAdminLogged now requires email + 24h session
-// 3. Sanitize helper for titles - prevents <script> injection via track title
-window.npsEscapeHtml = function(s){
-  if(s==null) return '';
-  return String(s).replace(/[&<>"']/g, function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]; });
-};
-// Override handleAdminLogin to force hash-only - if old code still has direct compare, block it
-(function(){
-  try{
-    let orig = window.handleAdminLogin;
-    if(typeof orig === 'function'){
-      window.handleAdminLogin = async function(pwd){
-        // Block plain-text bypass - require hash check only
-        if(pwd === 'REMOVED_PLAIN_PASSWORD') return false;
-        return await orig(pwd);
-      };
-    }
-  }catch(e){}
-})();
-</script>
-
-<script>
-// --- NPS SUPABASE + CLOUDINARY FIX ONLY - RULE KEPT: SAME FILE, NO NEW FILE, NO OLD FILE ---
-// New Supabase: https://bnllpygszyosfbgmhljyo.supabase.co / Table songs / New Key
-// Cloudinary: mplhw46c / naija_upload as MAIN, Catbox only fallback
-(function(){
-  try{
-    var cfg = JSON.parse(localStorage.getItem('nps_cloud_cfg')||'{}');
-    var changed = false;
-    if(cfg.supabaseUrl !== 'https://bnllpygszyosfbgmhljyo.supabase.co'){ cfg.supabaseUrl = 'https://bnllpygszyosfbgmhljyo.supabase.co'; changed = true; }
-    if(cfg.supabaseKey !== 'sb_publishable_nwKjsGD2BvonS8EKSJvIcQ_R8hESnTs'){ cfg.supabaseKey = 'sb_publishable_nwKjsGD2BvonS8EKSJvIcQ_R8hESnTs'; changed = true; }
-    if(cfg.cloudName !== 'mplhw46c'){ cfg.cloudName = 'mplhw46c'; changed = true; }
-    if(cfg.uploadPreset !== 'naija_upload'){ cfg.uploadPreset = 'naija_upload'; changed = true; }
-    if(changed) localStorage.setItem('nps_cloud_cfg', JSON.stringify(cfg)); try{ localStorage.setItem('nps_cloud_config', JSON.stringify(cfg)); }catch(e){}
-    window.CLOUDINARY_CLOUD_NAME_FIXED = 'mplhw46c';
-    window.CLOUDINARY_UPLOAD_PRESET_FIXED = 'naija_upload';
-    window.SUPABASE_URL_FIXED = 'https://bnllpygszyosfbgmhljyo.supabase.co';
-    window.SUPABASE_ANON_KEY_FIXED = 'sb_publishable_nwKjsGD2BvonS8EKSJvIcQ_R8hESnTs';
-  }catch(e){}
-})();
-</script>
-
-<script>
-// --- NPS AUTO REMOVE SAMPLE ON UPLOAD FIX ONLY - SAME FILE, NO TOUCH OTHER THINGS ---
-(function(){
-  function hasRealUploads(){
-    try{
-      var u = JSON.parse(localStorage.getItem('nps_uploads')||'[]');
-      if(u && u.length>0) return true;
-      var b = JSON.parse(localStorage.getItem('nps_uploads_backup')||'[]');
-      if(b && b.length>0) return true;
-    }catch(e){}
-    try{ if(window.globalUploads && window.globalUploads.length>0) return true; }catch(e){}
-    return false;
-  }
-  function hideSamples(){
-    if(!hasRealUploads()) return;
-    try{
-      document.querySelectorAll('.card[data-search]').forEach(function(card){
-        var s = (card.getAttribute('data-search')||'').toLowerCase();
-        if(s.indexOf('sample')===0 || s.indexOf(' sample')>=0){
-          card.style.setProperty('display','none','important');
-          card.hidden = true;
-          card.setAttribute('data-sample-hidden','1');
-        }
-      });
-      document.querySelectorAll('.card h3').forEach(function(h){
-        var t = (h.textContent||'').trim().toLowerCase();
-        if(t.indexOf('sample ')===0){
-          var c = h.closest('.card');
-          if(c){ c.style.setProperty('display','none','important'); c.hidden=true; c.setAttribute('data-sample-hidden','1'); }
-        }
-      });
-    }catch(e){}
-  }
-  window.npsHideSamplesIfUploads = hideSamples;
-  if(document.readyState==='loading'){ document.addEventListener('DOMContentLoaded', function(){ setTimeout(hideSamples, 500); setTimeout(hideSamples, 1500); setTimeout(hideSamples, 3000); }); }
-  else { setTimeout(hideSamples, 500); setTimeout(hideSamples, 1500); setTimeout(hideSamples, 3000); }
-  try{
-    var origSave = window.saveAndSyncUpload;
-    if(typeof origSave==='function' && !origSave.__npsSampleHook){
-      var wrapped = function(){ var r = origSave.apply(this, arguments); setTimeout(hideSamples, 600); setTimeout(hideSamples, 1500); return r; };
-      wrapped.__npsSampleHook = true;
-      window.saveAndSyncUpload = wrapped;
-    }
-  }catch(e){}
-  try{
-    var obs = new MutationObserver(function(){ hideSamples(); });
-    obs.observe(document.body, {childList:true, subtree:true});
-    setTimeout(function(){ obs.disconnect(); }, 15000);
-  }catch(e){}
-  document.addEventListener('click', function(e){ if(e.target.closest('button') && /upload|post again|save/i.test(e.target.textContent||'')){ setTimeout(hideSamples, 800); } }, true);
-})();
-</script>
-
-<script>
-// --- NPS STRICT SUPABASE UPLOAD FIX - SAME FILE, NO TOUCH DESIGN/LAYOUT ---
-// Supabase client shim - uses REST fetch to NEW project bnllpygszyosfbgmhljyo, no old project, no localhost
-if (typeof window.supabaseClient === 'undefined' || !window.supabaseClient) {
-  window.supabaseClient = {
-    _url: 'https://bnllpygszyosfbgmhljyo.supabase.co',
-    _key: 'sb_publishable_nwKjsGD2BvonS8EKSJvIcQ_R8hESnTs',
-    from: function(table){
-      var self = this;
-      return {
-        insert: async function(rows){
-          try{
-            var res = await fetch(self._url + '/rest/v1/' + table, {
-              method: 'POST',
-              headers: {
-                'apikey': self._key,
-                'Authorization': 'Bearer ' + self._key,
-                'Content-Type': 'application/json',
-                'Prefer': 'return=representation'
-              },
-              body: JSON.stringify(rows)
-            });
-            if(!res.ok){
-              var txt = '';
-              try{ txt = await res.text(); }catch(e){}
-              var msg = txt || ('HTTP ' + res.status);
-              try{ var j = JSON.parse(txt); if(j.message) msg = j.message; }catch(e){}
-              return {data: null, error: {message: msg, status: res.status, details: txt}};
-            }
-            var data = null;
-            try{ data = await res.json(); }catch(e){}
-            return {data: data, error: null};
-          }catch(err){
-            return {data: null, error: {message: String(err.message||err), status: 0}};
-          }
-        }
-      };
-    }
-  };
-}
-var supabaseClient = window.supabaseClient;
-async function saveTrackToSupabase(trackData) {
-  // 1. Check if Supabase client is available
-  if (typeof supabaseClient === 'undefined' || !supabaseClient) {
-    alert("Error: Supabase client is not connected.");
-    return false;
-  }
-  // 2. Attempt Supabase INSERT into 'songs' table with exact columns
-  try {
-    const { data, error } = await supabaseClient
-      .from('songs')
-      .insert([
-        {
-          title: trackData.title,
-          artist: trackData.artist,
-          genre: trackData.genre,
-          cover_url: trackData.coverUrl || trackData.cover || trackData.cover_url || '',
-          audio_url: trackData.audioUrl || trackData.audio || trackData.audio_url || ''
-        }
-      ]);
-    // 3. Rule check: If Supabase INSERT fail, DO NOT save to localStorage, DO NOT show Success.
-    if (error) {
-      console.error("Supabase insert failed:", error);
-      window.lastSupabaseError = 'Supabase INSERT failed: ' + (error.status||'') + ' ' + (error.message||'Unknown error');
-      alert("Error saving to database: " + (error.message || "Unknown error"));
-      return false; // Stop execution completely
-    }
-    // 4. Only if Supabase succeeds, then save to localStorage
-    let localUploads = JSON.parse(localStorage.getItem('nps_uploads') || '[]');
-    localUploads.unshift(trackData);
-    localStorage.setItem('nps_uploads', JSON.stringify(localUploads));
-    localStorage.setItem('nps_uploads_backup', JSON.stringify(localUploads));
-    // Refresh FYP grid
-    if (typeof renderTracks === 'function') {
-      renderTracks();
-    } else if (typeof loadTracks === 'function') {
-      loadTracks();
-    }
-    try{ if(typeof loadMyUploads==='function') loadMyUploads(); }catch(e){}
-    try{ if(typeof renderPinnedOnTop==='function') renderPinnedOnTop(); }catch(e){}
-    try{ if(typeof saveAndSyncUpload==='function' && !trackData.__npsStrictSaved){ /* FYP already via localStorage above, do not double-save */ } }catch(e){}
-    alert("Success! Song uploaded and stored in Supabase.");
-    return true;
-  } catch (err) {
-    console.error("Supabase connection exception:", err);
-    alert("Network error: Could not reach Supabase.");
-    return false;
-  }
-}
-window.saveTrackToSupabase = saveTrackToSupabase;
-window.supabaseClient = supabaseClient;
 </script>
 </body></html>
